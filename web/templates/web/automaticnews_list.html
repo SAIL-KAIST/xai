@@ -1,0 +1,73 @@
+{% extends "web/index.html" %}
+{% block content %}
+
+
+<section id="inner-headline">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <ul class="breadcrumb">
+                  <li>
+                      <a href="#">
+                          <i class="fa fa-home"></i>
+                      </a>
+                      <i class="icon-angle-right"></i>
+                  </li>
+                  <li class="active">Automatic News</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="content">
+    <div class="container">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th style="width: 20px;">No.</th>
+              <th>News Title</th>
+              <th>Writer</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for autonews in object_list %}
+              {% if autonews.company == company %}
+              <tr>
+                  <td>{{ autonews.id }}</td>
+                  <td><a href="{% url 'autonews_detail' pk=autonews.id %}">{{ autonews.title }}</a></td>
+                  <td>{{ autonews.writer }}</td>
+                  <td>{{ autonews.datetime | date:'Y-m-d H:i' }}</td>
+              </tr>
+              {% endif %}
+          {% endfor %}
+          </tbody>
+        </table>
+
+        <div class="text-center">
+            {% if is_paginated %}
+              <ul class="pagination">
+                {% if object_list.has_previous %}
+                  <li><a href="?page={{ news_list.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                  <li class="disabled"><span>&laquo;</span></li>
+                {% endif %}
+                {% for i in paginator.page_range %}
+                  {% if object_list.number == i %}
+                    <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                  {% else %}
+                    <li><a href="?page={{ i }}">{{ i }}</a></li>
+                  {% endif %}
+                {% endfor %}
+                {% if object_list.has_next %}
+                  <li><a href="?page={{ news_list.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                  <li class="disabled"><span>&raquo;</span></li>
+                {% endif %}
+              </ul>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

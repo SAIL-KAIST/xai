@@ -1,0 +1,53 @@
+{% extends "web/index.html" %}
+{% block content %} 
+<section id="inner-headline">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <ul class="breadcrumb">
+                  <li>
+                      <a href="#">
+                          <i class="fa fa-home"></i>
+                      </a>
+                      <i class="icon-angle-right"></i>
+                  </li>
+                  <li class="active">Automatic News</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="content">
+    <div class="container">
+        <h2 class="titleHead" style="text-align:center;">{{ autonews.title}}</h2><br/>
+        <div class="date" style="text-align:right;">기사입력 {{ autonews.datetime | date:'Y-m-d H:i' }}</div>
+        <br>
+        <p class="indent"> {{ autonews.content }}</p>
+
+        <hr class="figure"/>
+                <div class="tabular">
+                    <table cellpadding="0" cellspacing="0" class="tabular" id="TBL-2">
+                        <tr id="TBL-2-1-" style="vertical-align:baseline;">
+                            <td class="td11" id="TBL-2-1-1" style="white-space:nowrap; text-align:center;">
+                                <img alt="pict" src="/static/upload/{{ autonews.image_raw }}"/>
+                            </td>
+                            <td class="td11" id="TBL-2-1-2" style="white-space:nowrap; text-align:center;">
+                                <img alt="pict" src="/static/upload/{{ autonews.image_predict }}"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br/>
+                <div class="caption">
+                    <span class="id">그림 1</span>
+                    <span class="content">주가 데이터(왼쪽)과 사후 분포 및 전망 예측(오른쪽)</span>
+                </div>
+        <hr class="endfigure"/>
+
+    <p class="indent">이 기사는 "UNIST 설명가능인공지능 시스템"이 생성하였습니다.</p>
+    <p class="indent">* 본 예측은 베타버전이며 투자자들의 투자판단에 참고가 되는 정보제공을 목적으로 배포되는 자료입니다.본 기사에수록된 내용은 추정치로서 오차가 발생할 수 있으며 정확성이나 완벽성은 보장하지 않습니다.</p>
+    <br/>
+    <a href="/static/upload/{{ autonews.report_pdf }}" class="btn btn-primary btn-large btn-rounded"> PDF 보고서 다운 </a>
+    </div>
+</section>
+{% endblock content %}

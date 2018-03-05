@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MENU_DETAIL</title>
+</head>
+<body>
+    <div>{{topMenu.titleko}}</div>
+    <div>
+        <li>
+            {% for subMenu in subMenus %}
+            <ul>{{subMenu.title}}</ul>
+            {% endfor %}
+        </li>
+    </div>
+</body>
+</html>

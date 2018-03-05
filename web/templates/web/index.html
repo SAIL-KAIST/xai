@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% block header %}
+<div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="navbar-brand" href="/"><span>X</span>AIC</a> -->
+            <a class="navbar-brand" href="/"><img src="/static/img/XAIC_logo.png" alt="" width="180px" ="" /></a>
+        </div>
+        <div class="navbar-collapse collapse ">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li class="dropdown">
+                	 <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">ABOUT<b class=" icon-angle-down"></b></a>
+                	 <ul class="dropdown-menu">
+                	 	<li><a href ='{% url 'greeting' %}'>Greeting</a></li>
+                	 	<li><a href ='{% url 'member' %}'>Member</a></li>
+                	 	<li><a href ='{% url 'lab' %}'>Lab</a></li>
+                	 	<li><a href ='{% url 'project' %}'>Project</a></li>
+                	 </ul>
+                </li>
+                <li class="dropdown">	 
+                	 <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">News&Info<b class=" icon-angle-down"></b></a>
+                	 <ul class="dropdown-menu">
+                	 	<li><a href ='{% url 'notice' %}'>Notice</a></li>
+                	 	<li><a href ='{% url 'news' %}'>News</a></li>
+                	 	<li><a href ='{% url 'gallery' %}'>Gallery</a></li>
+                	 </ul>
+                </li>
+                <li class="dropdown">	 	 
+                	 <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Reaseach<b class=" icon-angle-down"></b></a>
+                	 <ul class="dropdown-menu">
+                	 	<!--<li><a href ='{% url 'demoresource' %}'>Demo Resource</a></li>-->
+						<li><a href ='{% url 'autonews' %}'>Automatic News</a></li>
+                	 	<li><a href ='{% url 'publication' %}'>Publication</a></li>
+                	 </ul>
+                </li>
+                <li class="dropdown">	 	 
+                	 <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Open Source<b class=" icon-angle-down"></b></a>
+                	 <ul class="dropdown-menu">
+                	 	<li><a href ='{% url 'github' %}'>Github</a></li>
+                	 	<li><a href ='{% url 'relatedproject' %}'>Related Project</a></li>
+                	 </ul>
+                </li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock header %}
+{% block content %}
+	<section id="featured">
+	<!-- start slider -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+	<!-- Slider -->
+        <div id="main-slider" class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="/static/img/main/main3.jpg" alt="" />
+              </li>
+            </ul>
+        </div>
+	<!-- end slider -->
+			</div>
+		</div>
+	</div>
+	</section>
+	<section id="content">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="box">
+							<div class="box-gray aligncenter">
+								<h4>Explainable Time Series</h4>
+								<img src="/static/img/part/part1.png" alt="" />
+							</div>
+							<div class="box-bottom">
+								<a href="http://saildemo.unist.ac.kr/automatic_statistician/">Learn more</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="box">
+							<div class="box-gray aligncenter">
+								<h4>OneShot/ZeroShot</h4>
+								<img src="/static/img/part/part2.png" alt="" />
+							</div>
+							<div class="box-bottom">
+								<a href="https://www.ku-milab.org/">Learn more</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="box">
+							<div class="box-gray aligncenter">
+								<h4>Explainable Interface</h4>
+								<img src="/static/img/part/part3.png" alt="" />
+							</div>
+							<div class="box-bottom">
+								<a href="https://www.aitrics.com/">Learn more</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="box">
+							<div class="box-gray aligncenter">
+								<h4>Precision Medicine</h4>
+								<img src="/static/img/part/part4.png" alt="" />
+							</div>
+							<div class="box-bottom">
+								<a href="https://www.aitrics.com/">Learn more</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- divider -->
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="solidline">
+				</div>
+			</div>
+		</div>
+		<!-- end divider -->
+	</div>
+	</section>
+{% endblock content %}
+{% block script %}
+{% endblock script %}
+</body>
+</html>

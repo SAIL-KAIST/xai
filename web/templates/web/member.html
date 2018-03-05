@@ -1,0 +1,51 @@
+{% extends "web/index.html" %}
+{% block content %}
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Member Name</th>
+      <th>Image</th>
+      <th>Position</th>
+      <th>Department</th>
+      <th>Education</th>
+      <th>Career</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for member in member_list %}
+      <tr>
+        <td>{{ member.nameen }}</td>
+        <td><img src="{{member.testImage.url}}"></td>
+        <td>{{ member.positionen }}</td>
+        <td>{{ member.departmenten }}</td>
+        <td>{{ member.educationen }}</td>
+        <td>{{ member.careeren }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% if is_paginated %}
+  <ul class="pagination">
+    {% if member_list.has_previous %}
+      <li><a href="?page={{ member_list.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in paginator.page_range %}
+      {% if member_list.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if page_obj.has_next %}
+      <li><a href="?page={{ member_list.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+{% endblock content %}
+{% block script %}
+{% endblock script %}

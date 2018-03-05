@@ -1,0 +1,80 @@
+{% extends "web/index.html" %}
+{% block content %}
+
+
+<section id="inner-headline">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <ul class="breadcrumb">
+                  <li>
+                      <a href="#">
+                          <i class="fa fa-home"></i>
+                      </a>
+                      <i class="icon-angle-right"></i>
+                  </li>
+                  <li class="active">Automatic News</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="content">
+    <div class="container">
+        <div class="col-lg-12">
+              <div class="album-list">
+                   <div class="album-list-photo">
+                        <a href="{% url 'autonews_list' company='amorepacific' %}">
+                            <img src="/static/img/logos/amorepacific.png"/>
+                        </a>
+                   </div>
+                   <div class="album-list-photo">
+                        <a href="{% url 'autonews_list' company='hyundaimobis' %}">
+                            <img src="/static/img/logos/hyundaimobis.png"/>
+                        </a>
+                   </div>
+                   <div class="album-list-photo">
+                        <a href="{% url 'autonews_list' company='hyundaimotor' %}">
+                            <img src="/static/img/logos/hyundaimotor.png"/>
+                        </a>
+                   </div>
+                   <div class="album-list-photo">
+                        <a href="{% url 'autonews_list' company='koreaelectric' %}">
+                            <img src="/static/img/logos/koreaelectric.jpg"/>
+                        </a>
+                   </div>
+                   <div class="album-list-photo">
+                        <a href="{% url 'autonews_list' company='lgchem' %}">
+                            <img src="/static/img/logos/lgchem.png"/>
+                        </a>
+                   </div>
+                   <div class="album-list-photo">
+                        <a href="{% url 'autonews_list' company='lghnhc' %}">
+                            <img src="/static/img/logos/lghnhc.jpg"/>
+                        </a>
+                   </div>
+                   <div class="album-list-photo">
+                         <a href="{% url 'autonews_list' company='samsungcnt' %}">
+                            <img src="/static/img/logos/samsungcnt.jpg"/>
+                        </a>
+                   </div>
+                   <div class="album-list-photo">
+                        <a href="{% url 'autonews_list' company='samsungelectronics' %}">
+                            <img src="/static/img/logos/samsungelectronics.png"/>
+                        </a>
+                   </div>
+                   <div class="album-list-photo">
+                        <a href="{% url 'autonews_list' company='samsungsds' %}">
+                            <img src="/static/img/logos/samsungsds.jpg"/>
+                        </a>
+                   </div>
+                   <div class="album-list-photo">
+                        <a href="{% url 'autonews_list' company='skhynix' %}">
+                            <img src="/static/img/logos/skhynix.png"/>
+                        </a>
+                   </div>
+              </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

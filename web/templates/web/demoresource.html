@@ -1,0 +1,128 @@
+{% extends "web/index.html" %}
+{% block content %}
+<section id="inner-headline">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="breadcrumb">
+                    <li><a href="{% url 'contact' %}"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+                    <li class="active">Demo Resource</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="content">
+    <div class="container">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th style="width: 20px;">No.</th>
+              <th>Title</th>
+              <th>Writer</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+<!--             {% for demoresource in demoresource_list %}
+              <tr>
+                  <td>{{ demoresource.id }}</td>
+                  <td><a href="{% url 'community_detail' pk=community.id%}">{{ demoresource.title }}</a></td>
+                  <td>{{ demoresource.writer }}</td>
+                  <td>{{ demoresource.date }}</td>
+              </tr>
+            {% endfor %} -->
+              <tr>
+                  <td>1</td>
+                  <td><a href="{% url 'amorepacific' %}">[특징주]아모레퍼시픽, 전일 대비 약 0.64% 하락한 30만 9500원 </a></td>
+                  <td>설명가능인공지능</td>
+                  <td>2018-01-30</td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td><a href="{% url 'hyundaimobis' %}">[특징주]현대모비스, 전일 대비 약 1.6% 하락한 24만 5500원</a></td>
+                  <td>설명가능인공지능</td>
+                  <td>2018-01-30</td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td><a href="{% url 'hyundaimotor' %}">[특징주]현대차, 전일 대비 약 0.97% 상승한 15만 6000원</a></td>
+                  <td>설명가능인공지능</td>
+                  <td>2018-01-30</td>
+              </tr>
+              <tr>
+                  <td>4</td>
+                  <td><a href="{% url 'koreaelectric' %}">[특징주]한국전력, 전일 대비 약 0.83% 하락한 3만 5900원</a></td>
+                  <td>설명가능인공지능</td>
+                  <td>2018-01-30</td>
+              </tr>
+              <tr>
+                  <td>5</td>
+                  <td><a href="{% url 'lgchem' %}">[특징주]LG화학, 전일 대비 약 1.25% 하락한 43만 6000원 </a></td>
+                  <td>설명가능인공지능</td>
+                  <td>2018-01-30</td>
+              </tr>
+              <tr>
+                  <td>6</td>
+                  <td><a href="{% url 'lghnhc' %}">[특징주]LG생활건강, 전일 대비 약 0.77% 하락한 116만 1000원 </a></td>
+                  <td>설명가능인공지능</td>
+                  <td>2018-01-30</td>
+              </tr>
+              <tr>
+                  <td>7</td>
+                  <td><a href="{% url 'samsungcnt' %}">[특징주]삼성물산, 전일 대비 약 2.46% 하락한 13만 8500원 </a></td>
+                  <td>설명가능인공지능</td>
+                  <td>2018-01-30</td>
+              </tr>
+              <tr>
+                  <td>8</td>
+                  <td><a href="{% url 'samsungelectronics' %}">[특징주]삼성전자, 전일 대비 약 2.77% 하락한 249만원 </a></td>
+                  <td>설명가능인공지능</td>
+                  <td>2018-01-30</td>
+              </tr>
+              <tr>
+                  <td>9</td>
+                  <td><a href="{% url 'samsungsds' %}">[특징주]삼성에스디에스, 전일 대비 약 1.93% 하락한 25만 4000원
+ </a></td>
+                  <td>설명가능인공지능</td>
+                  <td>2018-01-30</td>
+              </tr>
+              <tr>
+                  <td>10</td>
+                  <td><a href="{% url 'skhynix' %}">[특징주]SK하이닉스, 전일 대비 약 2.92% 하락한 7만 3100원
+ </a></td>
+                  <td>설명가능인공지능</td>
+                  <td>2018-01-30</td>
+              </tr>
+          </tbody>
+        </table>       
+
+        <div class="text-center">
+            {% if is_paginated %}
+              <ul class="pagination">
+                {% if demoresource_list.has_previous %}
+                  <li><a href="?page={{ news_list.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                  <li class="disabled"><span>&laquo;</span></li>
+                {% endif %}
+                {% for i in paginator.page_range %}
+                  {% if demoresource_list.number == i %}
+                    <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                  {% else %}
+                    <li><a href="?page={{ i }}">{{ i }}</a></li>
+                  {% endif %}
+                {% endfor %}
+                {% if demoresource_list.has_next %}
+                  <li><a href="?page={{ demoresource_list.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                  <li class="disabled"><span>&raquo;</span></li>
+                {% endif %}
+              </ul>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock content %}

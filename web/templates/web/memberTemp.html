@@ -1,0 +1,115 @@
+{% extends "web/index.html" %}
+{% block content %}
+{% load staticfiles%} <!-- static을 사용하는 모든 개별 html에서 별도로 호출해야함 -->
+   <section id="inner-headline">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <ul class="breadcrumb">
+                  <li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+                  <li class="active">Members</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="content">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <ul class="portfolio-categ filter">
+                  <!-- <li class="all active"><a href="/member/">All</a></li> -->
+                  <li class="UNIST"><a href="#" title="">UNIST</a></li>
+                  <li class="KOREA"><a href="#" title="">KOREA Uni.</a></li>
+                  <li class="YONSEI"><a href="#" title="">YONSEI Uni.</a></li>
+                  <li class="KAIST"><a href="#" title="">KAIST</a></li>
+                  </li>
+                  <li class="AItrics"><a href="#" title="">AItrics</a></li>
+               </ul>
+               <div class="clearfix">
+               </div>
+                  <section id="projects">
+                     <ul id="thumbs" class="portfolio">
+                        <!-- Item Project and Filter Name -->
+                        <li class="item-thumbs col-lg-3 design" data-id="id-0" data-type="UNIST">
+                           <img src={% static "img/member/jaesik.png" %}><br>
+                           <span><Strong>Jaesik Choi</Strong></span><br>
+                           <span>Associate Professor</span><br>
+                           <span>UNIST</span>
+                        </li>
+                        <!-- End Item Project -->
+                        <!-- Item Project and Filter Name -->
+                        <li class="item-thumbs col-lg-3 design" data-id="id-1" data-type="UNIST">
+                           <img src={% static "img/member/seongju.png" %}><br>
+                           <span><Strong>Seongju Hwang</Strong></span><br>
+                           <span>Assistant Professor</span><br>
+                           <span>UNIST</span>
+                        </li>
+                        <!-- End Item Project -->
+                        <!-- Item Project and Filter Name -->
+                        <li class="item-thumbs col-lg-3 design" data-id="id-2" data-type="UNIST">
+                           <img src={% static "img/member/byungki.png" %}><br>
+                           <span><Strong>Byungki Seo</Strong></span><br>
+                           <span>Assistant Professor</span><br>
+                           <span>UNIST</span>
+                        </li>
+                        <!-- End Item Project -->
+                     <div class="clearfix"></div> <!--줄 임의로 나눠주는 클래스, 이걸 안넣으면 한줄에 4개씩 들어가려고 하면서 엄청 이상해짐 ㅠㅠ   -->
+                        <!-- Item Project and Filter Name -->
+                        <li class="item-thumbs col-lg-3 design" data-id="id-0" data-type="KOREA">
+                           <img src={% static "img/member/seonghwan.png" %}><br>
+                           <span><Strong>Seong-Whan Lee</Strong></span><br>
+                           <span>Professor</span><br>
+                           <span>KOREA University</span>
+                        </li>
+                        <!-- End Item Project -->
+                        <!-- Item Project and Filter Name -->
+                         <li class="item-thumbs col-lg-3 design" data-id="id-4" data-type="KOREA">
+                           <img src={% static "img/member/heungil.png" %}><br>
+                           <span><Strong>Heung-Il Suk</Strong></span><br>
+                           <span>Assistant Professor</span><br>
+                           <span>KOREA University</span>
+                        </li> 
+                        <!-- End Item Project -->
+                        <!-- Item Project and Filter Name -->
+                         <li class="item-thumbs col-lg-3 design" data-id="id-1" data-type="KOREA">
+                           <img src={% static "img/member/muller.png" %}><br>
+                           <span><Strong>K.-R. Müller</Strong></span><br>
+                           <span>Professor</span><br>
+                           <span>KOREA University</span>
+                        </li>
+                        <!-- End Item Project -->
+                     <div class="clearfix">
+                     </div>   
+                        <!-- Item Project and Filter Name -->
+                        <li class="item-thumbs col-lg-3 design" data-id="id-2" data-type="YONSEI">
+                           <img src={% static "img/member/gwangjun.png" %}><br>
+                           <span><Strong>Gwangjun Kim</Strong></span><br>
+                           <span>Associate Professor</span><br>
+                           <span>YONSEI University</span>
+                        </li>
+                        <!-- End Item Project -->   
+                        <!-- Item Project and Filter Name -->
+                        <li class="item-thumbs col-lg-3 design" data-id="id-2" data-type="KAIST">
+                           <img src={% static "img/member/eunho.png" %}><br>
+                           <span><Strong>Eunho Yang</Strong></span><br>
+                           <span>Assistant Professor</span><br>
+                           <span>KAIST</span>
+                        </li>
+                        <!-- End Item Project -->   
+                        <!-- Item Project and Filter Name -->
+                        <li class="item-thumbs col-lg-3 design" data-id="id-7" data-type="AItrics">
+                           <img src={% static "img/member/jingyu.png" %}><br>
+                           <span><Strong>Jinkyu Yoo</Strong></span><br>
+                           <span>CEO</span><br>
+                           <span>AItrics</span>
+                        </li>
+                        <!-- End Item Project -->                        
+                     </ul>
+                  </section>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+{% endblock content %}
