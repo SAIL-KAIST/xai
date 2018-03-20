@@ -2,3 +2,5 @@
 *.pyc
 xai/settings.py
 static/upload/
+.idea/
+venv/
