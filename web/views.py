@@ -91,7 +91,6 @@ class AutomaticNews(ListView):
         context = {'company_list' : CompanyList.objects.all()}
         return render(request, self.template_name, context)
 
-
 class AutomaticNewsList(ListView):
     model = AutoNews
     template_name = 'web/automaticnews_list.html'
@@ -239,14 +238,8 @@ class CommunityDetail(DetailView):
         return context
 
 #OPEN SOURCE
-class GithubTextlist(ListView):
-    model = Github
-    template_name = 'web/github.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(GithubTextlist, self).get_context_data(**kwargs)
-        context['subMenuDict'] = getSubMenuDict()
-        return context
+def githubRedirect(request):
+    return redirect('https://github.com/OpenXAIProject')
 
 class RelatedProject(ListView):
     model = RelatedProject

@@ -27,7 +27,7 @@ urlpatterns = [
     url(r'^research/patent/$', views.PatentTextList.as_view(), name='patent'),
 
     #opensource
-    url(r'^opensource/github/$', views.GithubTextlist.as_view(), name='github'),
+    url(r'^opensource/github/$', views.githubRedirect, name='github'),
     url(r'^opensource/relatedproject/$', views.RelatedProject.as_view(), name='relatedproject'),
 
     #contact
