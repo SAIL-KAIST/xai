@@ -1,6 +1,6 @@
 *.log
 *.pyc
 xai/settings.py
-static/upload/
+static/upload/AutomaticNews
 .idea/
 venv/
