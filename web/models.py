@@ -196,9 +196,9 @@ class RelatedProject(models.Model):
 class AutoNews(models.Model):
     company = models.CharField(max_length=50)
     title = models.CharField(max_length=100)
-    writer = models.CharField(max_length=50, default='auto')
     datetime = models.DateTimeField()
     content = models.TextField()
+    prediction = models.TextField()
     image_raw = models.ImageField(upload_to='AutomaticNews/%Y/%m/%d')
     image_predict = models.ImageField(upload_to='AutomaticNews/%Y/%m/%d')
     report_pdf = models.FileField(upload_to='AutomaticNews/%Y/%m/%d')
@@ -206,3 +206,7 @@ class AutoNews(models.Model):
 
     def __str__(self):
         return self.title
+
+class CompanyList(models.Model):
+    company_kor = models.TextField()
+    company_eng = models.TextField()

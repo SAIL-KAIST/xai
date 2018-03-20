@@ -31,15 +31,13 @@
             </tr>
           </thead>
           <tbody>
-          {% for autonews in object_list %}
-              {% if autonews.company == company %}
+          {% for autonews in filter_list %}
               <tr>
-                  <td>{{ autonews.id }}</td>
+                  <td>{{ forloop.counter }}</td>
                   <td><a href="{% url 'autonews_detail' pk=autonews.id %}">{{ autonews.title }}</a></td>
-                  <td>{{ autonews.writer }}</td>
+                  <td> 설명가능인공지능 </td>
                   <td>{{ autonews.datetime | date:'Y-m-d H:i' }}</td>
               </tr>
-              {% endif %}
           {% endfor %}
           </tbody>
         </table>

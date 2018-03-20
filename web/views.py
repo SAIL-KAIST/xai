@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404, redirect
 from django.utils import timezone
 
-from .models import TopMenu, SubMenu, Greeting, Member, Lab, Project, DemoResource, Publication, Patent, Notice, News, Gallery, Community, RelatedProject, Github, AutoNews
+from .models import TopMenu, SubMenu, Greeting, Member, Lab, Project, DemoResource, Publication, Patent, Notice, News, Gallery, Community, RelatedProject, Github, AutoNews, CompanyList
 
 from django.views.generic.base import TemplateView
 from django.views.generic import ListView, DetailView, View
@@ -77,7 +77,7 @@ class ProjectPage(TemplateView):
         return context
 
 class AutomaticNews(ListView):
-    model = AutoNews
+    model = CompanyList
     template_name = 'web/automaticnews.html'
     paginate_by = 10
     queryset = AutoNews.objects.order_by('-id')
@@ -86,6 +86,11 @@ class AutomaticNews(ListView):
         context = super(AutomaticNews, self).get_context_data(**kwargs)
         context['subMenuDict'] = getSubMenuDict()
         return context
+
+    def get(self, request):
+        context = {'company_list' : CompanyList.objects.all()}
+        return render(request, self.template_name, context)
+
 
 class AutomaticNewsList(ListView):
     model = AutoNews
@@ -99,7 +104,8 @@ class AutomaticNewsList(ListView):
         return context
 
     def get(self, request, company):
-        context = {'company' : company, 'object_list':AutoNews.objects.all()}
+        filter_list = filter(lambda x: x.company == company, AutoNews.objects.all())
+        context = {'filter_list' : filter_list}
         return render(request, self.template_name, context)
 
 class AutomaticNewsDetail(DetailView):

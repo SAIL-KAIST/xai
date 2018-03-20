@@ -21,60 +21,56 @@
 </section>
 <section id="content">
     <div class="container">
-        <div class="col-lg-12">
-              <div class="album-list">
-                   <div class="album-list-photo">
-                        <a href="{% url 'autonews_list' company='amorepacific' %}">
-                            <img src="/static/img/logos/amorepacific.png"/>
-                        </a>
-                   </div>
-                   <div class="album-list-photo">
-                        <a href="{% url 'autonews_list' company='hyundaimobis' %}">
-                            <img src="/static/img/logos/hyundaimobis.png"/>
-                        </a>
-                   </div>
-                   <div class="album-list-photo">
-                        <a href="{% url 'autonews_list' company='hyundaimotor' %}">
-                            <img src="/static/img/logos/hyundaimotor.png"/>
-                        </a>
-                   </div>
-                   <div class="album-list-photo">
-                        <a href="{% url 'autonews_list' company='koreaelectric' %}">
-                            <img src="/static/img/logos/koreaelectric.jpg"/>
-                        </a>
-                   </div>
-                   <div class="album-list-photo">
-                        <a href="{% url 'autonews_list' company='lgchem' %}">
-                            <img src="/static/img/logos/lgchem.png"/>
-                        </a>
-                   </div>
-                   <div class="album-list-photo">
-                        <a href="{% url 'autonews_list' company='lghnhc' %}">
-                            <img src="/static/img/logos/lghnhc.jpg"/>
-                        </a>
-                   </div>
-                   <div class="album-list-photo">
-                         <a href="{% url 'autonews_list' company='samsungcnt' %}">
-                            <img src="/static/img/logos/samsungcnt.jpg"/>
-                        </a>
-                   </div>
-                   <div class="album-list-photo">
-                        <a href="{% url 'autonews_list' company='samsungelectronics' %}">
-                            <img src="/static/img/logos/samsungelectronics.png"/>
-                        </a>
-                   </div>
-                   <div class="album-list-photo">
-                        <a href="{% url 'autonews_list' company='samsungsds' %}">
-                            <img src="/static/img/logos/samsungsds.jpg"/>
-                        </a>
-                   </div>
-                   <div class="album-list-photo">
-                        <a href="{% url 'autonews_list' company='skhynix' %}">
-                            <img src="/static/img/logos/skhynix.png"/>
-                        </a>
-                   </div>
-              </div>
-        </div>
+         <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th style="width: 20px;">No.</th>
+              <th>Company</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>1</td>
+                  <td><a href="{% url 'autonews_list' company='amorepacific' %}">아모레퍼시픽</a></td>
+              </tr>
+               <tr>
+                  <td>2</td>
+                  <td><a href="{% url 'autonews_list' company='hyundaimobis' %}">현대모비스</a></td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td><a href="{% url 'autonews_list' company='hyundaimotor' %}">현대차</a></td>
+              </tr>
+              <tr>
+                  <td>4</td>
+                  <td><a href="{% url 'autonews_list' company='koreaelectric' %}">한국전력</a></td>
+              </tr>
+               <tr>
+                  <td>5</td>
+                  <td><a href="{% url 'autonews_list' company='lgchem' %}">LG화학</a></td>
+              </tr>
+                <tr>
+                  <td>6</td>
+                  <td><a href="{% url 'autonews_list' company='lghousehold' %}">LG생활건강</a></td>
+              </tr>
+                 <tr>
+                  <td>7</td>
+                  <td><a href="{% url 'autonews_list' company='samsungcnt' %}">삼성물산</a></td>
+              </tr>
+                  <tr>
+                  <td>8</td>
+                  <td><a href="{% url 'autonews_list' company='samsungelectronics' %}">삼성전자</a></td>
+              </tr>
+                  <tr>
+                  <td>9</td>
+                  <td><a href="{% url 'autonews_list' company='samsungsds' %}">삼성에스디에스</a></td>
+              </tr>
+                  <tr>
+                  <td>10</td>
+                  <td><a href="{% url 'autonews_list' company='skhynix' %}">SK하이닉스</a></td>
+              </tr>
+          </tbody>
+         </table>
     </div>
 </section>
 {% endblock content %}
