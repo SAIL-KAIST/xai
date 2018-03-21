@@ -89,6 +89,7 @@ class NoticeTextList(ListView):
 class NewsImageList(ListView):
     model = News
     template_name = 'web/news.html'  # Default: <app_label>/<model_name>_list.html
+    queryset = News.objects.order_by('-id')
     paginate_by = 3
 
     def get_context_data(self, **kwargs):
