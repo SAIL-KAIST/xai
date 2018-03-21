@@ -1,10 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Patent</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends "web/index.html" %}
+{% block content %}
+   <section id="inner-headline">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <ul class="breadcrumb">
+                  <li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+                  <li class="active">Patent</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="content">
+      <div class="container">
+         <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>특허명칭</th>
+              <th>국명</th>
+              <th>출원인</th>
+              <th>출원일</th>
+              <th>출원번호</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for list in object_list %}
+              <tr>
+                  <td>{{forloop.counter }}</td>
+                  <td>{{list.title}}</td>
+                  <td>{{list.nation}} </td>
+                  <td>{{list.inventor}} </td>
+                  <td>{{list.date | date:'Y-m-d'}}</td>
+                  <td>{{list.number}}</td>
+              </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+   </section>
+{% endblock content %}

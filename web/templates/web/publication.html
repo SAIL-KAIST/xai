@@ -14,32 +14,30 @@
    </section>
    <section id="content">
       <div class="container">
-         <div class="row">
-            <div class="col-lg-8">
-               <article>
-                  <div class="post-image">
-                     <div class="post-heading">
-                        <h3><a href="#">Publication</a></h3>
-                     </div>
-                  </div>
-                  <p>
-                  	 ...
-                  </p>
-               </article>
-            </div>
-         </div>
-          <div class="col-lg-8">
-               <article>
-                  <div class="post-image">
-                     <div class="post-heading">
-                        <h3><a href="#">Patent</a></h3>
-                     </div>
-                  </div>
-                  <p>
-                  	 ...
-                  </p>
-               </article>
-            </div>
+         <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Date</th>
+              <th>Journal</th>
+              <th>Publication</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for list in object_list %}
+              <tr>
+                  <td>{{forloop.counter }}</td>
+                  <td>{{list.title}}</td>
+                  <td>{{list.author}} </td>
+                  <td>{{list.date | date:'Y-m-d'}}</td>
+                  <td>{{list.journal}} </td>
+                  <td>{{list.publication}}</td>
+              </tr>
+          {% endfor %}
+          </tbody>
+        </table>
       </div>
    </section>
 {% endblock content %}

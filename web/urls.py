@@ -14,8 +14,6 @@ urlpatterns = [
    
     url(r'^news&info/notice/$', views.NoticeTextList.as_view(), name='notice'),
     url(r'^news&info/news/$', views.NewsImageList.as_view(), name='news'),
-    url(r'^news&info/news_new/$', views.news_new, name='news_new'),
-    url(r'^news&info/news/(?P<pk>\d+)/$', views.NewsDetail.as_view(), name='news_detail'),
     url(r'^news&info/gallery/$', views.GalleryImageList.as_view(), name='gallery'),
 
     url(r'^research/automatic_news/$', views.AutomaticNews.as_view(), name='autonews'),
@@ -29,10 +27,10 @@ urlpatterns = [
     #opensource
     url(r'^opensource/github/$', views.githubRedirect, name='github'),
     url(r'^opensource/relatedproject/$', views.RelatedProject.as_view(), name='relatedproject'),
+    url(r'^opensource/community/$', views.CommunityBoard.as_view(), name='community'),
+    url(r'^opensource/community/(?P<pk>\d+)/$', views.CommunityDetail.as_view(), name='community_detail'),
+    url(r'^opensource/community/new/$', views.community_new, name='community_new'),
 
     #contact
     url(r'^contact/$', views.Contact, name='contact'),
-
 ]
-
-

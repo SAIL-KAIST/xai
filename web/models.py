@@ -43,7 +43,7 @@ class SubMenu(models.Model):
     def __str__(self):
         return self.title
 
-# About
+#ABOUT##########################################################################################################################
 class Greeting(models.Model):
     title = models.CharField(max_length=100)
     writer = models.CharField(max_length=45)
@@ -74,7 +74,6 @@ class Lab(models.Model):
     professor = models.CharField(max_length=45)
     research_on = models.TextField()
     link = models.CharField(max_length=100)
-    image = models.CharField(max_length=100)
     submenu_id = models.ForeignKey('SubMenu', on_delete=models.PROTECT)
 
     def __str__(self):
@@ -91,40 +90,7 @@ class Project(models.Model):
     def __str__(self):
         return self.title
 
-class DemoResource(models.Model):
-    title = models.CharField(max_length=100)
-    writer = models.CharField(max_length=45)
-    date = models.DateField()
-    content = models.TextField()
-    image = models.CharField(max_length=100)
-    submenu_id = models.ForeignKey('SubMenu', on_delete=models.PROTECT)
-
-    def __str__(self):
-        return self.title
-
-class Publication(models.Model):
-    title = models.CharField(max_length=100)
-    writer = models.CharField(max_length=45)
-    date = models.DateField()
-    content = models.TextField()
-    image = models.CharField(max_length=100)
-    submenu_id = models.ForeignKey('SubMenu', on_delete=models.PROTECT)
-
-    def __str__(self):
-        return self.title
-
-class Patent(models.Model):
-    title = models.CharField(max_length=100)
-    writer = models.CharField(max_length=45)
-    date = models.DateField()
-    content = models.TextField()
-    image = models.CharField(max_length=100)
-    submenu_id = models.ForeignKey('SubMenu', on_delete=models.PROTECT)
-
-    def __str__(self):
-        return self.title
-
-# News&Info
+#NEWS&INFO##########################################################################################################################
 class Notice(models.Model):
     title = models.CharField(max_length=100)
     writer = models.CharField(max_length=45)
@@ -138,9 +104,9 @@ class Notice(models.Model):
 
 class News(models.Model):
     title = models.CharField(max_length=100)
-    writer = models.CharField(max_length=45)
     date = models.DateField()
     content = models.TextField()
+    link = models.TextField()
     image = models.CharField(max_length=100)
     submenu_id = models.ForeignKey('SubMenu', on_delete=models.PROTECT)
 
@@ -158,7 +124,8 @@ class Gallery(models.Model):
     def __str__(self):
         return self.title
 
-class Community(models.Model):
+#RESEARCH##########################################################################################################################
+class DemoResource(models.Model):
     title = models.CharField(max_length=100)
     writer = models.CharField(max_length=45)
     date = models.DateField()
@@ -169,6 +136,43 @@ class Community(models.Model):
     def __str__(self):
         return self.title
 
+class AutoNews(models.Model):
+    company = models.CharField(max_length=50)
+    title = models.CharField(max_length=100)
+    datetime = models.DateTimeField()
+    content = models.TextField()
+    prediction = models.TextField()
+    image_raw = models.ImageField(upload_to='AutomaticNews/%Y/%m/%d')
+    image_predict = models.ImageField(upload_to='AutomaticNews/%Y/%m/%d')
+    report_pdf = models.FileField(upload_to='AutomaticNews/%Y/%m/%d')
+    submenu_id = models.ForeignKey('SubMenu', on_delete=models.PROTECT)
+
+    def __str__(self):
+        return self.title
+
+class Publication(models.Model):
+    title = models.CharField(max_length=100)
+    author = models.CharField(max_length=100)
+    date = models.DateField()
+    journal = models.CharField(max_length=100)
+    publication = models.CharField(max_length=100)
+    submenu_id = models.ForeignKey('SubMenu', on_delete=models.PROTECT)
+
+    def __str__(self):
+        return self.title
+
+class Patent(models.Model):
+    title = models.CharField(max_length=100)
+    inventor = models.CharField(max_length=45)
+    nation = models.CharField(max_length=45)
+    date = models.DateField()
+    number = models.TextField()
+    submenu_id = models.ForeignKey('SubMenu', on_delete=models.PROTECT)
+
+    def __str__(self):
+        return self.title
+
+#OPEN SOURCE##########################################################################################################################
 class Github(models.Model):
     title = models.CharField(max_length=100)
     writer = models.CharField(max_length=45)
@@ -193,16 +197,12 @@ class RelatedProject(models.Model):
     def __str__(self):
         return self.title
 
-class AutoNews(models.Model):
-    company = models.CharField(max_length=50)
+class Community(models.Model):
     title = models.CharField(max_length=100)
-    datetime = models.DateTimeField()
+    writer = models.CharField(max_length=45)
+    date = models.DateField()
     content = models.TextField()
-    prediction = models.TextField()
-    image_raw = models.ImageField(upload_to='AutomaticNews/%Y/%m/%d')
-    image_predict = models.ImageField(upload_to='AutomaticNews/%Y/%m/%d')
-    report_pdf = models.FileField(upload_to='AutomaticNews/%Y/%m/%d')
-    submenu_id = models.ForeignKey('SubMenu', on_delete=models.PROTECT)
+    submenu_id = models.ForeignKey('SubMenu', on_delete=models.PROTECT, default=13)
 
     def __str__(self):
         return self.title

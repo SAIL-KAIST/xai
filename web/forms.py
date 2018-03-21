@@ -11,7 +11,7 @@ class CommunityForm(forms.ModelForm):
 
     class Meta:
         model = Community
-        fields = ('title', 'content', 'writer', 'submenu_id')
+        fields = ('title', 'content', 'writer')
 
 class DemoForm(forms.ModelForm):
 

@@ -33,7 +33,7 @@
      <div class="text-center">
         {% if is_paginated %}
           <ul class="pagination">
-            {% if news_list.has_previous %}
+            {% if object_list.has_previous %}
               <li><a href="?page={{ news_list.previous_page_number }}">&laquo;</a></li>
             {% else %}
               <li class="disabled"><span>&laquo;</span></li>
@@ -54,6 +54,7 @@
         {% endif %}
     </div>
 
+      </div>
     </div>
   </div>
 </section>  
