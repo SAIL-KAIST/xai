@@ -148,7 +148,10 @@ class AutomaticNewsList(ListView):
         filters.reverse()
         paginator = Paginator(filters, self.paginate_by)
         page = request.GET.get('page')
-        filter_list = paginator.get_page(page)
+        #if your django version 2.0.4 just you get_page
+        if page == None:
+            page = 1
+        filter_list = paginator.page(page)
         context = {'filter_list': filter_list}
         return render(request, self.template_name, context)
 
