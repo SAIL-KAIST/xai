@@ -1,7 +1,6 @@
 {% extends "web/index.html" %}
 {% block content %}
 
-
 <section id="inner-headline">
   <div class="container">
       <div class="row">
@@ -21,56 +20,122 @@
 </section>
 <section id="content">
     <div class="container">
-         <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th style="width: 20px;">No.</th>
-              <th>Company</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>1</td>
-                  <td><a href="{% url 'autonews_list' company='amorepacific' %}">아모레퍼시픽</a></td>
-              </tr>
-               <tr>
-                  <td>2</td>
-                  <td><a href="{% url 'autonews_list' company='hyundaimobis' %}">현대모비스</a></td>
-              </tr>
-              <tr>
-                  <td>3</td>
-                  <td><a href="{% url 'autonews_list' company='hyundaimotor' %}">현대차</a></td>
-              </tr>
-              <tr>
-                  <td>4</td>
-                  <td><a href="{% url 'autonews_list' company='koreaelectric' %}">한국전력</a></td>
-              </tr>
-               <tr>
-                  <td>5</td>
-                  <td><a href="{% url 'autonews_list' company='lgchem' %}">LG화학</a></td>
-              </tr>
-                <tr>
-                  <td>6</td>
-                  <td><a href="{% url 'autonews_list' company='lghousehold' %}">LG생활건강</a></td>
-              </tr>
-                 <tr>
-                  <td>7</td>
-                  <td><a href="{% url 'autonews_list' company='samsungcnt' %}">삼성물산</a></td>
-              </tr>
+       <div class="col-lg-6">
+           <div class="pricing-box-alt special">
+               <div class="pricing-heading">
+                <h3><strong>Company Stock</strong> Prediction</h3>
+              </div>
+           </div>
+           <table class="table table-bordered" style="text-align: center;">
+              <thead>
+                <tr style="color: white; background-color:#393a3d;">
+                  <th style="width: 50px;">No.</th>
+                  <th style="text-align: center;">Company Name</th>
+                </tr>
+              </thead>
+              <tbody>
                   <tr>
-                  <td>8</td>
-                  <td><a href="{% url 'autonews_list' company='samsungelectronics' %}">삼성전자</a></td>
-              </tr>
+                      <td>1</td>
+                      <td><a href="{% url 'autonews_list' company='amorepacific' %}">아모레퍼시픽</a></td>
+                  </tr>
+                   <tr>
+                      <td>2</td>
+                      <td><a href="{% url 'autonews_list' company='hyundaimobis' %}">현대모비스</a></td>
+                  </tr>
                   <tr>
-                  <td>9</td>
-                  <td><a href="{% url 'autonews_list' company='samsungsds' %}">삼성에스디에스</a></td>
-              </tr>
+                      <td>3</td>
+                      <td><a href="{% url 'autonews_list' company='hyundaimotor' %}">현대차</a></td>
+                  </tr>
                   <tr>
-                  <td>10</td>
-                  <td><a href="{% url 'autonews_list' company='skhynix' %}">SK하이닉스</a></td>
-              </tr>
-          </tbody>
-         </table>
+                      <td>4</td>
+                      <td><a href="{% url 'autonews_list' company='koreaelectric' %}">한국전력</a></td>
+                  </tr>
+                   <tr>
+                      <td>5</td>
+                      <td><a href="{% url 'autonews_list' company='lgchem' %}">LG화학</a></td>
+                  </tr>
+                    <tr>
+                      <td>6</td>
+                      <td><a href="{% url 'autonews_list' company='lghousehold' %}">LG생활건강</a></td>
+                  </tr>
+                     <tr>
+                      <td>7</td>
+                      <td><a href="{% url 'autonews_list' company='samsungcnt' %}">삼성물산</a></td>
+                  </tr>
+                      <tr>
+                      <td>8</td>
+                      <td><a href="{% url 'autonews_list' company='samsungelectronics' %}">삼성전자</a></td>
+                  </tr>
+                      <tr>
+                      <td>9</td>
+                      <td><a href="{% url 'autonews_list' company='samsungsds' %}">삼성에스디에스</a></td>
+                  </tr>
+                      <tr>
+                      <td>10</td>
+                      <td><a href="{% url 'autonews_list' company='skhynix' %}">SK하이닉스</a></td>
+                  </tr>
+              </tbody>
+             </table>
+         </div>
+
+        <div class="col-lg-6">
+            <div class="pricing-box-alt">
+               <div class="pricing-heading">
+                <h3><strong>Raw Material</strong> Prediction</h3>
+              </div>
+           </div>
+             <table class="table table-bordered" style="text-align: center;">
+              <thead>
+                <tr style="color: white; background-color:#393a3d;">
+                  <th style="width: 50px;">No.</th>
+                  <th style="text-align: center;">Raw Material Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>1</td>
+                      <td><a href="{% url 'autonews_list' company='wtioil' %}">WTI유</a></td>
+                  </tr>
+                   <tr>
+                      <td>2</td>
+                      <td><a href="{% url 'autonews_list' company='brentoil' %}">브렌트유</a></td>
+                  </tr>
+                  <tr>
+                      <td>3</td>
+                      <td><a href="{% url 'autonews_list' company='gold' %}">금</a></td>
+                  </tr>
+                  <tr>
+                      <td>4</td>
+                      <td><a href="{% url 'autonews_list' company='silver' %}">은</a></td>
+                  </tr>
+                   <tr>
+                      <td>5</td>
+                      <td><a href="{% url 'autonews_list' company='copper' %}">구리</a></td>
+                  </tr>
+                    <tr>
+                      <td>6</td>
+                      <td><a href="{% url 'autonews_list' company='aluminum' %}">알루미늄</a></td>
+                  </tr>
+                     <tr>
+                      <td>7</td>
+                      <td><a href="{% url 'autonews_list' company='naturalgas' %}">천연가스</a></td>
+                  </tr>
+                      <tr>
+                      <td>8</td>
+                      <td><a href="{% url 'autonews_list' company='uscoffee' %}">미국커피</a></td>
+                  </tr>
+                      <tr>
+                      <td>9</td>
+                      <td><a href="{% url 'autonews_list' company='uscorn' %}">미국옥수수</a></td>
+                  </tr>
+                      <tr>
+                      <td>10</td>
+                      <td><a href="{% url 'autonews_list' company='uscocoa' %}">미국코코아</a></td>
+                  </tr>
+              </tbody>
+            </table>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock content %}

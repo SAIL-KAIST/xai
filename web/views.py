@@ -6,7 +6,7 @@ from .models import TopMenu, SubMenu, Greeting, Member, Lab, Project, DemoResour
 from django.views.generic.base import TemplateView
 from django.views.generic import ListView, DetailView
 
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator, EmptyPage, InvalidPage, PageNotAnInteger
 
 from .forms import CommunityForm
 # Create your views here.
@@ -120,11 +120,11 @@ class DemoresourceImageList(ListView):
 class AutomaticNews(ListView):
     model = CompanyList
     template_name = 'web/automaticnews.html'
-    paginate_by = 10
+    paginate_by = 5
     queryset = AutoNews.objects.order_by('-id')
 
     def get_context_data(self, **kwargs):
-        context = super(AutomaticNews, self).get_context_data(**kwargs)
+        context = super(NewsImageList, self).get_context_data(**kwargs)
         context['subMenuDict'] = getSubMenuDict()
         return context
 
@@ -135,23 +135,26 @@ class AutomaticNews(ListView):
 class AutomaticNewsList(ListView):
     model = AutoNews
     template_name = 'web/automaticnews_list.html'
-    paginate_by = 10
     queryset = AutoNews.objects.order_by('-id')
+    paginate_by = 10
 
     def get_context_data(self, **kwargs):
-        context = super(AutomaticNews, self).get_context_data(**kwargs)
+        context = super(NewsImageList, self).get_context_data(**kwargs)
         context['subMenuDict'] = getSubMenuDict()
         return context
 
     def get(self, request, company):
-        filter_list = filter(lambda x: x.company == company, AutoNews.objects.all())
-        context = {'filter_list' : filter_list}
+        filters = list(filter(lambda x: x.company == company, AutoNews.objects.all()))
+        filters.reverse()
+        paginator = Paginator(filters, self.paginate_by)
+        page = request.GET.get('page')
+        filter_list = paginator.get_page(page)
+        context = {'filter_list': filter_list}
         return render(request, self.template_name, context)
 
 class AutomaticNewsDetail(DetailView):
     model = AutoNews
     template_name = 'web/automaticnews_detail.html'
-
     def get_context_data(self, **kwargs):
         context = super(AutomaticNewsDetail, self).get_context_data(**kwargs)
         context['subMenuDict'] = getSubMenuDict()
