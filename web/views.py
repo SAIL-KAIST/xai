@@ -188,7 +188,7 @@ def githubRedirect(request):
 class RelatedProject(ListView):
     model = RelatedProject
     template_name = 'web/relatedproject.html'
-
+    queryset = RelatedProject.objects.order_by('-id')
     paginate_by = 4 #how much show your list
 
     def get_context_data(self, **kwargs):
