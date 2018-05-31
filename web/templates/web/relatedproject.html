@@ -25,8 +25,8 @@
         <div class="dl-horizontal" style="font-size: 15pt">
           <dt>Institutions : </dt><dd>{{ project.Institutions }}</dd>
           <dt>Authors : </dt><dd>{{ project.Authors }}</dd>
-          <dt>Publication :</dt><dd><a href="{{ project.Publication_title }}">{{ project.Publication_title }} </a></dd>
-          <dt>Source code : </dt><dd><a href="https://github.com/VigneshSrinivasan10/interprettensor">{{ project.Sourcecode }}</a></dd>
+          <dt>Publication :</dt><dd><a href="{{ project.Publication_link}}">{{ project.Publication_title }} </a></dd>
+          <dt>Source code : </dt><dd><a href="{{ project.Sourcecode }}">{{ project.Sourcecode }}</a></dd>
       <br/><br/>
      {% endfor %}
 
