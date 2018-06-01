@@ -136,7 +136,7 @@ class AutomaticNewsList(ListView):
     model = AutoNews
     template_name = 'web/automaticnews_list.html'
     queryset = AutoNews.objects.order_by('-id')
-    paginate_by = 10
+    paginate_by = 20
 
     def get_context_data(self, **kwargs):
         context = super(NewsImageList, self).get_context_data(**kwargs)

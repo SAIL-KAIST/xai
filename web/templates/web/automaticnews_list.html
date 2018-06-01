@@ -33,7 +33,11 @@
           <tbody>
           {% for autonews in filter_list %}
               <tr>
-                  <td>{{ forloop.counter   }}</td>
+                {% if filter_list.has_next %}
+                  <td>{{ filter_list.next_page_number.count }}</td>
+                {% else %}
+                 <td>{{ forloop.revcounter   }}</td>
+                {% endif %}
                   <td><a href="{% url 'autonews_detail' pk=autonews.id %}">{{ autonews.title }}</a></td>
                   <td> 설명가능인공지능 </td>
                   <td>{{ autonews.datetime | date:'Y-m-d H:i' }}</td>
