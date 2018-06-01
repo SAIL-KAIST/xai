@@ -990,6 +990,7 @@ color:#353535;
 
 /* --- pricing box alt 1 --- */
 .pricing-box-alt {
+    border : 0px;
 	background:#fcfcfc;
 	position:relative;
 	margin:0 0 20px 0;

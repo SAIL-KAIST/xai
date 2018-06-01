@@ -4,3 +4,4 @@ xai/settings.py
 static/upload/AutomaticNews
 .idea/
 venv/
+web/migrations

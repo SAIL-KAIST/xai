@@ -185,6 +185,7 @@ class RelatedProject(models.Model):
     Authors = models.CharField(max_length=200, null=True)
     Publication_title = models.CharField(max_length=200, null=True)
     Publication_link = models.CharField(max_length=200, null=True)
+    Related_link = models.CharField(max_length=200, null=True)
     Sourcecode =models.CharField(max_length=200, null=True)
     image = models.ImageField(upload_to='RelatedProject/')
     submenu_id = models.ForeignKey('SubMenu', on_delete=models.PROTECT)
