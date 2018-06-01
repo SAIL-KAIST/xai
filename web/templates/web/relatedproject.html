@@ -26,9 +26,9 @@
           <dt>Institutions : </dt><dd>{{ project.Institutions }}</dd>
           <dt>Authors : </dt><dd>{{ project.Authors }}</dd>
           <dt>Publication :</dt><dd><a href="{{ project.Publication_link}}">{{ project.Publication_title }} </a></dd>
-          <dt>Source code : </dt><dd><a href="{{ project.Sourcecode }}">{{ project.Sourcecode }}</a></dd>
+          <dt>Source Code : </dt><dd><a href="{{ project.Sourcecode }}">{{ project.Sourcecode }}</a></dd>
           {% if project.Related_link is not null %}
-          <dt>Related Link : </dt><dd><a href="{{ project.Related_link }}">{{ project.Related_link }}</a></dd>
+          <dt>Further Info: </dt><dd><a href="{{ project.Related_link }}">{{ project.Related_link }}</a></dd>
           {% endif %}
       <br/><br/>
      {% endfor %}
