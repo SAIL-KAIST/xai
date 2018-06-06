@@ -1,6 +1,5 @@
 {% extends "web/index.html" %}
 {% block content %}
-{% load custom_tag %}
 
 <section id="inner-headline">
   <div class="container">
@@ -33,7 +32,7 @@
           <tbody>
           {% for autonews in filter_list %}
               <tr>
-                  <td>{{ rev_num|sub:forloop.counter0}}</td>
+                  <td>{{ rev_num|add:forloop.counter0}}</td>
                   <td><a href="{% url 'autonews_detail' pk=autonews.id %}">{{ autonews.title }}</a></td>
                   <td> 설명가능인공지능 </td>
                   <td>{{ autonews.datetime | date:'Y-m-d H:i' }}</td>
@@ -69,4 +68,5 @@
     </div>
 </section>
 
-{% endblock content %}
+<!--
+{% endblock content %}-->

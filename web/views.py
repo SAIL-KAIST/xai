@@ -156,6 +156,7 @@ class AutomaticNewsList(ListView):
         mod = paginator.count % self.paginate_by
         rev_num = (paginator.num_pages-int(page))*self.paginate_by + mod
         print("rev_num", rev_num)
+
         context = {'filter_list': filter_list, 'rev_num' : rev_num}
         return render(request, self.template_name, context)
 
