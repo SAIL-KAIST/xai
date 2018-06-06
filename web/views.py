@@ -9,7 +9,6 @@ from django.views.generic import ListView, DetailView
 from django.core.paginator import Paginator, EmptyPage, InvalidPage, PageNotAnInteger
 
 from .forms import CommunityForm
-# Create your views here.
 
 def index(request):
     # topMenus = TopMenu.objects.all()
@@ -136,7 +135,7 @@ class AutomaticNewsList(ListView):
     model = AutoNews
     template_name = 'web/automaticnews_list.html'
     queryset = AutoNews.objects.order_by('-id')
-    paginate_by = 20
+    paginate_by = 10
 
     def get_context_data(self, **kwargs):
         context = super(NewsImageList, self).get_context_data(**kwargs)
@@ -152,7 +151,12 @@ class AutomaticNewsList(ListView):
         if page == None:
             page = 1
         filter_list = paginator.page(page)
-        context = {'filter_list': filter_list}
+
+        # counting page number
+        mod = paginator.count % self.paginate_by
+        rev_num = (paginator.num_pages-int(page))*self.paginate_by + mod
+        print("rev_num", rev_num)
+        context = {'filter_list': filter_list, 'rev_num' : rev_num}
         return render(request, self.template_name, context)
 
 class AutomaticNewsDetail(DetailView):
