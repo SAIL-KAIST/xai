@@ -153,18 +153,13 @@ class AutomaticNewsList(ListView):
         filter_list = paginator.page(page)
 
         # counting page number
-
         if filter_list.has_next() == False :
-            rev_num = 0
+            acc_num = 0
         else :
             mod = paginator.count % self.paginate_by
-            print(paginator.num_pages-int(page))
-            print(self.paginate_by)
-            print((paginator.num_pages - int(page))*self.paginate_by+ mod)
-            rev_num = (paginator.num_pages-int(page)-1)*self.paginate_by + mod
-        print("rev_num", rev_num)
+            acc_num = (paginator.num_pages-int(page)-1) * self.paginate_by + mod
 
-        context = {'filter_list': filter_list, 'rev_num' : rev_num}
+        context = {'filter_list': filter_list, 'acc_num' : acc_num}
         return render(request, self.template_name, context)
 
 class AutomaticNewsDetail(DetailView):
