@@ -31,6 +31,9 @@ urlpatterns = [
     url(r'^opensource/community/(?P<pk>\d+)/$', views.CommunityDetail.as_view(), name='community_detail'),
     url(r'^opensource/community/new/$', views.community_new, name='community_new'),
 
+    # Symposium
+    url(r'^Symposium/2018/$', views.Symposium.as_view(), name='2018Symposium'),
+
     #contact
     url(r'^contact/$', views.Contact, name='contact'),
 ]

@@ -48,12 +48,19 @@
 						<li><a href ='{% url 'community' %}'>Community</a></li>
                 	 </ul>
                 </li>
+				<li class="dropdown">
+                	 <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Symposium<b class=" icon-angle-down"></b></a>
+                	 <ul class="dropdown-menu">
+                	 	<li><a href ='{% url '2018Symposium' %}'>2018 XAI Symposium</a></li>
+                	 </ul>
+                </li>
                 <li><a href="{% url 'contact' %}">Contact</a></li>
             </ul>
         </div>
     </div>
 </div>
 {% endblock header %}
+
 {% block content %}
 <section id="featured">
 	<!-- start slider -->
@@ -147,8 +154,13 @@
 		<!-- end divider -->
 	</div>
 	</section>
+
+{% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+{% endfor %}
 {% endblock content %}
 {% block script %}
 {% endblock script %}
+
 </body>
 </html>
