@@ -18,7 +18,7 @@ def index(request):
     #     subMenuDict[topMenu.title] = subMenus
     # return render(request, 'web/index.html', {'topMenus' : topMenus, 'subMenuDict' : subMenuDict})
 
-    return render(request, 'web/index.html',  {'subMenuDict':getSubMenuDict()})
+    return render(request, 'web/index.html', {'subMenuDict':getSubMenuDict()})
 
 def getSubMenuDict():
     topMenus = TopMenu.objects.all()
@@ -40,15 +40,6 @@ class GreetingPage(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(GreetingPage, self).get_context_data(**kwargs)
-        context['subMenuDict'] = getSubMenuDict()
-        return context
-
-class Symposium(TemplateView):
-    model = Greeting
-    template_name = 'web/2018Symposium.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(Symposium, self).get_context_data(**kwargs)
         context['subMenuDict'] = getSubMenuDict()
         return context
 
@@ -252,3 +243,22 @@ def Contact(request):
         subMenus = SubMenu.objects.filter(topmenu_id=topMenu.id)
         subMenuDict[topMenu.title] = subMenus
     return render(request, 'web/contact.html', {'subMenuDict':getSubMenuDict()})
+
+#### temporary use greeting model
+class Symposium(TemplateView):
+    model = Greeting
+    template_name = 'web/2018Symposium.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(Symposium, self).get_context_data(**kwargs)
+        context['subMenuDict'] = getSubMenuDict()
+        return context
+
+class Popup(TemplateView):
+    model = Greeting
+    template_name = 'web/popup.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(Popup, self).get_context_data(**kwargs)
+        context['subMenuDict'] = getSubMenuDict()
+        return context

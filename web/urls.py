@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 
 from . import views
 
@@ -33,7 +33,9 @@ urlpatterns = [
 
     # Symposium
     url(r'^Symposium/2018/$', views.Symposium.as_view(), name='2018Symposium'),
+    url(r'^popups/2018/$', views.Popup.as_view(), name='popup'),
 
     #contact
     url(r'^contact/$', views.Contact, name='contact'),
+
 ]
