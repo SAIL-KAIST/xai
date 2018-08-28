@@ -1,168 +1,204 @@
-{% extends "web/index.html" %}
-{% block content %}
-{% load staticfiles%} <!-- static을 사용하는 모든 개별 html에서 별도로 호출해야함 -->
-   <section id="inner-headline">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-12">
-               <ul class="breadcrumb">
-                  <li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
-                  <li class="active">Symposium</li>
-               </ul>
-            </div>
-         </div>
-      </div>
-   </section>
-   <section id="content">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-12">
-
-                    <div class="post-image">
-                          <div class="post-heading">
-                             <h1>2018 Explainable AI Symposium</h1>
-                             <h4>Friday, October 12th, 2018</h4>
-                             <h4>@ COEX ASEM Hall(COEX ASEM Ballroom), Seoul KOREA </h4>
-                          </div>
-                        <div class="col-lg-12">
-                            <div class="row">
-                                    <a href="#" class="btn btn-theme">Invitation</a>
-                                    <a href="#" class="btn btn-primary">Keynote Speakers</a>
-                                    <a href="#" class="btn btn-danger">Program</a>
-                                    <a href="#" class="btn btn-warning">Registration</a>
-                                    <a href="#" class="btn btn-info">Location</a>
-                                    <a href="#" class="btn btn-success">Organization</a>
-                            </div>
-                        </div>
-                    </div>
-                                 <!-- divider -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="solidline">
-                        </div>
-                    </div>
-                </div>
-                <!-- end divider -->
-                <br><br>
-                <article>
-                 <p class="lead">
-                    We are pleased to invite you to <strong>2018 Explainable AI Symposium</strong> sponsored by the Korea Government, Ministry of Science and ICT.
-                    There is growing interests on transparent AI technologies which could provide explanation of decisions.
-                    Recently, the Korea Government established an Explainable Artificial Intelligence (XAI) Center to build generally applicable
-                     XAI systems for healthcare and finance <a href="http://xai.unist.ac.kr/">http://xai.unist.ac.kr/</a>.<br><br>
-                     We invited top researchers/research organizations actively working on XAI problems. <strong>Prof. Klaus-Robert Müller </strong> (a pioneer in explaining Deep Learning models)
-                     and <strong>Dr. David Gunning</strong>(the DARPA XAI Program Manager) will deliver keynote speeches.
-                    Korean researchers who are actively working in the explainable AI project will present their work.<br><br>
-                    The symposium will be in Seoul Korea, October 12th, 2018 at Seoul COEX. We wish to see many of you in the symposium.
-                     <br><br> <br>
-
-		Program Chairs,<br>
-		Jaesik Choi, Directory of UNIST Explainable Artificial Intelligence Center<br>
-		Seong-Whan Lee, Chairman of Korean Artificial Intelligence Society
-                 </p>
-
-                </article>
-                <!-- divider -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="solidline">
-                        </div>
-                    </div>
-                </div>
-                <!-- end divider -->
-                <!-- Descriptions -->
-				<div class="row">
-					<div class="col-lg-6">
-						<!-- Description -->
-                       <a href="#" class="btn btn-primary btn-large">Keynote Speakers</a>
-                        <br>
-                        <br>
-                  <ul id="thumbs" class="portfolio">
-
-                        <li class="item-thumbs col-lg-6 design"  >
-                           <img src={% static "img/member/muller2.png" %} width=300 height=350><br>
-                           <span class="lead"><Strong>Klaus-Robert Müller</Strong></span><br>
-                           <span class="lead">a pioneer in explaining Deep Learning models</span><br>
-                        </li>
-
-                         <li class="item-thumbs col-lg-6 design" >
-                           <img src={% static "img/member/david.png" %} width=300 height=350><br>
-                           <span class="lead"><Strong>David Gunning</Strong></span><br>
-                           <span class="lead">the DARPA XAI Program Manager</span><br>
-
-                        </li>
-                  </ul>
-		  </div>
+{% extends "web/index.html" %} {% block content %} {% load staticfiles%}
+<!-- static을 사용하는 모든 개별 html에서 별도로 호출해야함 -->
+<section id="inner-headline">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<ul class="breadcrumb">
+				<li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+				<li class="active">Symposium</li>
+			</ul>
 		</div>
-		    
-		<!-- divider -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="solidline">
-                        </div>
-                    </div>
-                </div>
-                <!-- end divider -->
-                <!-- Descriptions -->
-		<div class="row">
-		  <div class="col-lg-6">
-		   <a href="#" class="btn btn-danger btn-large">Program</a>
-                        <br>
-                 <p class="lead">
-               <strong>Program</strong><br>
-                    TBD.
-                 </p>
-		 </div>
-		</div>
-                <!-- divider -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="solidline">
-                        </div>
-                    </div>
-                </div>
-                <!-- end divider -->
-                <!-- Descriptions -->
-		<div class="row">
-		   <div class="col-lg-6">
-                     <a href="#" class="btn btn-warning btn-large">Registration</a>
-                     <p class="lead">
-                        A link to http://aiassociation.kr/.
-                     </p>
-	 	   </div>
-		</div>
-		    
-                <!-- divider -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="solidline">
-                        </div>
-                    </div>
-                </div>
-                <!-- end divider -->
-                <a href="#" class="btn btn-info btn-large">Location</a>
-                <br>                <br><br>
-                <div class="row">
-					<div class="col-lg-6">
-                        <br>
-                        <div class="map">
-                            <div id="naver-map" style="width:100%;height:400px;"></div>
-                        </div>
-                        <p class="lead">Coex<br />
-513, Yeongdong-daero, Gangnam-gu<br />Seoul 06164 Republic of Korea </p>
-<p class="lead"><a href="https://goo.gl/maps/tH9cz2FPmSB2" target="_blank"><i class="glyphicon glyphicon-map-marker kl-icon-white"></i> Open in Google Maps</a><br />
-<a href="http://naver.me/GbmrgtLi" target="_blank"><i class="glyphicon glyphicon-map-marker kl-icon-white"></i> Open in Naver Maps</a></p></div>
+	</div>
+</div>
+</section>
+<section id="content">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="post-image">
+				<div class="post-heading">
+					<h1>2018 Explainable AI Symposium</h1>
+					<h4>Friday, October 12th, 2018</h4>
+					<h4>@ COEX ASEM Hall(COEX ASEM Ballroom), Seoul KOREA </h4>
+				</div>
+				<div class="col-lg-12">
+					<div class="row">
+						<a href="#Invitation" class="btn btn-theme">Invitation</a>
+						<a href="#Keynote" class="btn btn-primary">Keynote Speakers</a>
+						<a href="#Program" class="btn btn-danger">Program</a>
+						<a href="#Registration" class="btn btn-warning">Registration</a>
+						<a href="#Location" class="btn btn-info">Location</a>
+						<a href="#Organization" class="btn btn-success">Organization</a>
+					</div>
+				</div>
+			</div>
+			<!-- divider -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="solidline">
+					</div>
+				</div>
+			</div>
+			<!-- end divider -->
+			<a href="#Invitation" class="btn btn-theme btn-large">Invitation</a>
+			<br>
+			<br>
+			<article>
+			<p class="lead">
+				 We are pleased to invite you to <strong>2018 Explainable AI Symposium</strong> sponsored by the Korea Government, Ministry of Science and ICT. There is growing interests on transparent AI technologies which could provide explanation of decisions. Recently, the Korea Government established an Explainable Artificial Intelligence (XAI) Center to build generally applicable XAI systems for healthcare and finance <a href="http://xai.unist.ac.kr/">http://xai.unist.ac.kr/</a>.<br>
+				<br>
+				 We invited top researchers/research organizations actively working on XAI problems. <strong>Prof. Klaus-Robert Müller </strong> (a pioneer in explaining Deep Learning models) and <strong>Dr. David Gunning</strong>(the DARPA XAI Program Manager) will deliver keynote speeches. Korean researchers who are actively working in the explainable AI project will present their work.<br>
+				<br>
+				 The symposium will be in Seoul Korea, October 12th, 2018 at Seoul COEX. We wish to see many of you in the symposium. <br>
+				<br>
+				<br>
+				 Program Chairs,<br>
+				 Jaesik Choi, Directory of UNIST Explainable Artificial Intelligence Center<br>
+				 Seong-Whan Lee, Chairman of Korean Artificial Intelligence Society
+			</p>
+			</article>
+			<!-- divider -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="solidline">
+					</div>
+				</div>
+			</div>
+			<!-- end divider -->
+			<!-- Descriptions -->
+			<div class="row">
+				<div class="col-lg-6">
+					<!-- Description -->
+					<a href="#" class="btn btn-primary btn-large" id="Keynote">Keynote Speakers</a>
+					<br>
+					<br>
+					<ul class="portfolio">
+						<li class="item-thumbs col-lg-6 design">
+						<img src="/static/img/member/muller2.png" %} width=300 height=350><br>
+						<span class="lead"><strong>Klaus-Robert Müller</strong></span><br>
+						<span class="lead">a pioneer in explaining Deep Learning models</span><br>
+						</li>
+						<li class="item-thumbs col-lg-6 design">
+						<img src="/static/img/member/david.png" %} width=300 height=350><br>
+						<span class="lead"><strong>David Gunning</strong></span><br>
+						<span class="lead">the DARPA XAI Program Manager</span><br>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- divider -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="solidline">
+					</div>
+				</div>
+			</div>
+			<!-- end divider -->
+			<!-- Descriptions -->
+			<div class="row">
+				<div class="col-lg-6">
+					<a href="#" class="btn btn-danger btn-large" id="Program">Program</a>
+					<br><br>
+					<p class="lead">
+						<strong>Program</strong><br>
+						 TBD.
+					</p>
+				</div>
+			</div>
+			<!-- divider -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="solidline">
+					</div>
+				</div>
+			</div>
+			<!-- end divider -->
+			<!-- Descriptions -->
+			<div class="row">
+				<div class="col-lg-6">
+					<a href="#" class="btn btn-warning btn-large" id="Registration">Registration</a>
+					<br><br>
+					<p class="lead">
+						 A link to <a href="http://aiassociation.kr/">http://aiassociation.kr/</a>
+					</p>
+				</div>
+			</div>
+			<!-- divider -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="solidline">
+					</div>
+				</div>
+			</div>
+			<!-- end divider -->
+			<a href="#" class="btn btn-info btn-large" id="Location">Location</a>
+			<br>
+			<br>
+			<br>
+			<div class="row">
+				<div class="col-lg-6">
+					<br>
+					<div class="map">
+						<div id="naver-map" style="width:100%;height:400px;">
+						</div>
+					</div>
+					<p class="lead">
+						Coex<br/>
+						513, Yeongdong-daero, Gangnam-gu<br/>Seoul 06164 Republic of Korea
+					</p>
+					<p class="lead">
+						<a href="https://goo.gl/maps/tH9cz2FPmSB2" target="_blank"><span class="glyphicon glyphicon-map-marker kl-icon-white"></span> Open in Google Maps</a><br/>
+						<a href="http://naver.me/GbmrgtLi" target="_blank"><span class="glyphicon glyphicon-map-marker kl-icon-white"></span> Open in Naver Maps </a>
+					</p>
+				</div>
+			</div>
+			<a href="#" class="btn btn-success btn-large" id="Organization">Organization</a>
+			<br>
+			<br>
+			<div class="lead">
+				<strong> Hosted by</strong><br><br>
+				<ul class="portfolio">
+					<li class="item-thumbs col-lg-4 design">
+					<img src="/static/img/logos/ministry_of_ST.png" width="150" height="50"/><br><br>
+					<span class="lead">Ministry of Science and Technology </span>
+					</li>
+					<li class="item-thumbs col-lg-4 design">
+					<img src="/static/img/logos/IITP.png" width="150" height="50"/><br><br>
+					<span class="lead">Institute for Information and communications Technology Promotion (IITP)</span>
+					</li>
+				</ul>
+			</div>
+			<div class="row">
+			</div>
+			<div class="lead">
+				<strong>Organized by </strong><br><br>
+				<ul class="portfolio">
+					<li class="item-thumbs col-lg-4 design">
+					<img src="/static/img/logos/XAIC_logo.png" width="150" height="50"/><br><br>
+					<span class="lead">UNIST Explainable Artificial Intelligence Center</span>
+					</li>
+					<li class="item-thumbs col-lg-4 design">
+					<img src="/static/img/logos/AI_Association.png" width="200" height="50"/><br><br>
+					<span class="lead">Korean Artificial Intelligence Association</span>
+					</li>
+				</ul>
+			</div>
 
-                     </div>
-                 </div>
-         </div>
-      </div>
-   </section>
-{% endblock content %}
-
-{% block script %}
-	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=g9DAE7AOMF4rEJUbJ0Kr"></script>
-	<script>
+	</div>
+</div>
+</section>
+<!-- divider -->
+<div class="row">
+	<div class="col-lg-12">
+		<div class="solidline">
+		</div>
+	</div>
+</div>
+<!-- end divider -->
+ {% endblock content %} {% block script %}
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=g9DAE7AOMF4rEJUbJ0Kr"></script>
+<script>
 		// http://blog.goodkiss.co.kr/entry/ 좌표값 알아내는 사이트
 		var mapOptions = {
 		    center: new naver.maps.LatLng(37.5130620, 127.0586440),
@@ -172,48 +208,3 @@
 		var marker = new naver.maps.Marker({position: new naver.maps.LatLng(37.5130620, 127.0586440), map:map})
 	</script>
 {% endblock script %}
-
-                <!-- divider -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="solidline">
-                        </div>
-                    </div>
-                </div>
-                <!-- end divider -->
-                <a href="#" class="btn btn-danger btn-large">Organization</a>
-                <article>
-                 <p class="lead">
-                    Hosted by <br>
-                 </p>
-                 <p class="lead">
-                  <ul id="thumbs" class="portfolio">
-                    <li class="item-thumbs col-lg-4 design">
-		       <img src="img/logos/ministry_of_ST.png" width="150" height="50"/><br>
- <span class="lead">Ministry of Science and Technology </span>
-                    </li>
-                    <li class="item-thumbs col-lg-4 design" >
-	               <img src="img/logos/IITP.png" width="150"  height="50"/><br>
-<span class="lead">Institute for Information and communications Technology Promotion (IITP)</span>
-                    </li>
-                   </ul>
-                 </p>	
-                <div class="row">
-                    <div class="col-lg-12">
-                        </div>
-                    </div>
-                </div>
-                 <p class="lead">
-		    Organized by <br>
-                  <ul id="thumbs" class="portfolio">
-                    <li class="item-thumbs col-lg-4 design" >
-	               <img src="img/logos/XAIC_logo.png" width="150"  height="50"/><br>
-<span class="lead">UNIST Explainable Artificial Intelligence Center</span>
-                    </li>
-                    <li class="item-thumbs col-lg-4 design" >
-	               <img src="img/logos/AI_Association.gif" width="150"  height="50"/><br>
-<span class="lead">Korean Artificial Intelligence Association</span>
-                    </li>
-                   </ul>
-                 </p>
-                </article>
