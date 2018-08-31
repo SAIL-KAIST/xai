@@ -11,7 +11,7 @@ urlpatterns = [
     url(r'^about/member/$', views.MemberImageList.as_view(), name='member'),
     url(r'^about/lab/$', views.LabTextList.as_view(), name='lab'),
     url(r'^about/project/$', views.ProjectPage.as_view(), name='project'),
-   
+
     url(r'^news&info/notice/$', views.NoticeTextList.as_view(), name='notice'),
     url(r'^news&info/news/$', views.NewsImageList.as_view(), name='news'),
     url(r'^news&info/gallery/$', views.GalleryImageList.as_view(), name='gallery'),
@@ -33,6 +33,7 @@ urlpatterns = [
 
     # Symposium
     url(r'^Symposium/2018/$', views.Symposium.as_view(), name='2018Symposium'),
+    url(r'^Symposium/2018/korean/$', views.Symposium_ko.as_view(), name='2018Symposium_ko'),
     url(r'^popups/2018/$', views.Popup.as_view(), name='popup'),
 
     #contact

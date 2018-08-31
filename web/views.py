@@ -254,6 +254,15 @@ class Symposium(TemplateView):
         context['subMenuDict'] = getSubMenuDict()
         return context
 
+class Symposium_ko(TemplateView):
+    model = Greeting
+    template_name = 'web/2018Symposium_ko.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(Symposium_ko, self).get_context_data(**kwargs)
+        context['subMenuDict'] = getSubMenuDict()
+        return context
+
 class Popup(TemplateView):
     model = Greeting
     template_name = 'web/popup.html'
