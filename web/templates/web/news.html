@@ -25,12 +25,11 @@
 					</div>
 					<img src="/static/upload/{{ news.image }}" alt="" />
 					</div>
-	   				<p>{{ news.content }}</p>
+	   				<p class="lead">{{ news.content }}</p>
 				    <div class="bottom-article">
 					<ul class="meta-post">
 						<li><i class="icon-calendar">{{ news.date}}</i></li>
 					</ul>
-					<a href="{{ news.writer}}" class="pull-right">Continue reading <i class="icon-angle-right"></i></a>
 				</div>
 			</article>
 			{% endfor %}
