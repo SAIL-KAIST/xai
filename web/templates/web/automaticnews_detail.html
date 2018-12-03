@@ -40,7 +40,11 @@
                 <br/>
                 <div class="caption">
                     <span class="id">그림 1</span>
-                    <span class="content">주가 데이터(왼쪽)과 사후 분포 및 전망 예측(오른쪽)</span>
+                    {% if  autonews.submenu_id_id == 2 %}
+                     <span class="content">주가 데이터(왼쪽)과 사후 분포 및 전망 예측(오른쪽)</span>
+                    {% elif autonews.submenu_id_id == 3 %}
+                     <span class="content">선물가격 데이터(왼쪽)과 사후 분포 및 전망 예측(오른쪽)</span>
+                    {% endif %}
                 </div>
         <hr class="endfigure"/>
 
