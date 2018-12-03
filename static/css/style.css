@@ -325,9 +325,10 @@ ul.nav li.dropdown a {
 
 #featured .flexslider {
 	padding:0;
-	margin: 50px 0 30px; 
+	margin: 0;
 	background: #fff; 
-	position: relative; 
+	position: relative;
+	min-height:600px;
 	zoom: 1;
 }
 
@@ -355,8 +356,8 @@ section.callaction {
 #content {
 	position:relative;
 	background:#fff;
-	padding:50px 0 30px 0;
-	min-height: 650px;
+	padding:50px 0px 0;
+	min-height: 300px;
 }
 
 #content img {
