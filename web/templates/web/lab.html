@@ -15,25 +15,23 @@
 
 <section id="content">
     <div class="container">
-        <div class="raw">
 
-            {% for lab in object_list %}
-            <div class="col-lg-3">
-                <div class="cta-text">
-                     <h3>{{ lab.name }}</h3>
-                </div>
-                <dl>
-                    <dt>Professor/PI</dt>
-                    <dd>{{ lab.professor }}</dd>
-                    <dt>Research on</dt>
-                    <dd>{{ lab.research_on }}</dd>
-                    <dt>Website</dt>
-                    <dd><a href="{{ lab.link }}">{{ lab.link }}</a></dd>
-                </dl>
+        {% for lab in object_list %}
+        <div class="col-lg-12">
+            <div >
+                 <h3>{{ lab.name }}</h3>
             </div>
-            {% endfor %}
-
+            <dl>
+                <dt>Professor/PI</dt>
+                <dd>{{ lab.professor }}</dd>
+                <dt>Research on</dt>
+                <dd>{{ lab.research_on }}</dd>
+                <dt>Website</dt>
+                <dd><a href="{{ lab.link }}">{{ lab.link }}</a></dd>
+            </dl>
         </div>
+        {% endfor %}
+
     </div>
 </section>
 {% endblock content %}
