@@ -15,102 +15,137 @@
    </section>
    <section id="content">
       <div class="container">
-         <div class="row">
-            <div class="col-lg-12">
-               <ul class="portfolio-categ filter">
-                  <!-- <li class="all active"><a href="/member/">All</a></li> -->
-                  <li class="UNIST"><a href="#" title="">UNIST</a></li>
-                  <li class="KOREA"><a href="#" title="">KOREA Uni.</a></li>
-                  <li class="YONSEI"><a href="#" title="">YONSEI Uni.</a></li>
-                  <li class="YONSEI"><a href="#" title="">YONSEI Uni.</a></li>
-                  <li class="KAIST"><a href="#" title="">KAIST</a></li>
-                  </li>
-                  <li class="AItrics"><a href="#" title="">AItrics</a></li>
-               </ul>
-               <div class="clearfix">
-               </div>
-                  <section id="projects">
-                     <ul id="thumbs" class="portfolio">
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs col-lg-3 design" data-id="id-0" data-type="UNIST">
-                           <img src={% static "img/member/jaesik.png" %}><br>
-                           <span><Strong>Jaesik Choi</Strong></span><br>
-                           <span>Associate Professor</span><br>
-                           <span>UNIST</span>
-                        </li>
-                        <!-- End Item Project -->
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs col-lg-3 design" data-id="id-1" data-type="KAIST">
-                           <img src={% static "img/member/seongju.png" %}><br>
-                           <span><Strong>Seongju Hwang</Strong></span><br>
-                           <span>Assistant Professor</span><br>
-                           <span>KAIST</span>
-                        </li>
-                        <!-- End Item Project -->
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs col-lg-3 design" data-id="id-2" data-type="UNIST">
-                           <img src={% static "img/member/byungki.png" %}><br>
-                           <span><Strong>Byungki Seo</Strong></span><br>
-                           <span>Assistant Professor</span><br>
-                           <span>UNIST</span>
-                        </li>
-                        <!-- End Item Project -->
-                     <div class="clearfix"></div> <!--줄 임의로 나눠주는 클래스, 이걸 안넣으면 한줄에 4개씩 들어가려고 하면서 엄청 이상해짐 ㅠㅠ   -->
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs col-lg-3 design" data-id="id-0" data-type="KOREA">
-                           <img src={% static "img/member/seonghwan.png" %}><br>
-                           <span><Strong>Seong-Whan Lee</Strong></span><br>
-                           <span>Professor</span><br>
-                           <span>KOREA University</span>
-                        </li>
-                        <!-- End Item Project -->
-                        <!-- Item Project and Filter Name -->
-                         <li class="item-thumbs col-lg-3 design" data-id="id-4" data-type="KOREA">
-                           <img src={% static "img/member/heungil.png" %} style="width:150px"><br>
-                           <span><Strong>Heung-Il Suk</Strong></span><br>
-                           <span>Assistant Professor</span><br>
-                           <span>KOREA University</span>
-                        </li> 
-                        <!-- End Item Project -->
-                        <!-- Item Project and Filter Name -->
-                         <li class="item-thumbs col-lg-3 design" data-id="id-1" data-type="KOREA">
-                           <img src="/static/img/member/muller.png" style="width:150px"><br>
-                           <span><Strong>K.-R. Müller</Strong></span><br>
-                           <span>Professor</span><br>
-                           <span>KOREA University</span>
-                        </li>
-                        <!-- End Item Project -->
-                     <div class="clearfix">
-                     </div>   
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs col-lg-3 design" data-id="id-2" data-type="YONSEI">
-                           <img src={% static "img/member/gwangjun.png" %}><br>
-                           <span><Strong>Gwangjun Kim</Strong></span><br>
-                           <span>Associate Professor</span><br>
-                           <span>YONSEI University</span>
-                        </li>
-                        <!-- End Item Project -->   
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs col-lg-3 design" data-id="id-2" data-type="KAIST">
-                           <img src={% static "img/member/eunho.png" %}><br>
-                           <span><Strong>Eunho Yang</Strong></span><br>
-                           <span>Assistant Professor</span><br>
-                           <span>KAIST</span>
-                        </li>
-                        <!-- End Item Project -->   
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs col-lg-3 design" data-id="id-7" data-type="AItrics">
-                           <img src={% static "img/member/jingyu.png" %}><br>
-                           <span><Strong>Jinkyu Yoo</Strong></span><br>
-                           <span>CEO</span><br>
-                           <span>AItrics</span>
-                        </li>
-                        <!-- End Item Project -->                        
-                     </ul>
-                  </section>
-               </div>
-            </div>
-         </div>
+         <table >
+            <tr><STRONG>TEAM1 : Machine learning technology for learning explainable causality of decision making</STRONG></tr><br><br>
+            <tr>
+               <td >
+                  <img style="width:130px;height:170px;border-spacing:100px" src={% static "img/member/hsj.jpg" %}><br>
+                  <span><Strong>Seongju Hwang</Strong></span><br>
+                  <span>KAIST</span><br>
+                  <a href="http://www.sungjuhwang.com/"><i class="fa fa-home"></i></a>
+               </td>
+               <td class="tb"><div style="width:50px;height:10px;"></div></td>
+               <td class="tb">
+                  <img style="width:130px;height:170px" src={% static "img/member/yhy.jpg" %}><br>
+                  <span><Strong>Eunho Yang</Strong></span><br>
+                  <span>KAIST</span><br>
+                  <a href="http://mli.kaist.ac.kr"><i class="fa fa-home"></i></a>
+               </td>
+               <td class="tb"><div style="width:50px;height:10px;"></div></td>
+               <td>
+                  <img style="width:130px;height:170px" src={% static "img/member/sjw.png" %}><br>
+                  <span><Strong>Jinwoo Shin </Strong></span><br>
+                  <span>KAIST</span><br>
+                  <a href="http://alinlab.kaist.ac.kr/"><i class="fa fa-home"></i></a>
+               </td>
+            </tr>
+         </table><br>
+
+         <table >
+            <tr><STRONG>TEAM2 : Machine learning technology for learning explainable causality of decision making</STRONG></tr><br><br>
+            <tr>
+               <td >
+                  <img style="width:130px;height:170px" src={% static "img/member/phw.png" %}><br>
+                  <span><Strong>HyunWook Park</Strong></span><br>
+                  <span>KAIST</span><br>
+                  <a href="http://athena.kaist.ac.kr/"><i class="fa fa-home"></i></a>
+               </td>
+               <td class="tb"><div style="width:50px;height:10px;"></div></td>
+               <td class="tb">
+                  <img style="width:130px;height:170px" src={% static "img/member/nym.jpg" %}><br>
+                  <span><Strong>Yong Man Ro</Strong></span><br>
+                  <span>KAIST</span><br>
+                  <a href="http://ivylab.kaist.ac.kr/"><i class="fa fa-home"></i></a>
+               </td>
+               <td class="tb"><div style="width:50px;height:10px;"></div></td>
+               <td>
+                  <img style="width:130px;height:170px" src={% static "img/member/ohy.png" %}><br>
+                  <span><Strong>Alice Oh</Strong></span><br>
+                  <span>KAIST</span><br>
+                  <a href="https://aliceoh9.github.io/"><i class="fa fa-home"></i></a>
+               </td>
+               <td class="tb"><div style="width:50px;height:10px;"></div></td>
+               <td>
+                  <img style="width:130px;height:170px"  src={% static "img/member/hbh.jpg" %}><br>
+                  <span><Strong>Bohyung Han</Strong></span><br>
+                  <span>SNU</span><br>
+                  <a href="https://cv.snu.ac.kr/index.php/~bhhan/"><i class="fa fa-home"></i></a>
+               </td>
+                <td class="tb"><div style="width:50px;height:10px;"></div></td>
+               <td>
+                  <img style="width:130px;height:170px"  src={% static "img/member/hsw.jpg" %}><br>
+                  <span><Strong>Seungwon Hwang</Strong></span><br>
+                  <span>Yonsei Univ.</span><br>
+                  <a href="http://dilab.yonsei.ac.kr/"><i class="fa fa-home"></i></a>
+               </td>
+            </tr>
+         </table><br>
+
+         <table >
+            <tr><STRONG>TEAM3: Explainable interface to provide reasons for decision making</STRONG></tr><br><br>
+            <tr>
+               <td >
+                  <img style="width:130px;height:170px" src={% static "img/member/jaesik.png" %}><br>
+                  <span><Strong>Jaesik Choi</Strong></span><br>
+                  <span>UNIST</span><br>
+                  <a href="http://sail.unist.ac.kr"><i class="fa fa-home"></i></a>
+               </td>
+               <td><div style="width:50px;height:10px;"></div></td>
+               <td>
+                  <img style="width:130px;height:170px" src={% static "img/member/seonghwan.png" %}><br>
+                  <span><Strong>Seong-Whan Lee</Strong></span><br>
+                  <span>KOREA University</span><br>
+                  <a href="http://pr.korea.ac.kr"><i class="fa fa-home"></i></a>
+               </td>
+               <td><div style="width:50px;height:10px;"></div></td>
+               <td>
+                  <img style="width:130px;height:170px" src={% static "img/member/heungil.png" %}><br>
+                  <span><Strong>Heung-Il Suk</Strong></span><br>
+                  <span>KOREA University</span><br>
+                  <a href="https://www.ku-milab.org/"><i class="fa fa-home"></i></a>
+               </td>
+               <td ><div style="width:50px;height:10px;"></div></td>
+               <td>
+                  <img style="width:130px;height:170px"  src={% static "img/member/muller.png" %}><br>
+                  <span><Strong>K.-R. Müller</Strong></span><br>
+                  <span>KOREA University</span><br>
+                  <a href="http://heatmapping.org/"><i class="fa fa-home"></i></a>
+               </td>
+                <td ><div style="width:50px;height:10px;"></div></td>
+               <td>
+                  <img style="width:130px;height:170px"  src={% static "img/member/kke.png" %}><br>
+                  <span><Strong>Kee-Eung Kim </Strong></span><br>
+                  <span>KAIST</span><br>
+                  <a href="http://ailab.kaist.ac.kr/"><i class="fa fa-home"></i></a>
+               </td>
+            </tr>
+         </table><br>
+
+            <table >
+            <tr><STRONG>TEAM4: Real-world applications of Explainable AI</STRONG></tr><br><br>
+            <tr>
+               <td >
+                  <img style="width:130px;height:170px" src={% static "img/member/jingyu.png" %}><br>
+                  <span><Strong>Jinkyu Yoo</Strong></span><br>
+                  <span>AITRICS</span><br>
+                  <a href="https://www.aitrics.com"><i class="fa fa-home"></i></a>
+               </td>
+               <td><div style="width:50px;height:10px;"></div></td>
+               <td>
+                  <img style="width:130px;height:170px" src={% static "img/member/kjk.png" %}><br>
+                  <span><Strong>Kwangjoon Kim</Strong></span><br>
+                  <span>Yonsei Univ.</span><br>
+                  <a href="http://sev.iseverance.com/dept_clinic/center/SRP/doc/docprofile.asp?sno=3406&isClinic=Y"><i class="fa fa-home"></i></a>
+               </td>
+               <td><div style="width:50px;height:10px;"></div></td>
+               <td>
+                  <img style="width:130px;height:170px" src={% static "img/member/byungki.png" %}><br>
+                  <span><Strong>Byungki Seo</Strong></span><br>
+                  <span>UNIST</span><br>
+                  <a href="http://scholarworks.unist.ac.kr/researcher-profile?ep=2021"><i class="fa fa-home"></i></a>
+               </td>
+            </tr>
+         </table><br><br>
       </div>
    </section>
 {% endblock content %}

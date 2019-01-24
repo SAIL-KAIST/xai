@@ -2016,3 +2016,8 @@ article img.pull-right, article .align-right{
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
 }
+
+.member{
+ width:130px;
+ height:170px;
+}
