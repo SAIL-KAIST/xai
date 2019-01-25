@@ -15,10 +15,12 @@
 
 <section id="content">
     <div class="container">
+<div class="row">
+    <ul id="thumbs" class="portfolio">
 
-        {% for lab in object_list %}
-        <div class="col-lg-12">
-            <div >
+        {% for lab in object_list%}
+        <li class="item-thumbs col-lg-5" >
+            <div>
                  <h3>{{ lab.name }}</h3>
             </div>
             <dl>
@@ -29,9 +31,9 @@
                 <dt>Website</dt>
                 <dd><a href="{{ lab.link }}">{{ lab.link }}</a></dd>
             </dl>
-        </div>
+        </li>
         {% endfor %}
-
-    </div>
+    </ul>
+</div>
 </section>
 {% endblock content %}
