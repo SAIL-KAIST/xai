@@ -2,6 +2,7 @@ from django.conf.urls import url, include
 
 from . import views
 
+
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     # url(r'^(?P<subMenu>.+)/$', views.subMenu, name='subMenu'),
@@ -38,5 +39,4 @@ urlpatterns = [
 
     #contact
     url(r'^contact/$', views.Contact, name='contact'),
-
 ]

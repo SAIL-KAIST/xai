@@ -105,7 +105,6 @@ class GalleryImageList(ListView):
         context['subMenuDict'] = getSubMenuDict()
         return context
 
-
 #RESEARCH##########################################################################################################################
 class DemoresourceImageList(ListView):
     model = DemoResource
@@ -235,7 +234,7 @@ def community_new(request):
         form = CommunityForm()
     return render(request, 'web/community_edit.html', {'form':form})
 
-#Contact##########################################################################################################################
+#Contact##################################################################
 def Contact(request):
     topMenus = TopMenu.objects.all()
     subMenuDict = dict()
