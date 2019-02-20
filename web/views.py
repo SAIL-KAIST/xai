@@ -170,6 +170,14 @@ class AutomaticNewsDetail(DetailView):
         context['subMenuDict'] = getSubMenuDict()
         return context
 
+def Index(request):
+    topMenus = TopMenu.objects.all()
+    subMenuDict = dict()
+    for topMenu in topMenus:
+        subMenus = SubMenu.objects.filter(topmenu_id=topMenu.id)
+        subMenuDict[topMenu.title] = subMenus
+    return render(request, 'web/indexTemp.html', {'subMenuDict':getSubMenuDict()})
+
 class PublicationTextList(ListView):
     model = Publication
     template_name = 'web/publication.html'
