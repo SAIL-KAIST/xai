@@ -21,7 +21,7 @@ urlpatterns = [
     url(r'^research/automatic_news/detail/(?P<pk>\d+)/$', views.AutomaticNewsDetail.as_view(), name='autonews_detail'),
 
     # url(r'^research/demoresource/$', views.DemoresourceImageList.as_view(), name='demoresource'),
-    url(r'^research/unist_index/$', views.Index, name='unist_index'),
+    url(r'^finance_xai/$', views.Index, name='unist_index'),
     url(r'^research/publication/$', views.PublicationTextList.as_view(), name='publication'),
     url(r'^research/patent/$', views.PatentTextList.as_view(), name='patent'),
 
