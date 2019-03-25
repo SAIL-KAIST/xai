@@ -22,6 +22,7 @@ urlpatterns = [
 
     # url(r'^research/demoresource/$', views.DemoresourceImageList.as_view(), name='demoresource'),
     url(r'^research/unist_index/$', views.Index, name='unist_index'),
+    url(r'^research/stock_commodity/$', views.stock, name='stock_commodity'),
     url(r'^research/publication/$', views.PublicationTextList.as_view(), name='publication'),
     url(r'^research/patent/$', views.PatentTextList.as_view(), name='patent'),
 

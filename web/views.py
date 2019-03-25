@@ -169,6 +169,15 @@ class AutomaticNewsDetail(DetailView):
         context = super(AutomaticNewsDetail, self).get_context_data(**kwargs)
         context['subMenuDict'] = getSubMenuDict()
         return context
+##url(r'^research/stock_commodity/$', views.stock, name='stock_commodity'),
+
+def stock(request):
+    topMenus = TopMenu.objects.all()
+    subMenuDict = dict()
+    for topMenu in topMenus:
+        subMenus = SubMenu.objects.filter(topmenu_id=topMenu.id)
+        subMenuDict[topMenu.title] = subMenus
+    return render(request, 'web/stockTemp.html', {'subMenuDict':getSubMenuDict()})
 
 def Index(request):
     topMenus = TopMenu.objects.all()
