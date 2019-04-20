@@ -34,9 +34,10 @@ urlpatterns = [
     url(r'^opensource/community/new/$', views.community_new, name='community_new'),
 
     # Symposium
-    url(r'^Symposium/2018/$', views.Symposium.as_view(), name='2018Symposium'),
-    url(r'^Symposium/2018/korean/$', views.Symposium_ko.as_view(), name='2018Symposium_ko'),
+    url(r'^Symposium/2018/$', views.Symposium.as_view(), name='Symposium18'),
+    url(r'^Symposium/2018/korean/$', views.Symposium_ko.as_view(), name='Symposium18_ko'),
     url(r'^popups/2018/$', views.Popup.as_view(), name='popup'),
+    url(r'^workshop/2019/$', views.Workshop19.as_view(), name='Workshop19'),
 
     #contact
     url(r'^contact/$', views.Contact, name='contact'),

@@ -264,7 +264,7 @@ def Contact(request):
 #### temporary use greeting model
 class Symposium(TemplateView):
     model = Greeting
-    template_name = 'web/2018Symposium.html'
+    template_name = 'web/Symposium18.html'
 
     def get_context_data(self, **kwargs):
         context = super(Symposium, self).get_context_data(**kwargs)
@@ -273,10 +273,20 @@ class Symposium(TemplateView):
 
 class Symposium_ko(TemplateView):
     model = Greeting
-    template_name = 'web/2018Symposium_ko.html'
+    template_name = 'web/Symposium18_ko.html'
 
     def get_context_data(self, **kwargs):
         context = super(Symposium_ko, self).get_context_data(**kwargs)
+        context['subMenuDict'] = getSubMenuDict()
+        context['subMenuDict'] = getSubMenuDict()
+        return context
+
+class Workshop19(TemplateView):
+    model = Greeting
+    template_name = 'web/workshop19.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(Workshop19, self).get_context_data(**kwargs)
         context['subMenuDict'] = getSubMenuDict()
         return context
 
