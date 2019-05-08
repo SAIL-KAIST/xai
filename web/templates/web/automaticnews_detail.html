@@ -27,56 +27,54 @@
         <p class="indent"> <b>{{ autonews.prediction }}</b></p>
         <!--<hr class="figure"/>-->
         <br>
-                <div class="tabular">
-                    <table cellpadding="0" cellspacing="0" class="tabular" id="TBL-2">
-                        <tr id="TBL-2-1-" style="vertical-align:baseline;">
-                            <td class="td11" id="TBL-2-1-1" style="white-space:nowrap; text-align:center;">
-                                <img alt="pict" width="400px"  src="/static/upload/{{ autonews.image_raw }}"/>
-                            </td>
-                            <td class="td11" id="TBL-2-1-2" style="white-space:nowrap; text-align:center;">
-                                <img alt="pict" width="400px"  src="/static/upload/{{ autonews.image_predict }}"/>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <br/>
-                <div style="text-align:center;">
-                     <span class="id"><strong>[그림 1]</strong></span>
-                    {% if  autonews.submenu_id_id == 2 %}
-                     <span class="content">주가 데이터(왼쪽)과 사후 분포 및 전망 예측(오른쪽)</span>
-                    {% elif autonews.submenu_id_id == 3 %}
-                     <span class="content">선물가격 데이터(왼쪽)과 사후 분포 및 전망 예측(오른쪽)</span>
-                    {% endif %}
-                </div>
+        <div class="tabular">
+            <table cellpadding="0" cellspacing="0" class="tabular" id="TBL-2">
+                <tr id="TBL-2-1-" style="vertical-align:baseline;">
+                    <td class="td11" id="TBL-2-1-1" style="white-space:nowrap; text-align:center;">
+                        <img alt="pict" width="400px"  src="/static/upload/{{ autonews.image_raw }}"/>
+                    </td>
+                    <td class="td11" id="TBL-2-1-2" style="white-space:nowrap; text-align:center;">
+                        <img alt="pict" width="400px"  src="/static/upload/{{ autonews.image_predict }}"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="text-align:center;">
+             <span class="id"><strong>[그림 1]</strong></span>
+            {% if  autonews.submenu_id_id == 2 %}
+             <span class="content">주가 데이터(왼쪽)과 사후 분포 및 전망 예측(오른쪽)</span>
+            {% elif autonews.submenu_id_id == 3 %}
+             <span class="content">선물가격 데이터(왼쪽)과 사후 분포 및 전망 예측(오른쪽)</span>
+            {% endif %}
+        </div>
         <!--<hr class="endfigure"/>-->
         <br>
         <p class="indent"> {{ autonews.content3 }}</p>
         <br>
         <!--<hr class="figure"/>-->
-                <div class="tabular">
-                    <table cellpadding="0" cellspacing="0" class="tabular" id="TBL-2">
-                        <tr id="TBL-2-1-" style="vertical-align:baseline;">
-                            <td class="td11" id="TBL-2-1-1" style="white-space:nowrap; text-align:center;">
-                                <img alt="pict" width="400px" src="/static/upload/{{ autonews.image_first }}"/>
-                            </td>
-                            <td class="td11" id="TBL-2-1-2" style="white-space:nowrap; text-align:center;">
-                                <img alt="pict" width="400px"  src="/static/upload/{{ autonews.image_second }}"/>
-                            </td>
-                             <td class="td11" id="TBL-2-1-2" style="white-space:nowrap; text-align:center;">
-                                <img alt="pict" width="400px"  src="/static/upload/{{ autonews.image_third }}"/>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <br/>
-                <div style="text-align:center;">
-                    <span class="id"><strong>[그림 2]</strong></span>
-                    {% if  autonews.submenu_id_id == 2 %}
-                     <span class="content">주가 예측 설명 추세선(장기-왼쪽, 중기-중간, 단기-오른쪽)</span>
-                    {% elif autonews.submenu_id_id == 3 %}
-                     <span class="content">선물 가격 예측 설명 추세선(장기-왼쪽, 중기-중간, 단기-오른쪽))</span>
-                    {% endif %}
-                </div>
+        <div class="tabular">
+            <table cellpadding="0" cellspacing="0" class="tabular" id="TBL-2">
+                <tr id="TBL-2-1-" style="vertical-align:baseline;">
+                    <td class="td11" id="TBL-2-1-1" style="white-space:nowrap; text-align:center;">
+                        <img alt="pict" width="400px" src="/static/upload/{{ autonews.image_first }}"/>
+                    </td>
+                    <td class="td11" id="TBL-2-1-2" style="white-space:nowrap; text-align:center;">
+                        <img alt="pict" width="400px"  src="/static/upload/{{ autonews.image_second }}"/>
+                    </td>
+                     <td class="td11" id="TBL-2-1-2" style="white-space:nowrap; text-align:center;">
+                        <img alt="pict" width="400px"  src="/static/upload/{{ autonews.image_third }}"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="text-align:center;">
+            <span class="id"><strong>[그림 2]</strong></span>
+            {% if  autonews.submenu_id_id == 2 %}
+             <span class="content">주가 예측 설명 추세선(장기-왼쪽, 중기-중간, 단기-오른쪽)</span>
+            {% elif autonews.submenu_id_id == 3 %}
+             <span class="content">선물 가격 예측 설명 추세선(장기-왼쪽, 중기-중간, 단기-오른쪽))</span>
+            {% endif %}
+        </div>
         <!--<hr class="endfigure"/>-->
         <br>
 
