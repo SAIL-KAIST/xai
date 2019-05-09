@@ -29,7 +29,7 @@
           {% for list in object_list %}
               <tr>
                   <td>{{forloop.counter }}</td>
-                  <td><a href={{list.link}}>{{list.title}}</a></td>
+                  <td><a href="{{list.link}}">{{list.title}}</a></td>
                   <td>{{list.author}} </td>
                   <td>{{list.date | date:'Y-m-d'}}</td>
                   <td>{{list.journal}} </td>
