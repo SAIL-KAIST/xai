@@ -157,6 +157,7 @@ class Publication(models.Model):
     journal = models.CharField(max_length=100)
     publication = models.CharField(max_length=100)
     submenu_id = models.ForeignKey('SubMenu', on_delete=models.PROTECT)
+    link = models.TextField()
 
     def __str__(self):
         return self.title
