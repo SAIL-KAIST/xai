@@ -181,15 +181,22 @@ class AutomaticNewsDetail(DetailView):
         my_datetime = autonews.datetime
         predict_date = my_datetime.date()+timedelta(days=28)
         # print("my_company", my_company)
-        # print("my_datetime", my_datetime)
-        # print("predict_date", predict_date)
+        print("my_datetime", my_datetime)
+        print("predict_date", predict_date)
 
         predict = AutoNews.objects.filter(company=my_company, datetime__icontains=predict_date).values('id')
-        predict_pk = predict.values('id')
-        # print(predict.values())
+        predict_id = predict.values('id')
+        predict_exist = predict_id.exists()
+        print("predict_id", predict_id)
+        print("predict_exist", predict_id.exists())
+        if(predict_exist) :
+            predict_pk = predict_id[0]['id']
+            print("predict_pk", predict_pk)
+        else :
+            predict_pk = 0
         # print('predict_pk', predict_pk[0]['id'])
 
-        context = {'autonews':autonews, 'predict_pk':predict_pk[0]['id']}
+        context = {'autonews':autonews, 'predict_pk':predict_pk, "predict_exist":predict_exist}
         return render(request, self.template_name, context)
 
 def stock(request):
