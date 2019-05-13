@@ -1,6 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 
+from datetime import timedelta
+
+
 from .models import TopMenu, SubMenu, Greeting, Member, Lab, Project, DemoResource, Publication, Patent, Notice, News, Gallery, Community, RelatedProject, AutoNews, CompanyList
 
 from django.views.generic.base import TemplateView
@@ -165,11 +168,29 @@ class AutomaticNewsList(ListView):
 class AutomaticNewsDetail(DetailView):
     model = AutoNews
     template_name = 'web/automaticnews_detail.html'
+
     def get_context_data(self, **kwargs):
         context = super(AutomaticNewsDetail, self).get_context_data(**kwargs)
         context['subMenuDict'] = getSubMenuDict()
+
         return context
-##url(r'^research/stock_commodity/$', views.stock, name='stock_commodity'),
+
+    def get(self, request, pk):
+        autonews = AutoNews.objects.get(pk = pk)
+        my_company = autonews.company
+        my_datetime = autonews.datetime
+        predict_date = my_datetime.date()+timedelta(days=28)
+        # print("my_company", my_company)
+        # print("my_datetime", my_datetime)
+        # print("predict_date", predict_date)
+
+        predict = AutoNews.objects.filter(company=my_company, datetime__icontains=predict_date).values('id')
+        predict_pk = predict.values('id')
+        # print(predict.values())
+        # print('predict_pk', predict_pk[0]['id'])
+
+        context = {'autonews':autonews, 'predict_pk':predict_pk[0]['id']}
+        return render(request, self.template_name, context)
 
 def stock(request):
     topMenus = TopMenu.objects.all()

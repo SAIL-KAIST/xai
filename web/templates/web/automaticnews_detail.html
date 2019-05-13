@@ -47,6 +47,7 @@
              <span class="content">선물가격 데이터(왼쪽)과 사후 분포 및 전망 예측(오른쪽)</span>
             {% endif %}
         </div>
+         <a href="/research/automatic_news/detail/{{ predict_pk }}" class="btn btn-theme btn-large btn-rounded">4주후 예측</a><br>
         <!--<hr class="endfigure"/>-->
         <br>
         <p class="indent"> {{ autonews.content3 }}</p>
@@ -78,11 +79,15 @@
         <!--<hr class="endfigure"/>-->
         <br>
 
+
     <p class="indent">이 기사는 "UNIST 설명가능인공지능 시스템"이 생성하였습니다.</p>
     <p class="indent">* 본 예측은 베타버전이며 투자자들의 투자판단에 참고가 되는 정보제공을 목적으로 배포되는 자료입니다. 본 기사에 수록된 내용은 추정치로서 오차가 발생할 수 있으며 정확성이나 완벽성은 보장하지 않습니다.</p>
     <br/>
     <a href="/static/upload/{{ autonews.report_pdf }}" class="btn btn-primary btn-large btn-rounded"> PDF 보고서 다운 </a>
     </div>
     <br/>
+
 </section>
 {% endblock content %}
+
+a href="?page={{ i }}"
