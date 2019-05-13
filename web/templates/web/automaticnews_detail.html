@@ -47,8 +47,13 @@
              <span class="content">선물가격 데이터(왼쪽)과 사후 분포 및 전망 예측(오른쪽)</span>
             {% endif %}
         </div>
+
         {% if predict_pk is not 0 %}
-            <a  class="btn btn-theme" href="{% url 'autonews_detail' pk=predict_pk %}">4주후 예측</a><br>
+            <a  class="btn btn-theme" href="{% url 'autonews_detail' pk=predict_pk %}">4주후 예측기사</a><br>
+        {% elif predict_pk is 0 and is_future%}
+            <a  class="btn btn-theme" href="{% url 'autonews_notcome' %}">4주후 예측기사</a><br>
+        {% elif predict_pk is 0 and is_future is False%}
+            <a  class="btn btn-theme" href="{% url 'autonews_notexist' %}">4주후 예측</a><br>
         {% endif %}
         <!--<hr class="endfigure"/>-->
         <br>

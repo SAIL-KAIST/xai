@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 
-from datetime import timedelta
+from datetime import timedelta, datetime
 
 
 from .models import TopMenu, SubMenu, Greeting, Member, Lab, Project, DemoResource, Publication, Patent, Notice, News, Gallery, Community, RelatedProject, AutoNews, CompanyList
@@ -172,7 +172,6 @@ class AutomaticNewsDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super(AutomaticNewsDetail, self).get_context_data(**kwargs)
         context['subMenuDict'] = getSubMenuDict()
-
         return context
 
     def get(self, request, pk):
@@ -180,24 +179,37 @@ class AutomaticNewsDetail(DetailView):
         my_company = autonews.company
         my_datetime = autonews.datetime
         predict_date = my_datetime.date()+timedelta(days=28)
-        # print("my_company", my_company)
-        print("my_datetime", my_datetime)
-        print("predict_date", predict_date)
+        today = datetime.today().date()
+        is_future = predict_date > today
 
         predict = AutoNews.objects.filter(company=my_company, datetime__icontains=predict_date).values('id')
         predict_id = predict.values('id')
-        predict_exist = predict_id.exists()
-        print("predict_id", predict_id)
-        print("predict_exist", predict_id.exists())
-        if(predict_exist) :
+
+        if(predict_id.exists()) :
             predict_pk = predict_id[0]['id']
             print("predict_pk", predict_pk)
         else :
             predict_pk = 0
-        # print('predict_pk', predict_pk[0]['id'])
-
-        context = {'autonews':autonews, 'predict_pk':predict_pk, "predict_exist":predict_exist}
+        print("predict_pk",predict_pk)
+        print("is_future", is_future)
+        context = {'autonews':autonews, 'predict_pk':predict_pk, 'is_future':is_future}
         return render(request, self.template_name, context)
+
+def not_come(request):
+    topMenus = TopMenu.objects.all()
+    subMenuDict = dict()
+    for topMenu in topMenus:
+        subMenus = SubMenu.objects.filter(topmenu_id=topMenu.id)
+        subMenuDict[topMenu.title] = subMenus
+    return render(request, 'web/automaticnews_notcome.html', {'subMenuDict':getSubMenuDict()})
+
+def not_exist(request):
+    topMenus = TopMenu.objects.all()
+    subMenuDict = dict()
+    for topMenu in topMenus:
+        subMenus = SubMenu.objects.filter(topmenu_id=topMenu.id)
+        subMenuDict[topMenu.title] = subMenus
+    return render(request, 'web/automaticnews_notexist.html', {'subMenuDict':getSubMenuDict()})
 
 def stock(request):
     topMenus = TopMenu.objects.all()
