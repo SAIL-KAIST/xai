@@ -178,21 +178,18 @@ class AutomaticNewsDetail(DetailView):
         autonews = AutoNews.objects.get(pk = pk)
         my_company = autonews.company
         my_datetime = autonews.datetime
+        my_subid = autonews.submenu_id_id
         predict_date = my_datetime.date()+timedelta(days=28)
         today = datetime.today().date()
         is_future = predict_date > today
 
         predict = AutoNews.objects.filter(company=my_company, datetime__icontains=predict_date).values('id')
         predict_id = predict.values('id')
-
+        predict_pk = 0
         if(predict_id.exists()) :
             predict_pk = predict_id[0]['id']
-            print("predict_pk", predict_pk)
-        else :
-            predict_pk = 0
-        print("predict_pk",predict_pk)
-        print("is_future", is_future)
-        context = {'autonews':autonews, 'predict_pk':predict_pk, 'is_future':is_future}
+
+        context = {'autonews':autonews, 'predict_pk':predict_pk, 'is_future':is_future,}
         return render(request, self.template_name, context)
 
 def not_come(request):
