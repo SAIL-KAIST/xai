@@ -189,7 +189,15 @@ class AutomaticNewsDetail(DetailView):
         if(predict_id.exists()) :
             predict_pk = predict_id[0]['id']
 
-        context = {'autonews':autonews, 'predict_pk':predict_pk, 'is_future':is_future,}
+        only_2018 = ['amorepacific','hyundaimobis','lghousehold','samsungcnt','samsungsds']
+        last_2018_date = datetime(2018, 11, 30, 23, 59)
+
+        is_only_2018 = False
+        if my_company in only_2018 and my_datetime > last_2018_date :
+            is_only_2018 = True
+        print("predict_pk", predict_pk)
+        print("is_only_2018", is_only_2018)
+        context = {'autonews':autonews, 'predict_pk':predict_pk, 'is_future':is_future, 'is_only_2018':is_only_2018}
         return render(request, self.template_name, context)
 
 def stock(request):
