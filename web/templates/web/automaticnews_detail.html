@@ -44,14 +44,14 @@
         </div>
 
         {% if predict_pk is not 0 %}
-            <a  class="btn btn-theme btn-large btn-rounded" href="{% url 'autonews_detail' pk=predict_pk %}">예측 검증(4주 후)</a><br>
+         <a  class="btn btn-theme btn-large btn-rounded" href="{% url 'autonews_detail' pk=predict_pk %}"><i class="far fa-hand-point-right"></i> 예측 검증 [4주 후]</a><br>
         {% else %}
             {% if is_only_2018 %}
-                  <button id="only_18" class="btn btn-theme btn-large btn-rounded" onclick=not_2019()>예측 검증(4주 후)</button>
+                  <button id="only_18" class="btn btn-theme btn-large btn-rounded" onclick=not_2019()><i class="far fa-hand-point-right"></i> 예측 검증 [4주 후]</button>
             {% elif is_future or autonews.submenu_id_id == 3 %}
-                 <button id="come" class="btn btn-theme btn-large btn-rounded" onclick=not_come()>예측 검증(4주 후)</button>
+                 <button id="come" class="btn btn-theme btn-large btn-rounded" onclick=not_come()><i class="far fa-hand-point-right"></i> 예측 검증 [4주 후]</button>
             {% elif is_future is False %}
-                 <button id="exist" class="btn btn-theme btn-large btn-rounded" onclick=not_exist()>예측 검증(4주 후)</button>
+                 <button id="exist" class="btn btn-theme btn-large btn-rounded" onclick=not_exist()><i class="far fa-hand-point-right"></i> 예측 검증 [4주 후]</button>
             {% endif%}
                 <div id="alert"></div><br>
         {% endif%}
