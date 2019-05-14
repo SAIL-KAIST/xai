@@ -43,19 +43,6 @@
             {% endif %}
         </div>
 
-        {% if predict_pk is not 0 %}
-         <a  class="btn btn-theme btn-large btn-rounded" href="{% url 'autonews_detail' pk=predict_pk %}"><i class="far fa-hand-point-right"></i> 예측 검증 [4주 후]</a><br>
-        {% else %}
-            {% if is_only_2018 %}
-                  <button id="only_18" class="btn btn-theme btn-large btn-rounded" onclick=not_2019()><i class="far fa-hand-point-right"></i> 예측 검증 [4주 후]</button>
-            {% elif is_future or autonews.submenu_id_id == 3 %}
-                 <button id="come" class="btn btn-theme btn-large btn-rounded" onclick=not_come()><i class="far fa-hand-point-right"></i> 예측 검증 [4주 후]</button>
-            {% elif is_future is False %}
-                 <button id="exist" class="btn btn-theme btn-large btn-rounded" onclick=not_exist()><i class="far fa-hand-point-right"></i> 예측 검증 [4주 후]</button>
-            {% endif%}
-                <div id="alert"></div><br>
-        {% endif%}
-
         <!--<hr class="endfigure"/>-->
         <br>
         <p class="indent"> {{ autonews.content3 }}</p>
@@ -86,15 +73,27 @@
         </div>
         <!--<hr class="endfigure"/>-->
         <br>
-
-
     <p class="indent">이 기사는 "UNIST 설명가능인공지능 시스템"이 생성하였습니다.</p>
     <p class="indent">* 본 예측은 베타버전이며 투자자들의 투자판단에 참고가 되는 정보제공을 목적으로 배포되는 자료입니다. 본 기사에 수록된 내용은 추정치로서 오차가 발생할 수 있으며 정확성이나 완벽성은 보장하지 않습니다.</p>
     <br/>
-    <a href="/static/upload/{{ autonews.report_pdf }}" class="btn btn-primary btn-large btn-rounded"> PDF 보고서 다운 </a>
+
+        <div class="col-lg-12" style="text-align:right; width:100%; padding:0;">
+            <a href="/static/upload/{{ autonews.report_pdf }}" class="btn btn-success btn-large btn-rounded"><i class='fas fa-download'></i> 자동 통계학자 보고서 다운로드 </a>
+            {% if predict_pk is not 0 %}
+                <a  class="btn btn-info btn-large btn-rounded" href="{% url 'autonews_detail' pk=predict_pk %}"><i class="fas fa-file-signature"></i> 예측 검증 [4주 후]</a>
+            {% else %}
+                {% if is_only_2018 %}
+                      <button id="only_18" class="btn btn-theme btn-large btn-rounded" onclick=not_2019()><i class="fas fa-file-signature"></i> 예측 검증 [4주 후]</button>
+                {% elif is_future or autonews.submenu_id_id == 3 %}
+                     <button id="come" class="btn btn-theme btn-large btn-rounded" onclick=not_come()><i class="fas fa-file-signature"></i> 예측 검증 [4주 후]</button>
+                {% elif is_future is False %}
+                     <button id="exist" class="btn btn-theme btn-large btn-rounded" onclick=not_exist()><i class="fas fa-file-signature"></i> 예측 검증 [4주 후]</button>
+                {% endif%}
+                    <div id="alert"></div>
+            {% endif%}
+        </div>
     </div>
     <br/>
-
 </section>
 {% endblock content %}
 
@@ -102,7 +101,7 @@
 <script type="text/javascript">
 function not_come(){
     $("#come").remove();
-    $('#alert').append('<br><div class="alert alert-info"><strong> 본 종목에 대한 4주 후 기사는 추후 업데이트 될 예정입니다..</strong></div>');
+    $('#alert').append('<br><div class="alert alert-info"><strong> 본 종목에 대한 4주 후 기사는 추후 업데이트 될 예정입니다.</strong></div>');
 }
 function not_exist(){
      $("#exist").remove();
