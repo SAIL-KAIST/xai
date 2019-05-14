@@ -19,8 +19,6 @@ urlpatterns = [
     url(r'^research/automatic_news/$', views.AutomaticNews.as_view(), name='autonews'),
     url(r'^research/automatic_news/list/(?P<company>.+)/$', views.AutomaticNewsList.as_view(), name='autonews_list'),
     url(r'^research/automatic_news/detail/(?P<pk>\d+)/$', views.AutomaticNewsDetail.as_view(), name='autonews_detail'),
-    url(r'^research/automatic_news/detail/error_notcome/$', views.not_come, name='autonews_notcome'),
-    url(r'^research/automatic_news/detail/error_notexist/$', views.not_exist, name='autonews_notexist'),
 
     # url(r'^research/demoresource/$', views.DemoresourceImageList.as_view(), name='demoresource'),
     url(r'^research/unist_index/$', views.Index, name='unist_index'),

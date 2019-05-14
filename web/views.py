@@ -192,22 +192,6 @@ class AutomaticNewsDetail(DetailView):
         context = {'autonews':autonews, 'predict_pk':predict_pk, 'is_future':is_future,}
         return render(request, self.template_name, context)
 
-def not_come(request):
-    topMenus = TopMenu.objects.all()
-    subMenuDict = dict()
-    for topMenu in topMenus:
-        subMenus = SubMenu.objects.filter(topmenu_id=topMenu.id)
-        subMenuDict[topMenu.title] = subMenus
-    return render(request, 'web/automaticnews_notcome.html', {'subMenuDict':getSubMenuDict()})
-
-def not_exist(request):
-    topMenus = TopMenu.objects.all()
-    subMenuDict = dict()
-    for topMenu in topMenus:
-        subMenus = SubMenu.objects.filter(topmenu_id=topMenu.id)
-        subMenuDict[topMenu.title] = subMenus
-    return render(request, 'web/automaticnews_notexist.html', {'subMenuDict':getSubMenuDict()})
-
 def stock(request):
     topMenus = TopMenu.objects.all()
     subMenuDict = dict()
