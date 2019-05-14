@@ -44,14 +44,14 @@
         </div>
 
         {% if predict_pk is not 0 %}
-            <a  class="btn btn-theme btn-large btn-rounded" href="{% url 'autonews_detail' pk=predict_pk %}">4주 후 예측기사</a><br>
+            <a  class="btn btn-theme btn-large btn-rounded" href="{% url 'autonews_detail' pk=predict_pk %}">예측 검증(4주 후)</a><br>
         {% else %}
             {% if is_only_2018 %}
-                  <button id="only_18" class="btn btn-theme btn-large btn-rounded" onclick=not_2019()> 4주 후 예측기사</button>
+                  <button id="only_18" class="btn btn-theme btn-large btn-rounded" onclick=not_2019()>예측 검증(4주 후)</button>
             {% elif is_future or autonews.submenu_id_id == 3 %}
-                 <button id="come" class="btn btn-theme btn-large btn-rounded" onclick=not_come()> 4주 후 예측기사</button>
+                 <button id="come" class="btn btn-theme btn-large btn-rounded" onclick=not_come()>예측 검증(4주 후)</button>
             {% elif is_future is False %}
-                 <button id="exist" class="btn btn-theme btn-large btn-rounded" onclick=not_exist()> 4주 후 예측기사</button>
+                 <button id="exist" class="btn btn-theme btn-large btn-rounded" onclick=not_exist()>예측 검증(4주 후)</button>
             {% endif%}
                 <div id="alert"></div><br>
         {% endif%}
@@ -102,15 +102,15 @@
 <script type="text/javascript">
 function not_come(){
     $("#come").remove();
-    $('#alert').append('<br><div class="alert alert-info"><strong>해당 데이터에 대한 예측 기사는 추후 업데이트 될 예정입니다.</strong></div>');
+    $('#alert').append('<br><div class="alert alert-info"><strong> 본 종목에 대한 4주 후 기사는 추후 업데이트 될 예정입니다..</strong></div>');
 }
 function not_exist(){
      $("#exist").remove();
-     $('#alert').append('<br><div class="alert alert-warning"><strong>해당 데이터에 대한 예측 기사는 예측 시점 기준으로 주식시장이 휴장하여 제공되지 않습니다. </strong></div>');
+     $('#alert').append('<br><div class="alert alert-warning"><strong>본 종목에 대한 4주 후 기사는 주식시장 휴장으로 제공되지 않습니다. </strong></div>');
 }
 function not_2019(){
     $("#only_18").remove();
-    $('#alert').append('<br><div class="alert alert-success"><strong> 해당 기업에 대한 예측 기사는 예측 시점 기준으로 2018년까지만 제공됩니다.</strong></div>');
+    $('#alert').append('<br><div class="alert alert-success"><strong>본 기업에 대한 예측 기사는 예측 시점 기준으로 2018년까지만 제공됩니다.</strong></div>');
 }
 </script>
 {% endblock script %}
