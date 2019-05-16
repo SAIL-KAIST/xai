@@ -39,7 +39,7 @@ def getSubMenuDict():
 #ABOUT##########################################################################################################################
 class GreetingPage(TemplateView):
     model = Greeting
-    template_name = 'web/greetingTemp.html'
+    template_name = 'web/introduction.html'
 
     def get_context_data(self, **kwargs):
         context = super(GreetingPage, self).get_context_data(**kwargs)
@@ -71,7 +71,7 @@ class LabTextList(ListView):
 
 class ProjectPage(TemplateView):
     model = Project
-    template_name = 'web/projectTemp.html'
+    template_name = 'web/introduction.html'
 
     def get_context_data(self, **kwargs):
         context = super(ProjectPage, self).get_context_data(**kwargs)
@@ -179,12 +179,13 @@ class AutomaticNewsDetail(DetailView):
         my_company = autonews.company
         my_datetime = autonews.datetime
         my_subid = autonews.submenu_id_id
+
         predict_date = my_datetime.date()+timedelta(days=28)
         today = datetime.today().date()
         is_future = predict_date > today
-
         predict = AutoNews.objects.filter(company=my_company, datetime__icontains=predict_date).values('id')
         predict_id = predict.values('id')
+
         predict_pk = 0
         if(predict_id.exists()) :
             predict_pk = predict_id[0]['id']
@@ -195,8 +196,9 @@ class AutomaticNewsDetail(DetailView):
         is_only_2018 = False
         if my_company in only_2018 and my_datetime > last_2018_date :
             is_only_2018 = True
-        print("predict_pk", predict_pk)
-        print("is_only_2018", is_only_2018)
+
+        # print("predict_pk", predict_pk)
+        # print("is_only_2018", is_only_2018)
         context = {'autonews':autonews, 'predict_pk':predict_pk, 'is_future':is_future, 'is_only_2018':is_only_2018}
         return render(request, self.template_name, context)
 
@@ -208,13 +210,13 @@ def stock(request):
         subMenuDict[topMenu.title] = subMenus
     return render(request, 'web/stockTemp.html', {'subMenuDict':getSubMenuDict()})
 
-def Index(request):
+def financialIndex(request):
     topMenus = TopMenu.objects.all()
     subMenuDict = dict()
     for topMenu in topMenus:
         subMenus = SubMenu.objects.filter(topmenu_id=topMenu.id)
         subMenuDict[topMenu.title] = subMenus
-    return render(request, 'web/indexTemp.html', {'subMenuDict':getSubMenuDict()})
+    return render(request, 'web/financial_index.html', {'subMenuDict':getSubMenuDict()})
 
 class PublicationTextList(ListView):
     model = Publication
