@@ -39,7 +39,7 @@ def getSubMenuDict():
 #ABOUT##########################################################################################################################
 class GreetingPage(TemplateView):
     model = Greeting
-    template_name = 'web/introduction.html'
+    template_name = 'web/greetingTemp.html'
 
     def get_context_data(self, **kwargs):
         context = super(GreetingPage, self).get_context_data(**kwargs)
