@@ -221,11 +221,32 @@ def financialIndex(request):
 class PublicationTextList(ListView):
     model = Publication
     template_name = 'web/publication.html'
+    queryset = model.objects.order_by('-id')
+    paginate_by = 10 #how much show your list
 
     def get_context_data(self, **kwargs):
         context = super(PublicationTextList, self).get_context_data(**kwargs)
         context['subMenuDict'] = getSubMenuDict()
         return context
+
+    def get(self, request):
+        obj = list(Publication.objects.all())
+        obj.reverse()
+
+        paginator = Paginator(obj, self.paginate_by)
+        page = request.GET.get('page') #if your django version 2.0.4 just use get_page
+        if page == None:
+            page = 1
+        object_list = paginator.page(page)
+
+        if object_list.has_next() == False :
+            acc_num = 0
+        else :
+            mod = paginator.count % self.paginate_by
+            acc_num = (paginator.num_pages-int(page)-1) * self.paginate_by + mod
+
+        context = {'object_list': object_list, 'acc_num' : acc_num}
+        return render(request, self.template_name, context)
 
 class PatentTextList(ListView):
     model = Patent
@@ -243,7 +264,7 @@ def githubRedirect(request):
 class RelatedProject(ListView):
     model = RelatedProject
     template_name = 'web/relatedproject.html'
-    queryset = RelatedProject.objects.order_by('-id')
+    queryset = model.objects.order_by('-id')
     paginate_by = 4 #how much show your list
 
     def get_context_data(self, **kwargs):
@@ -318,6 +339,15 @@ class Workshop19(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(Workshop19, self).get_context_data(**kwargs)
+        context['subMenuDict'] = getSubMenuDict()
+        return context
+
+class Tutorial19(TemplateView):
+    model = Greeting
+    template_name = 'web/tutorial19.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(Tutorial19, self).get_context_data(**kwargs)
         context['subMenuDict'] = getSubMenuDict()
         return context
 
