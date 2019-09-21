@@ -380,7 +380,7 @@
 						<br>
 						<span><strong>Presentation Guidelines</strong></span><br>
 						<li> All accepted papers have been assigned for presentation in a poster session. The physical dimensions of the poster stands that will be available this year are 1950mm (width) x 950mm (height).
-							Please prepare your posters accordingly.</li>
+							Please prepare your posters accordingly. Other formats are up to you.(eg. font style, font size, etc.) </li>
 						<li> The spotlight paper's authors will also make an oral presentations. We will notify soon for the presenters.<br> </li>
 					</div><br>
 
@@ -539,9 +539,9 @@
 								<a href="#" class="btn btn-success btn-large" id="Contact">Contact</a>
 								<br><br>
 								UNIST Explainable Artificial Intelligence Center<br>
-								 &emsp;&emsp;&emsp; <strong>Jaesik Choi</strong> / jaesik.choi@kaist.ac.kr.<br>
+								 &emsp;&emsp;&emsp; <strong>Jaesik Choi</strong> / jaesik.choi@kaist.ac.kr<br>
 								&emsp;&emsp;&emsp; <strong>Sohee Cho</strong> / kirarenctaon@gmail.com<br>
-								&emsp;&emsp;&emsp; <strong>GyeongEun Lee</strong>  / socool@unist.ac.kr / 052-217-2196<br>
+								&emsp;&emsp;&emsp; <strong>GyeongEun Lee</strong> / socool@unist.ac.kr / 052-217-2196<br>
 								<br>
 							</div>
 						</div>
@@ -568,15 +568,4 @@
 	</div>
 </div>
 <!-- end divider -->
- {% endblock content %} {% block script %}
-<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=g9DAE7AOMF4rEJUbJ0Kr"></script>
-<script>
-		// http://blog.goodkiss.co.kr/entry/ 좌표값 알아내는 사이트
-		var mapOptions = {
-		    center: new naver.maps.LatLng(37.5130620, 127.0586440),
-		    zoom: 10
-		};
-		var map = new naver.maps.Map('naver-map', mapOptions);
-		var marker = new naver.maps.Marker({position: new naver.maps.LatLng(37.5130620, 127.0586440), map:map})
-	</script>
-{% endblock script %}
+ {% endblock content %} {
