@@ -15,393 +15,35 @@
 <section id="content">
 <div class="container">
 	<div class="lead">
-	<div class="row">
-		<!--<ul class="nav nav-tabs">-->
+		<div class="row">
+			<!--<ul class="nav nav-tabs">-->
 			<!--<li class="active"><a href="#English" data-toggle="tab"><i class="icon-briefcase"></i> English</a></li>-->
 			<!--<li><a  href ='{% url 'Symposium18_ko' %}' >한국어</a></li>-->
-		<!--</ul>-->
-		<div class="tab-content">
-			<div class="tab-pane active" id="English">
-				<div class="col-lg-12">
-					<div class="post-image">
-						<div class="post-heading">
-							<a href="http://iccv2019.thecvf.com/"><img src="/static/img/event/ICCV19logo.png" style="" /></a><br><br>
-							<h1>2019 ICCV Workshop on</h1>
-							<h2>Interpreting and Explaining Visual Artificial Intelligence Models</h2>
-							<br>
-							<h4>Saturday, November 2nd, 2019</h4>
-							<h4>@ COEX 308AB, Seoul, Korea </h4>
-						</div>
-						<div class="col-lg-12">
-							<div class="row">
-								<a href="#Invitation" class="btn btn-danger">Invitation</a>
-								<a href="#Organizers" class="btn btn-primary">Organizers</a>
-								<a href="#Speakers" class="btn btn-warning">Invited Speakers</a>
-								<a href="#Accepted Papers" class="btn btn-info"> Accepted Papers</a>
-								<a href="#Program" class="btn btn-theme">Program</a>
-								<a href="#Contact" class="btn btn-success">Contact</a>
-							</div>
-						</div>
-					</div>
-					<!-- divider -->
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="solidline">
-							</div>
-						</div>
-					</div>
-					<!-- end divider -->
-					<a href="#Invitation" class="btn btn-danger btn-large">Invitation</a>
-					<br>
-					<br>
-					<article>
-						<p>
-						Explainable and interpretable machine learning models and algorithms are important topics which have
-						received growing attention from research, application and administration. Many advanced visual artificial
-						intelligence systems are often perceived as black-boxes. Researchers would like to be able to interpret what
-						the AI model has learned in order to identify biases and failure models and improve models. Many government
-						agencies pay special attention to the topic. In May 2018, EU enacted the General Data Protection Regulation
-						(GDPR) which mandates a right to explanation from machine learning model. An USA agency, DARPA,
-						launched an Explainable Artificial Intelligence program in 2017. The ministry of science and ICT (MSIT) of
-						South Korea established an Explainable Artificial Intelligence Center.<br><br>
-						Recently, several models and algorithms are introduced to explain or interpret the decision of complex
-						artificial intelligence system. Explainable Artificial Intelligence systems can now explain the decisions of
-						autonomous system such as self-driving cars and game agents trained by deep reinforcement learning.
-						Saliency maps built by attribution methods such as network gradients, DeConvNet, Layer-wise Relevance
-						Propagation, PatternAttribution and RISE can identify relevant inputs upon the decisions of classification or
-						regression tasks. Bayesian model composition methods can learn automated decomposition of input data into
-						a composition of explainable base models in human pose estimation. Model agnostic methods such as LIME
-						(Local interpretable model-agnostic explanations) and SHAP make complex deep learning models by
-						providing importance of input features. Network Dissection and GAN Dissection provide human-friendly
-						interpretations of internal nodes in deep neural network and deep generative models.<br><br>
-						The present workshop aims to overview recent advances in explainable/interpretable artificial intelligence and
-						establish new theoretical foundations of interpreting and understanding visual artificial intelligence models
-						including deep neural networks. We will discuss the future research directions and applications of
-						explainable visual artificial intelligence.<br><br>
-						This workshop has interest including but not limited to the following topics.<br>
-						- Explaining the decision of visual deep learning models<br>
-						- Interpretable deep learning models<br>
-						- Machine learning/deep learning models which generates human-friendly explanations<br>
-						- Bayesian model composition/decomposition methods<br>
-						- Model-agnostic machine learning explainable models<br>
-						- Evaluation of explainable AI models<br>
-						- Causal analysis of complex AI/ML systems<br>
-						- Practical applications of explainable AI<br>
-						</p>
-					</article>
-					<!-- divider -->
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="solidline">
-							</div>
-						</div>
-					</div>
-					<!-- end divider -->
-						<!-- Descriptions -->
-					<a href="#" class="btn btn-warning" id="Speakers">Invited Speakers</a>
-					<br>
-					<br>
-					<div class="row">
-						<div class="col-lg-3">
-							  <div style="text-align:center;">
-								<img style="width:180px;height:240px" src={% static "img/event/Trevor.png" %}><br>
-							    <span><Strong>Trevor Darrell</Strong></span>
-							  </div>
-							  <span><i class="fas fa-id-card-alt"></i> Professor</span><br>
-							  <span><i class="fas fa-building"></i> UC Berkeley</span><br>
-							  <a href="https://people.eecs.berkeley.edu/~trevor/"><i class="fa fa-home"></i></a>
-							 <!--title "Recent progress towards XAI at UC Berkeley"-->
-						</div>
-						<div class="col-lg-3">
-							  <div style="text-align:center;">
-								<img style="width:180px;height:240px" src={% static "img/event/wojciech.png" %}><br>
-							    <span><Strong>Wojciech Samek</Strong></span>
-							  </div>
-							  <span><i class="fas fa-id-card-alt"></i> Head of Machine Learning Group</span><br>
-							  <span><i class="fas fa-building"></i> Fraunhofer Heinrich Hertz Institute</span><br>
-							  <a href="http://iphome.hhi.de/samek/"><i class="fa fa-home"></i></a>
-						</div>
-						<div class="col-lg-3">
-							  <div style="text-align:center;">
-								<img style="width:180px;height:240px" src={% static "img/event/bau.png" %}><br>
-							    <span><Strong>David Bau</Strong></span>
-							  </div>
-							  <span><i class="fas fa-id-card-alt"></i> PhD student</span><br>
-							  <span><i class="fas fa-building"></i> MIT</span><br>
-							  <a href="http://people.csail.mit.edu/davidbau/home/"><i class="fa fa-home"></i></a>
-						</div>
-						<div class="col-lg-3">
-							  <div style="text-align:center;">
-								<img style="width:180px;height:240px" src={% static "img/event/ludwig.png" %}><br>
-							    <span><Strong>Ludwig Schubert</Strong></span>
-							  </div>
-							  <span><i class="fas fa-id-card-alt"></i> Software Engineer</span><br>
-							  <span><i class="fas fa-building"></i> OpenAI</span><br>
-							  <a href="https://distill.pub/about/"><i class="fa fa-home"></i></a>
-						</div>
-					</div>
-					<br>
-							<!--<strong>TBD</strong>-->
-					<!-- divider -->
-					<!--<div class="row">-->
-						<!--<div class="col-lg-12">-->
-							<!--<div class="solidline">-->
-							<!--</div>-->
-						<!--</div>-->
-					<!--</div>-->
-					<!--&lt;!&ndash; end divider &ndash;&gt;-->
-					<!--&lt;!&ndash; end divider &ndash;&gt;-->
-					<!--<a href="#" class="btn btn-info btn-large" id=" Accepted Papers"> Accepted Papers</a>-->
-					<!--<br>-->
-					<!--<br>-->
-
-						<!--<div class="pricing-box-alt special">-->
-								<!--<div class="pricing-heading">-->
-								   <!--<h3 style="text-transform: none;"><strong> Visual XAI Accepted Papers</strong> </h3>-->
-							    <!--</div><br>-->
-<!--Paper ID:	1	-	<b>		Visualization of Time Series Deep Neural Network		</b><br><i>	Sohee Cho (UNIST)*, Jaesik Choi (KAIST)	</i><br><br>-->
-<!--Paper ID:	2	-	<b>		Why are Saliency Maps Noisy? Cause of and Solution to Noisy Saliency Maps		</b><br><i>	Beomsu Kim (Korea Advanced Institute of Science and Technology)*, Junghoon Seo (Satrec Initiative), SeungHyun Jeon (Satrec Initiative), Jamyoung Koo (SI Analytics), Jeongyeol Choe (SI Analytics), Taegyun Jeon (SI Analytics)	</i><br><br>-->
-<!--Paper ID:	6	-	<b>		Interpretable Disentanglement of Neural Networks by Extracting Class-Specific Subnetwork		</b><br><i>	Yulong Wang (Tsinghua University), Xiaolin Hu (Tsinghua University), Hang Su (Tsinghua Univiersity)*	</i><br><br>-->
-<!--Paper ID:	7	-	<b>		Occlusions for Effective Data Augmentation in Image Classification		</b><br><i>	Ruth C Fong (University of Oxford)*, Andrea Vedaldi (Oxford University)	</i><br><br>-->
-<!--Paper ID:	8	-	<b>	<a href="https://arxiv.org/abs/1907.13054">	Grid Saliency for Context Explanations of Semantic Segmentation	</a>	</b><br><i>	Lukas Hoyer (Bosch Center for Artificial Intelligence)*, Mauricio Munoz (Bosch Center for Artificial Intelligence), Prateek Katiyar (Bosch Center for Artificial Intelligence), Anna Khoreva (Bosch Center for Artificial Intelligence), Volker Fischer (Bosch Center for Artificial Intelligence)	</i><br><br>-->
-<!--Paper ID:	9	-	<b>	<a href="https://arxiv.org/abs/1909.08891">	Explaining Visual Models by Causal Attribution	</a>	</b><br><i>	Álvaro Parafita Martínez (Universitat de Barcelona)*, Jordi Vitria (Universitat de Barcelona)	</i><br><br>-->
-<!--Paper ID:	10	-	<b>	<a href="https://arxiv.org/abs/1908.04351">	Explaining Convolutional Neural Networks using Softmax Gradient Layer-wise Relevance Propagation	</a>	</b><br><i>	Brian K Iwana (Kyushu University)*, Ryohei Kuroki (Kyushu University), Seiichi Uchida (Kyushu University)	</i><br><br>-->
-<!--Paper ID:	11	-	<b>		Understanding Convolutional Networks Using Linear Interpreters - Extended Abstract		</b><br><i>	Pablo Navarrete Michelini (BOE Technology Group Co., Ltd.)*, Hanwen Liu (BOE Technology Group Co., Ltd.), Yunhua Lu (BOE Technology Group Co., Ltd.), Xingqun Jiang (BOE Technology Group Co., Ltd.)	</i><br><br>-->
-<!--Paper ID:	12	-	<b>	<a href="https://arxiv.org/abs/1908.11528">	Bin-wise Temperature Scaling (BTS):Improvement in Confidence Calibration Performance through Simple Scaling Techniques	</a>	</b><br><i>	Younghak Shin (LGCNS)*, ByeongmoonJi (LG CNS), Hyemin Jung (LG CNS), jihyeun yoon (LG CNS), kyungyul kim (LG CNS)	</i><br><br>-->
-<!--Paper ID:	13	-	<b>	<a href="https://arxiv.org/abs/1904.04621">	Towards Analyzing Semantic Robustness of Deep Neural Networks	</a>	</b><br><i>	Abdullah J Hamdi (KAUST)*, Bernard Ghanem (KAUST)	</i><br><br>-->
-<!--Paper ID:	14	-	<b>	<a href="https://arxiv.org/abs/1909.07082">	Towards A Rigorous Evaluation Of XAI Methods On Time Series	</a>	</b><br><i>	Udo M Schlegel (University Konstanz)*, Hiba Arnout (Siemens CT & TU Munich), Mennatallah El-Assady (University of Konstanz), Daniela Oelke (Siemens CT), Daniel Keim (Uni. Konstanz)	</i><br><br>-->
-<!--Paper ID:	15	-	<b>	<a href="https://arxiv.org/abs/1909.08611">	Class Feature Pyramids for Video Explanation	</a>	</b><br><i>	Alexandros Stergiou (Utrecht University)*, George Kapidis (Utrecht University), Grigorios Kalliatakis (University of Essex, UK), Christos Chrysoulas (London South Bank University), Ronald Poppe (Utrecht University), Remco C.Veltkamp (Utrecht University)	</i><br><br>-->
-<!--Paper ID:	16	-	<b>		Localizing Occluders with Compositional Convolutional Networks		</b><br><i>	Adam Kortylewski (Johns Hopkins University)*, Qing Liu (Johns Hopkins University), Huiyu Wang (Johns Hopkins University), Zhishuai Zhang (Johns Hopkins University), Alan Yuille (Johns Hopkins University)	</i><br><br>-->
-<!--Paper ID:	17	-	<b>	<a href="https://arxiv.org/abs/1910.00387">	Leveraging Model Interpretability and Stability to increase Model Robustness	</a>	</b><br><i>	Fei WU (CentraleSupelec), Thomas MICHEL (Valeo)*, Alexandre Briot (Valeo)	</i><br><br>-->
-<!--Paper ID:	18	-	<b>	<a href="https://arxiv.org/abs/1909.09285">	Characterizing Sources of Uncertainty to Proxy Calibration and Disambiguate Annotator and Data Bias	</a>	</b><br><i>	Asma Ghandeharioun (MIT)*, Brian Eoff (Google Research), BrendanJou (Google Research), Rosalind Picard (MIT Media Lab)	</i><br><br>-->
-<!--Paper ID:	19	-	<b>		Dynamic-K Activation: Simple Dynamic Routing Like Behavior in Convolutional Neural Networks		</b><br><i>	Yiyou Sun (University of Wisconsin Madison)*, Sathya Ravi (University of Wisconsin-Madison), Vikas Singh (University of Wisconsin-Madison USA)	</i><br><br>-->
-<!--Paper ID:	20	-	<b>		Efficient Exploration-based Sampling in the Generative Boundary of Deep Generative Neural Networks		</b><br><i>	Giyoung Jeon (Ulsan National Institute of Science and Technology), Haedong Jeong (Ulsan National Institute of Science and Technology), Jaesik Choi (KAIST)*	</i><br><br>-->
-<!--Paper ID:	21	-	<b>		Cost-Effective Interactive Attention Learning for Action Recognition		</b><br><i>	Jay Heo (KAIST)*, Junhyeon Park (KAIST), Hyewon Jeong (KAIST), Wuhyun Shin (KAIST), Kwang Joon Kim (Yonsei University College of Medicine), Sung Ju Hwang (KAIST)	</i><br><br>-->
-<!--Paper ID:	22	-	<b>		A Plug-in Fatorizer for Disentangling a Latent Representation		</b><br><i>	Jee Seok Yoon (Korea University), Wonjun Ko (Korea University), Heung-Il Suk (Korea University)*	</i><br><br>-->
-<!--Paper ID:	24	-	<b><a href="https://arxiv.org/abs/1910.04357">		Visual Understanding of Multiple Attributes Learning Model of X-Ray Scattering Images</a>		</b><br><i>	Xinyi Huang (Kent State University), SuphanutJamonnak (Kent State University), Ye Zhao (Kent State University)*, Boyu Wang (Stony Brook University), Minh Hoai Nguyen (Stony Brook University), KevinYager (Brookhaven National Laboratory), Wei Xu (Brookhaven National Lab)	</i><br><br>-->
-<!--Paper ID:	25	-	<b>		Interpretable BoW Networks for Adversarial Example Detection		</b><br><i>	Krishna Kanth Nakka (EPFL)*, Mathieu Salzmann (EPFL)	</i><br><br>-->
-<!--Paper ID:	28	-	<b>	<a href="https://arxiv.org/abs/1909.08442">	Semantically Interpretable Activation Maps: what-where-how explanations within CNNs	</a>	</b><br><i>	Diego Marcos (Wageningen University)*, Sylvain Lobry (Wageningen University and Research), Devis Tuia (Wageningen University and Research)	</i><br><br>-->
-<!--Paper ID:	30	-	<b>		To Trust, or Not to Trust? A Case Study of Human Bias in Automated Video Interview Assessments		</b><br><i>	Chee Wee Leong (Educational Testing Service (ETS))*, Katrina Roohr (Educational Testing Service), Vikram Ramanarayanan (University of California, San Francisco), MichelleMartin-Raugh (Educational Testing Service (ETS)), Harrison Kell (Educational Testing Service), Rutuja Ubale (Educational Testing Service Research), Yao Qian (Educational Testing Service), Zydrune Mladineo (Educational Testing Service), Laura McCulla (Educational Testing Service)	</i><br><br>-->
-<!--Paper ID:	31	-	<b>		Assisting human experts in the interpretation of their visual process: A case study on assessing copper surface adhesive potency		</b><br><i>	Tristan Hascoet*, Xuejiao Deng, Kiyoto Tai, Mari Sugiyama, Yuji Adachi, Sachiko Nakamura, Yasuo Ariki, Tomoko Hayashi, Tetusya Takiguchi (Kobe University)	</i><br><br>-->
-<!--Paper ID:	32	-	<b>	<a href="https://arxiv.org/abs/1909.09263">	Propagated Perturbation of Adversarial Attack for well-known CNNs: Empirical Study and its Explanation	</a>	</b><br><i>	jihyeun yoon (LG CNS), kyungyul kim (LG CNS), jongseong jang (LG CNS)*	</i><br><br>-->
-<!--Paper ID:	33	-	<b>	<a href="https://arxiv.org/abs/1910.08705">	Attention Guided Metal Artifact Correction in MRI using Deep Neural Networks	</a>	</b><br><i>	Jee Won Kim (KAIST), Kinam Kwon (KAIST), Byungjai Kim (KAIST), HyunWook Park (KAIST)*	</i><br><br>-->
-<!--Paper ID:	34	-	<b>		Decision explanation and feature importance for invertible networks		</b><br><i>	Juntang Zhuang (Yale University)*, Nicha Dvornek (Yale University), Xiaoxiao Li (Yale University), Junlin Yang (Yale University), James S Duncan (Yale University)	</i><br><br>-->
-<!--Paper ID:	35	-	<b>	<a href="https://arxiv.org/abs/1908.02511">	Free-Lunch Saliency via Attention in Atari Agents	</a>	</b><br><i>	Dmitry Nikulin (Samsung AI Center Moscow)*, Anastasia Ianina (Samsung AI Center Moscow), Vladimir A Aliev (Samsung AI Center, Moscow), Sergey I Nikolenko (PDMI RAS)	</i><br><br>-->
-<!--Paper ID:	37	-	<b>		Fooling Neural Network Interpretations via Adversarial Model Manipulation		</b><br><i>	Juyeon Heo (Sungkyunkwan University), Sunghwan Joo (Sungkyunkwan University), Taesup Moon (Sungkyunkwan University)*	</i><br><br>-->
-<!--Paper ID:	39	-	<b>		Second-order feature representation for visualizing pyramidal multiscale superpixel pooling network		</b><br><i>	Ali Tousi (Ulsan National Institute of Science and Technology)*, Jaesik Choi (KAIST)	</i><br><br>-->
-<!--Paper ID:	42	-	<b>	<a href="https://arxiv.org/abs/1909.12446">	Interpreting Undesirable Pixels for Image Classification on Black-Box Models	</a>	</b><br><i>	Sin-Han Kang (Korea University)*, Hong-Gyu Jung (Korea University), Seong-Whan Lee (Korea University)	</i><br><br>-->
-
-						<!--</div>-->
-
-					<!-- Descriptions -->
-				<div class="row">
-						<div class="col-lg-12">
-							<a href="#" class="btn btn-theme btn-large" id="Program">Program</a>
-							<br>
-							<br>
-							<div class="pricing-box-alt special">
-								<div class="pricing-heading">
-								   <h3><strong>PROGRAM</strong> </h3>
-							    </div>
-							  <table class="table table-bordered">
-								  <thead>
-									<tr style="color: white; background-color:#393a3d;">
-									  <th style="text-align: center;width:15%">Time</th>
-									  <th style="text-align: center;width:65%">Title</th>
-										<th style="text-align: center;width:20%">Room</th>
-									</tr>
-								  </thead>
-								  <tbody  style="text-align: center;">
-</tr>
-<tr>
-<td >9:00 - 9:10</td>
-	<td ><strong>Opening Remarks</strong></td>
-<td  colspan="1" rowspan="3" >
-<div>308BC</div>
-</td>
-</tr>
-<tr >
-<td >9:10 -10:00</td>
-	<td ><strong>Invited Talk 1 : Trevor Darrell</strong></td>
-</tr>
-<tr >
-<td >10:00 - 10:20</td>
-<td ><strong>Oral Presentations 1 (10min * 2 papers)</strong></td>
-</tr>
-<tr style="background-color: #DFDDDD;">
-<td >10:20 - 10:40</td>
-<td colspan="2" rowspan="1" >Coffee Break</td>
-</tr>
-<tr >
-<td >10:40 - 11:30</td>
-	<td ><strong>Invited Talk 2 : Wojciech Samek</strong></td>
-<td colspan="1" rowspan="2" >
-<div>308BC</div>
-</td>
-</tr>
-<tr >
-<td >11:30 - 11:55</td>
-<td  ><strong>Poster Spotlights (1min * 25 papers)</strong></td>
-</tr>
-<tr style="background-color: #DFDDDD;" >
-<td >12:00 - 13:00</td>
-<td colspan="2" rowspan="1"  >Lunch</td>
-</tr>
-<tr >
-<td >13:00 - 13:30</td>
-<td ><strong>Poster Session 1 (16 papers)</strong></td>
-<td >Poster Section2</td>
-</tr>
-<tr >
-<td >13:30 - 14:20</td>
-	<td ><strong>Invited Talk 3 : David Bau</strong></td>
-<td colspan="1" rowspan="2" >
-<div>308BC</div>
-</td>
-</tr>
-<tr >
-<td >14:20 -15:00</td>
-<td ><strong>Oral Presentations 2 (10min * 4 papers)</strong>
-</td>
-</tr>
-<tr >
-<td >15:00 - 15:30</td>
-<td><strong>Poster Session 2 (15 papers)</strong></td>
-<td >Poster Section2</td>
-</tr>
-</tr>
-<tr style="background-color: #DFDDDD;">
-<td >15:30 - 15:50</td>
-<td colspan="2" rowspan="1" >Coffee Break</td>
-</tr>
-<tr >
-<td >15:50 - 16:40</td>
-	<td ><strong>Invited Talk 4 : Ludwig Schubert</strong></td>
-<td  colspan="1" rowspan="2">
-<div>308BC</div>
-</td>
-</tr>
-<tr >
-<td >16:40 - 17:00</td>
-	<td ><strong>Tutorial on Open Source projects in XAI (10min * 2 sessions)</strong></td>
-</tr>
-
-</tbody>
-							  </table>
-							</div>
-							</div>
-					</div>
-
-
-					<div class="alert alert-danger">
-						<span><strong>Presentation Guidelines</strong></span><br>
-						<li> All accepted papers are allocated not only a presentaion time (Oral presentation or 1-minute spotlight) but also a poster space at E hall. Please check your paper ID below. </li>
-						<li> The physical dimensions of the poster stands that will be available this year are 1950mm (width) x 950mm (height).
-							Please prepare your posters accordingly. Other formats are up to you.(eg. font style, font size, etc.) </li>
-						<li> You could use slides(pdf/ppt) for audience during the presentation. </li>
-					</div><br>
-					<img src="/static/img/event/poster.png" style="width:50%" />
-<br><br>
-<div class="pricing-box-alt special">
-<div class="pricing-heading">
-<h3 style="text-transform: none;"><strong> Presentaion List</strong> </h3>
-					</div></div>
-<div class="alert alert-info">
-      <strong> Oral Presentation 1 (10:00-10:20) </strong>
-</div>
-
-Paper ID:        18        -        <b>        <a href="https://arxiv.org/abs/1909.09285">        Characterizing Sources of Uncertainty to Proxy Calibration and Disambiguate Annotator and Data Bias        </a>        </b><br><i>        Asma Ghandeharioun (MIT)*, Brian Eoff (Google Research), Brendan Jou (Google Research), Rosalind Picard (MIT Media Lab)        </i><br><br>
-Paper ID:        34        -        <b>                Decision explanation and feature importance for invertible networks                </b><br><i>        Juntang Zhuang (Yale University)*, Nicha Dvornek (Yale University), Xiaoxiao Li (Yale University), Junlin Yang (Yale University), James S Duncan (Yale University)        </i><br><br>
-
-<div class="alert alert-info">
-        <strong> Oral Presentation 2 (14:20-15:00)</strong>
-</div>
-Paper ID:        19        -        <b>                Dynamic-K Activation: Simple Dynamic Routing Like Behavior in Convolutional Neural Networks                </b><br><i>        Yiyou Sun (University of Wisconsin Madison)*, Sathya Ravi (University of Wisconsin-Madison), Vikas Singh (University of Wisconsin-Madison USA)        </i><br><br>
-Paper ID:        35        -        <b>        <a href="https://arxiv.org/abs/1908.02511">        Free-Lunch Saliency via Attention in Atari Agents        </a>        </b><br><i>        Dmitry Nikulin (Samsung AI Center Moscow)*, Anastasia Ianina (Samsung AI Center Moscow), Vladimir A Aliev (Samsung AI Center, Moscow), Sergey I Nikolenko (PDMI RAS)        </i><br><br>
-Paper ID:        25        -        <b>                Interpretable BoW Networks for Adversarial Example Detection                </b><br><i>        Krishna Kanth Nakka (EPFL)*, Mathieu Salzmann (EPFL)        </i><br><br>
-Paper ID:        17        -        <b>        <a href="https://arxiv.org/abs/1910.00387">        Leveraging Model Interpretability and Stability to increase Model Robustness        </a>        </b><br><i>        Fei WU (CentraleSupelec), Thomas MICHEL (Valeo)*, Alexandre Briot (Valeo)        </i><br><br>
-
-<div class="alert alert-info">
-   <strong> 1-min Poster Spotlights (11:30-11:55)  </strong>
-</div>
-Paper ID:        1        -        <b>                Visualization of Time Series Deep Neural Network                </b><br><i>        Sohee Cho (UNIST)*, Jaesik Choi (KAIST)        </i><br><br>
-Paper ID:        2        -        <b>                Why are Saliency Maps Noisy? Cause of and Solution to Noisy Saliency Maps                </b><br><i>        Beomsu Kim (Korea Advanced Institute of Science and Technology)*, Junghoon Seo (Satrec Initiative), SeungHyun Jeon (Satrec Initiative), Jamyoung Koo (SI Analytics), Jeongyeol Choe (SI Analytics), Taegyun Jeon (SI Analytics)        </i><br><br>
-Paper ID:        6        -        <b>                Interpretable Disentanglement of Neural Networks by Extracting Class-Specific Subnetwork                </b><br><i>        Yulong Wang (Tsinghua University), Xiaolin Hu (Tsinghua University), Hang Su (Tsinghua Univiersity)*        </i><br><br>
-Paper ID:        7        -        <b>                Occlusions for Effective Data Augmentation in Image Classification                </b><br><i>        Ruth C Fong (University of Oxford)*, Andrea Vedaldi (Oxford University)        </i><br><br>
-Paper ID:        8        -        <b>        <a href="https://arxiv.org/abs/1907.13054">        Grid Saliency for Context Explanations of Semantic Segmentation        </a>        </b><br><i>        Lukas Hoyer (Bosch Center for Artificial Intelligence)*, Mauricio Munoz (Bosch Center for Artificial Intelligence), Prateek Katiyar (Bosch Center for Artificial Intelligence), Anna Khoreva (Bosch Center for Artificial Intelligence), Volker Fischer (Bosch Center for Artificial Intelligence)        </i><br><br>
-Paper ID:        9        -        <b>        <a href="https://arxiv.org/abs/1909.08891">        Explaining Visual Models by Causal Attribution        </a>        </b><br><i>        Álvaro Parafita Martínez (Universitat de Barcelona)*, Jordi Vitria (Universitat de Barcelona)        </i><br><br>
-Paper ID:        10        -        <b>        <a href="https://arxiv.org/abs/1908.04351">        Explaining Convolutional Neural Networks using Softmax Gradient Layer-wise Relevance Propagation        </a>        </b><br><i>        Brian K Iwana (Kyushu University)*, Ryohei Kuroki (Kyushu University), Seiichi Uchida (Kyushu University)        </i><br><br>
-Paper ID:        11        -        <b>                Understanding Convolutional Networks Using Linear Interpreters - Extended Abstract                </b><br><i>        Pablo Navarrete Michelini (BOE Technology Group Co., Ltd.)*, Hanwen Liu (BOE Technology Group Co., Ltd.), Yunhua Lu (BOE Technology Group Co., Ltd.), Xingqun Jiang (BOE Technology Group Co., Ltd.)        </i><br><br>
-Paper ID:        12        -        <b>        <a href="https://arxiv.org/abs/1908.11528">        Bin-wise Temperature Scaling (BTS):Improvement in Confidence Calibration Performance through Simple Scaling Techniques        </a>        </b><br><i>        Younghak Shin (LGCNS)*, ByeongmoonJi (LG CNS), Hyemin Jung (LG CNS), jihyeun yoon (LG CNS), kyungyul kim (LG CNS)        </i><br><br>
-Paper ID:        13        -        <b>        <a href="https://arxiv.org/abs/1904.04621">        Towards Analyzing Semantic Robustness of Deep Neural Networks        </a>        </b><br><i>        Abdullah J Hamdi (KAUST)*, Bernard Ghanem (KAUST)        </i><br><br>
-Paper ID:        14        -        <b>        <a href="https://arxiv.org/abs/1909.07082">        Towards A Rigorous Evaluation Of XAI Methods On Time Series        </a>        </b><br><i>        Udo M Schlegel (University Konstanz)*, Hiba Arnout (Siemens CT & TU Munich), Mennatallah El-Assady (University of Konstanz), Daniela Oelke (Siemens CT), Daniel Keim (Uni. Konstanz)        </i><br><br>
-Paper ID:        15        -        <b>        <a href="https://arxiv.org/abs/1909.08611">        Class Feature Pyramids for Video Explanation        </a>        </b><br><i>        Alexandros Stergiou (Utrecht University)*, George Kapidis (Utrecht University), Grigorios Kalliatakis (University of Essex, UK), Christos Chrysoulas (London South Bank University), Ronald Poppe (Utrecht University), Remco C.Veltkamp (Utrecht University)        </i><br><br>
-Paper ID:        16        -        <b>                Localizing Occluders with Compositional Convolutional Networks                </b><br><i>        Adam Kortylewski (Johns Hopkins University)*, Qing Liu (Johns Hopkins University), Huiyu Wang (Johns Hopkins University), Zhishuai Zhang (Johns Hopkins University), Alan Yuille (Johns Hopkins University)        </i><br><br>
-Paper ID:        20        -        <b>                Efficient Exploration-based Sampling in the Generative Boundary of Deep Generative Neural Networks                </b><br><i>        Giyoung Jeon (Ulsan National Institute of Science and Technology), Haedong Jeong (Ulsan National Institute of Science and Technology), Jaesik Choi (KAIST)*        </i><br><br>
-Paper ID:        21        -        <b>                Cost-Effective Interactive Attention Learning for Action Recognition                </b><br><i>        Jay Heo (KAIST)*, Junhyeon Park (KAIST), Hyewon Jeong (KAIST), Wuhyun Shin (KAIST), Kwang Joon Kim (Yonsei University College of Medicine), Sung Ju Hwang (KAIST)        </i><br><br>
-Paper ID:        22        -        <b>                A Plug-in Fatorizer for Disentangling a Latent Representation                </b><br><i>        Jee Seok Yoon (Korea University), Wonjun Ko (Korea University), Heung-Il Suk (Korea University)*        </i><br><br>
-Paper ID:        24        -        <b><a href="https://arxiv.org/abs/1910.04357">                Visual Understanding of Multiple Attributes Learning Model of X-Ray Scattering Images</a>                </b><br><i>        Xinyi Huang (Kent State University), SuphanutJamonnak (Kent State University), Ye Zhao (Kent State University)*, Boyu Wang (Stony Brook University), Minh Hoai Nguyen (Stony Brook University), KevinYager (Brookhaven National Laboratory), Wei Xu (Brookhaven National Lab)        </i><br><br>
-Paper ID:        28        -        <b>        <a href="https://arxiv.org/abs/1909.08442">        Semantically Interpretable Activation Maps: what-where-how explanations within CNNs        </a>        </b><br><i>        Diego Marcos (Wageningen University)*, Sylvain Lobry (Wageningen University and Research), Devis Tuia (Wageningen University and Research)        </i><br><br>
-Paper ID:        30        -        <b>                To Trust, or Not to Trust? A Case Study of Human Bias in Automated Video Interview Assessments                </b><br><i>        Chee Wee Leong (Educational Testing Service (ETS))*, Katrina Roohr (Educational Testing Service), Vikram Ramanarayanan (University of California, San Francisco), MichelleMartin-Raugh (Educational Testing Service (ETS)), Harrison Kell (Educational Testing Service), Rutuja Ubale (Educational Testing Service Research), Yao Qian (Educational Testing Service), Zydrune Mladineo (Educational Testing Service), Laura McCulla (Educational Testing Service)        </i><br><br>
-Paper ID:        31        -        <b>                Assisting human experts in the interpretation of their visual process: A case study on assessing copper surface adhesive potency                </b><br><i>        Tristan Hascoet*, Xuejiao Deng, Kiyoto Tai, Mari Sugiyama, Yuji Adachi, Sachiko Nakamura, Yasuo Ariki, Tomoko Hayashi, Tetusya Takiguchi (Kobe University)        </i><br><br>
-Paper ID:        32        -        <b>        <a href="https://arxiv.org/abs/1909.09263">        Propagated Perturbation of Adversarial Attack for well-known CNNs: Empirical Study and its Explanation        </a>        </b><br><i>        jihyeun yoon (LG CNS), kyungyul kim (LG CNS), jongseong jang (LG CNS)*        </i><br><br>
-Paper ID:        33        -        <b>        <a href="https://arxiv.org/abs/1910.08705">        Attention Guided Metal Artifact Correction in MRI using Deep Neural Networks        </a>        </b><br><i>        Jee Won Kim (KAIST), Kinam Kwon (KAIST), Byungjai Kim (KAIST), HyunWook Park (KAIST)*        </i><br><br>
-Paper ID:        37        -        <b>                Fooling Neural Network Interpretations via Adversarial Model Manipulation                </b><br><i>        Juyeon Heo (Sungkyunkwan University), Sunghwan Joo (Sungkyunkwan University), Taesup Moon (Sungkyunkwan University)*        </i><br><br>
-Paper ID:        39        -        <b>                Second-order feature representation for visualizing pyramidal multiscale superpixel pooling network                </b><br><i>        Ali Tousi (Ulsan National Institute of Science and Technology)*, Jaesik Choi (KAIST)        </i><br><br>
-Paper ID:        42        -        <b>        <a href="https://arxiv.org/abs/1909.12446">        Interpreting Undesirable Pixels for Image Classification on Black-Box Models        </a>        </b><br><i>        Sin-Han Kang (Korea University)*, Hong-Gyu Jung (Korea University), Seong-Whan Lee (Korea University)        </i><br><br>
-
-<br>
-<div class="pricing-box-alt special">
-<div class="pricing-heading">
-<h3 style="text-transform: none;"><strong> Poster List</strong> </h3>
-</div></div>
-
-								<table class="table table-bordered">
-																	  <thead>
-									<tr style="color: #31708F; background-color:#D9EDF7;">
-									  <th style="text-align: center;" colspan=2>Poster Session Paper List</th>
-									</tr>
-								  </thead>
-								  <tbody  style="text-align: center;">
-<tr style="height: 21px;">
-	<td>Poster Session 1 (13:00-13:30)</td>
-	<td>#1, #2, #6, #7, #8, #9, #10, #11, #12, #13, #14, #15, #16, #18, #20, #34</td>
-</tr>
-<tr style="height: 21px;">
-	<td>Poster Session 2 (15:00-15:30)</td>
-	<td>#17, #19, #21, #22, #24, #25, #28, #30, #31, #32, #33, #35, #37, #39, #42</td>
-</tr>
-								  </tbody>
-								</table>
-* The detail information will be updated on this page soon.<br>
-
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="solidline">
-							</div>
-						</div>
-					</div>
-
-
-					<!-- divider -->
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="solidline">
-								</div>
-							</div>
-						</div>
-						<!-- end divider -->
-						<div class="row">
-							<div class="col-lg-12">
-								<a href="#" class="btn btn-success btn-large" id="Contact">Contact</a>
-								<br><br>
-								UNIST Explainable Artificial Intelligence Center<br>
-								 &emsp;&emsp;&emsp; <strong>Jaesik Choi</strong> / jaesik.choi@kaist.ac.kr<br>
-								&emsp;&emsp;&emsp; <strong>Sohee Cho</strong> / sohee.cho@kaist.ac.kr<br>
-								&emsp;&emsp;&emsp; <strong>GyeongEun Lee</strong> / socool@unist.ac.kr / 052-217-2196<br>
+			<!--</ul>-->
+			<div class="tab-content">
+				<div class="tab-pane active" id="English">
+					<div class="col-lg-12">
+						<div class="post-image">
+							<div class="post-heading">
+								<a href="http://iccv2019.thecvf.com/"><img src="/static/img/event/ICCV19logo.png" style=""/></a><br>
 								<br>
+								<h1>2019 ICCV Workshop on</h1>
+								<h2>Interpreting and Explaining Visual Artificial Intelligence Models</h2>
+								<br>
+								<h4>Saturday, November 2nd, 2019</h4>
+								<h4>@ COEX 308AB, Seoul, Korea </h4>
+							</div>
+							<div class="col-lg-12">
+								<div class="row">
+									<a href="#Invitation" class="btn btn-danger">Invitation</a>
+									<a href="#Organizers" class="btn btn-primary">Organizers</a>
+									<a href="#Speakers" class="btn btn-warning">Invited Speakers</a>
+									<a href="#Program" class="btn btn-theme">Program</a>
+									<a href="#Contact" class="btn btn-success">Contact</a>
+								</div>
 							</div>
 						</div>
+						<!-- divider -->
 						<div class="row">
 							<div class="col-lg-12">
 								<div class="solidline">
@@ -409,76 +51,554 @@ Paper ID:        42        -        <b>        <a href="https://arxiv.org/abs/19
 							</div>
 						</div>
 						<!-- end divider -->
-									<!-- Descriptions -->
-					<a href="#" class="btn btn-primary btn-large" id="Organizers">Organizers</a>
-					<br>
-					<br>
-					<div class="row">
-						<div class="col-lg-4">
-								<span><Strong>Jaesik Choi</Strong></span>
-								<span>@UNIST</span>
-								<a href="http://sail.unist.ac.kr/members/jaesik/"><i class="fa fa-home"></i></a>
-						</div>
-						<div class="col-lg-4">
-								  <span><Strong>Seong-Whan Lee</Strong></span>
-								  <span>@Korea Univ.</span>
-								  <a href="http://pr.korea.ac.kr/sub2_1.php?code=LSW"><i class="fa fa-home"></i></a>
-						</div>
-						<div class="col-lg-4">
-								  <span><Strong>K.-R. Müller</Strong></span>
-								  <span>@TU Berlin</span>
-								  <a href="http://heatmapping.org/"><i class="fa fa-home"></i></a>
-						</div>
-						<div class="col-lg-4">
-								  <span><Strong>Seongju Hwang</Strong></span>
-								  <span>@KAIST</span>
-								  <a href="http://www.sungjuhwang.com/"><i class="fa fa-home"></i></a>
-						</div>
-						<div class="col-lg-4">
-								  <span><Strong>Bohyung Han</Strong></span>
-								  <span>@SNU</span>
-								  <a href="https://cv.snu.ac.kr/index.php/~bhhan/"><i class="fa fa-home"></i></a>
-						</div>
-						<div class="col-lg-4">
-								  <span><Strong>David Bau</Strong></span>
-								  <span>@MIT</span>
-								  <a href="http://people.csail.mit.edu/davidbau/home/"><i class="fa fa-home"></i></a>
-						</div>
-						<div class="col-lg-4">
-							  <span><Strong>Ludwig Schubert</Strong></span>
-							  <span>@OpenAI</span>
-							<a href="https://distill.pub/about/"><i class="fa fa-home"></i></a>
-						</div>
-						<div class="col-lg-4">
-							  <span><Strong>Yong Man Ro</Strong></span>
-							  <span>@KAIST</span>
-							<a href="http://ivylab.kaist.ac.kr/base/people/people1.php"><i class="fa fa-home"></i></a>
-						</div>
-
-					</div>
-					<!-- divider -->
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="solidline">
+						<a href="#Invitation" class="btn btn-danger btn-large">Invitation</a>
+						<br>
+						<br>
+						<article>
+						<p>
+							 Explainable and interpretable machine learning models and algorithms are important topics which have received growing attention from research, application and administration. Many advanced visual artificial intelligence systems are often perceived as black-boxes. Researchers would like to be able to interpret what the AI model has learned in order to identify biases and failure models and improve models. Many government agencies pay special attention to the topic. In May 2018, EU enacted the General Data Protection Regulation (GDPR) which mandates a right to explanation from machine learning model. An USA agency, DARPA, launched an Explainable Artificial Intelligence program in 2017. The ministry of science and ICT (MSIT) of South Korea established an Explainable Artificial Intelligence Center.<br>
+							<br>
+							 Recently, several models and algorithms are introduced to explain or interpret the decision of complex artificial intelligence system. Explainable Artificial Intelligence systems can now explain the decisions of autonomous system such as self-driving cars and game agents trained by deep reinforcement learning. Saliency maps built by attribution methods such as network gradients, DeConvNet, Layer-wise Relevance Propagation, PatternAttribution and RISE can identify relevant inputs upon the decisions of classification or regression tasks. Bayesian model composition methods can learn automated decomposition of input data into a composition of explainable base models in human pose estimation. Model agnostic methods such as LIME (Local interpretable model-agnostic explanations) and SHAP make complex deep learning models by providing importance of input features. Network Dissection and GAN Dissection provide human-friendly interpretations of internal nodes in deep neural network and deep generative models.<br>
+							<br>
+							 The present workshop aims to overview recent advances in explainable/interpretable artificial intelligence and establish new theoretical foundations of interpreting and understanding visual artificial intelligence models including deep neural networks. We will discuss the future research directions and applications of explainable visual artificial intelligence.<br>
+							<br>
+							 This workshop has interest including but not limited to the following topics.<br>
+							 - Explaining the decision of visual deep learning models<br>
+							 - Interpretable deep learning models<br>
+							 - Machine learning/deep learning models which generates human-friendly explanations<br>
+							 - Bayesian model composition/decomposition methods<br>
+							 - Model-agnostic machine learning explainable models<br>
+							 - Evaluation of explainable AI models<br>
+							 - Causal analysis of complex AI/ML systems<br>
+							 - Practical applications of explainable AI<br>
+						</p>
+						</article>
+						<!-- divider -->
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="solidline">
+								</div>
 							</div>
 						</div>
+						<!-- end divider -->
+						<!-- Descriptions -->
+						<a href="#" class="btn btn-warning" id="Speakers">Invited Speakers</a>
+						<br>
+						<br>
+						<div class="row">
+							<div class="col-lg-3">
+								<div style="text-align:center;">
+									<img style="width:180px;height:240px" src={% static "img/event/trevor.png" %}><br>
+									<span><strong>Trevor Darrell</strong></span>
+								</div>
+								<span><i class="fas fa-id-card-alt"></i> Professor</span><br>
+								<span><i class="fas fa-building"></i> UC Berkeley</span><br>
+								<a href="https://people.eecs.berkeley.edu/~trevor/"><i class="fa fa-home"></i></a>
+								<!--title "Recent progress towards XAI at UC Berkeley"-->
+							</div>
+							<div class="col-lg-3">
+								<div style="text-align:center;">
+									<img style="width:180px;height:240px" src={% static "img/event/wojciech.png" %}><br>
+									<span><strong>Wojciech Samek</strong></span>
+								</div>
+								<span><i class="fas fa-id-card-alt"></i> Head of Machine Learning Group</span><br>
+								<span><i class="fas fa-building"></i> Fraunhofer Heinrich Hertz Institute</span><br>
+								<a href="http://iphome.hhi.de/samek/"><i class="fa fa-home"></i></a>
+							</div>
+							<div class="col-lg-3">
+								<div style="text-align:center;">
+									<img style="width:180px;height:240px" src={% static "img/event/bau.png" %}><br>
+									<span><strong>David Bau</strong></span>
+								</div>
+								<span><i class="fas fa-id-card-alt"></i> PhD student</span><br>
+								<span><i class="fas fa-building"></i> MIT</span><br>
+								<a href="http://people.csail.mit.edu/davidbau/home/"><i class="fa fa-home"></i></a>
+							</div>
+							<div class="col-lg-3">
+								<div style="text-align:center;">
+									<img style="width:180px;height:240px" src={% static "img/event/ludwig.png" %}><br>
+									<span><strong>Ludwig Schubert</strong></span>
+								</div>
+								<span><i class="fas fa-id-card-alt"></i> Software Engineer</span><br>
+								<span><i class="fas fa-building"></i> OpenAI</span><br>
+								<a href="https://distill.pub/about/"><i class="fa fa-home"></i></a>
+							</div>
+						</div>
+						<br>
+						<!--<strong>TBD</strong>-->
+						<!-- divider -->
+						<!--<div class="row">-->
+						<!--<div class="col-lg-12">-->
+						<!--<div class="solidline">-->
+						<!--</div>-->
+						<!--</div>-->
+						<!--</div>-->
+						<!--&lt;!&ndash; end divider &ndash;&gt;-->
+						<!--&lt;!&ndash; end divider &ndash;&gt;-->
+						<!--<a href="#" class="btn btn-info btn-large" id=" Accepted Papers"> Accepted Papers</a>-->
+						<!--<br>-->
+						<!--<br>-->
+						<!--<div class="pricing-box-alt special">-->
+						<!--<div class="pricing-heading">-->
+						<!--<h3 style="text-transform: none;"><strong> Visual XAI Accepted Papers</strong> </h3>-->
+						<!--</div><br>-->
+						<!--Paper ID:	1	-	<b>		Visualization of Time Series Deep Neural Network		</b><br><i>	Sohee Cho (UNIST)*, Jaesik Choi (KAIST)	</i><br><br>-->
+						<!--Paper ID:	2	-	<b>		Why are Saliency Maps Noisy? Cause of and Solution to Noisy Saliency Maps		</b><br><i>	Beomsu Kim (Korea Advanced Institute of Science and Technology)*, Junghoon Seo (Satrec Initiative), SeungHyun Jeon (Satrec Initiative), Jamyoung Koo (SI Analytics), Jeongyeol Choe (SI Analytics), Taegyun Jeon (SI Analytics)	</i><br><br>-->
+						<!--Paper ID:	6	-	<b>		Interpretable Disentanglement of Neural Networks by Extracting Class-Specific Subnetwork		</b><br><i>	Yulong Wang (Tsinghua University), Xiaolin Hu (Tsinghua University), Hang Su (Tsinghua Univiersity)*	</i><br><br>-->
+						<!--Paper ID:	7	-	<b>		Occlusions for Effective Data Augmentation in Image Classification		</b><br><i>	Ruth C Fong (University of Oxford)*, Andrea Vedaldi (Oxford University)	</i><br><br>-->
+						<!--Paper ID:	8	-	<b>	<a href="https://arxiv.org/abs/1907.13054">	Grid Saliency for Context Explanations of Semantic Segmentation	</a>	</b><br><i>	Lukas Hoyer (Bosch Center for Artificial Intelligence)*, Mauricio Munoz (Bosch Center for Artificial Intelligence), Prateek Katiyar (Bosch Center for Artificial Intelligence), Anna Khoreva (Bosch Center for Artificial Intelligence), Volker Fischer (Bosch Center for Artificial Intelligence)	</i><br><br>-->
+						<!--Paper ID:	9	-	<b>	<a href="https://arxiv.org/abs/1909.08891">	Explaining Visual Models by Causal Attribution	</a>	</b><br><i>	Álvaro Parafita Martínez (Universitat de Barcelona)*, Jordi Vitria (Universitat de Barcelona)	</i><br><br>-->
+						<!--Paper ID:	10	-	<b>	<a href="https://arxiv.org/abs/1908.04351">	Explaining Convolutional Neural Networks using Softmax Gradient Layer-wise Relevance Propagation	</a>	</b><br><i>	Brian K Iwana (Kyushu University)*, Ryohei Kuroki (Kyushu University), Seiichi Uchida (Kyushu University)	</i><br><br>-->
+						<!--Paper ID:	11	-	<b>		Understanding Convolutional Networks Using Linear Interpreters - Extended Abstract		</b><br><i>	Pablo Navarrete Michelini (BOE Technology Group Co., Ltd.)*, Hanwen Liu (BOE Technology Group Co., Ltd.), Yunhua Lu (BOE Technology Group Co., Ltd.), Xingqun Jiang (BOE Technology Group Co., Ltd.)	</i><br><br>-->
+						<!--Paper ID:	12	-	<b>	<a href="https://arxiv.org/abs/1908.11528">	Bin-wise Temperature Scaling (BTS):Improvement in Confidence Calibration Performance through Simple Scaling Techniques	</a>	</b><br><i>	Younghak Shin (LGCNS)*, ByeongmoonJi (LG CNS), Hyemin Jung (LG CNS), jihyeun yoon (LG CNS), kyungyul kim (LG CNS)	</i><br><br>-->
+						<!--Paper ID:	13	-	<b>	<a href="https://arxiv.org/abs/1904.04621">	Towards Analyzing Semantic Robustness of Deep Neural Networks	</a>	</b><br><i>	Abdullah J Hamdi (KAUST)*, Bernard Ghanem (KAUST)	</i><br><br>-->
+						<!--Paper ID:	14	-	<b>	<a href="https://arxiv.org/abs/1909.07082">	Towards A Rigorous Evaluation Of XAI Methods On Time Series	</a>	</b><br><i>	Udo M Schlegel (University Konstanz)*, Hiba Arnout (Siemens CT & TU Munich), Mennatallah El-Assady (University of Konstanz), Daniela Oelke (Siemens CT), Daniel Keim (Uni. Konstanz)	</i><br><br>-->
+						<!--Paper ID:	15	-	<b>	<a href="https://arxiv.org/abs/1909.08611">	Class Feature Pyramids for Video Explanation	</a>	</b><br><i>	Alexandros Stergiou (Utrecht University)*, George Kapidis (Utrecht University), Grigorios Kalliatakis (University of Essex, UK), Christos Chrysoulas (London South Bank University), Ronald Poppe (Utrecht University), Remco C.Veltkamp (Utrecht University)	</i><br><br>-->
+						<!--Paper ID:	16	-	<b>		Localizing Occluders with Compositional Convolutional Networks		</b><br><i>	Adam Kortylewski (Johns Hopkins University)*, Qing Liu (Johns Hopkins University), Huiyu Wang (Johns Hopkins University), Zhishuai Zhang (Johns Hopkins University), Alan Yuille (Johns Hopkins University)	</i><br><br>-->
+						<!--Paper ID:	17	-	<b>	<a href="https://arxiv.org/abs/1910.00387">	Leveraging Model Interpretability and Stability to increase Model Robustness	</a>	</b><br><i>	Fei WU (CentraleSupelec), Thomas MICHEL (Valeo)*, Alexandre Briot (Valeo)	</i><br><br>-->
+						<!--Paper ID:	18	-	<b>	<a href="https://arxiv.org/abs/1909.09285">	Characterizing Sources of Uncertainty to Proxy Calibration and Disambiguate Annotator and Data Bias	</a>	</b><br><i>	Asma Ghandeharioun (MIT)*, Brian Eoff (Google Research), BrendanJou (Google Research), Rosalind Picard (MIT Media Lab)	</i><br><br>-->
+						<!--Paper ID:	19	-	<b>		Dynamic-K Activation: Simple Dynamic Routing Like Behavior in Convolutional Neural Networks		</b><br><i>	Yiyou Sun (University of Wisconsin Madison)*, Sathya Ravi (University of Wisconsin-Madison), Vikas Singh (University of Wisconsin-Madison USA)	</i><br><br>-->
+						<!--Paper ID:	20	-	<b>		Efficient Exploration-based Sampling in the Generative Boundary of Deep Generative Neural Networks		</b><br><i>	Giyoung Jeon (Ulsan National Institute of Science and Technology), Haedong Jeong (Ulsan National Institute of Science and Technology), Jaesik Choi (KAIST)*	</i><br><br>-->
+						<!--Paper ID:	21	-	<b>		Cost-Effective Interactive Attention Learning for Action Recognition		</b><br><i>	Jay Heo (KAIST)*, Junhyeon Park (KAIST), Hyewon Jeong (KAIST), Wuhyun Shin (KAIST), Kwang Joon Kim (Yonsei University College of Medicine), Sung Ju Hwang (KAIST)	</i><br><br>-->
+						<!--Paper ID:	22	-	<b>		A Plug-in Fatorizer for Disentangling a Latent Representation		</b><br><i>	Jee Seok Yoon (Korea University), Wonjun Ko (Korea University), Heung-Il Suk (Korea University)*	</i><br><br>-->
+						<!--Paper ID:	24	-	<b><a href="https://arxiv.org/abs/1910.04357">		Visual Understanding of Multiple Attributes Learning Model of X-Ray Scattering Images</a>		</b><br><i>	Xinyi Huang (Kent State University), SuphanutJamonnak (Kent State University), Ye Zhao (Kent State University)*, Boyu Wang (Stony Brook University), Minh Hoai Nguyen (Stony Brook University), KevinYager (Brookhaven National Laboratory), Wei Xu (Brookhaven National Lab)	</i><br><br>-->
+						<!--Paper ID:	25	-	<b>		Interpretable BoW Networks for Adversarial Example Detection		</b><br><i>	Krishna Kanth Nakka (EPFL)*, Mathieu Salzmann (EPFL)	</i><br><br>-->
+						<!--Paper ID:	28	-	<b>	<a href="https://arxiv.org/abs/1909.08442">	Semantically Interpretable Activation Maps: what-where-how explanations within CNNs	</a>	</b><br><i>	Diego Marcos (Wageningen University)*, Sylvain Lobry (Wageningen University and Research), Devis Tuia (Wageningen University and Research)	</i><br><br>-->
+						<!--Paper ID:	30	-	<b>		To Trust, or Not to Trust? A Case Study of Human Bias in Automated Video Interview Assessments		</b><br><i>	Chee Wee Leong (Educational Testing Service (ETS))*, Katrina Roohr (Educational Testing Service), Vikram Ramanarayanan (University of California, San Francisco), MichelleMartin-Raugh (Educational Testing Service (ETS)), Harrison Kell (Educational Testing Service), Rutuja Ubale (Educational Testing Service Research), Yao Qian (Educational Testing Service), Zydrune Mladineo (Educational Testing Service), Laura McCulla (Educational Testing Service)	</i><br><br>-->
+						<!--Paper ID:	31	-	<b>		Assisting human experts in the interpretation of their visual process: A case study on assessing copper surface adhesive potency		</b><br><i>	Tristan Hascoet*, Xuejiao Deng, Kiyoto Tai, Mari Sugiyama, Yuji Adachi, Sachiko Nakamura, Yasuo Ariki, Tomoko Hayashi, Tetusya Takiguchi (Kobe University)	</i><br><br>-->
+						<!--Paper ID:	32	-	<b>	<a href="https://arxiv.org/abs/1909.09263">	Propagated Perturbation of Adversarial Attack for well-known CNNs: Empirical Study and its Explanation	</a>	</b><br><i>	jihyeun yoon (LG CNS), kyungyul kim (LG CNS), jongseong jang (LG CNS)*	</i><br><br>-->
+						<!--Paper ID:	33	-	<b>	<a href="https://arxiv.org/abs/1910.08705">	Attention Guided Metal Artifact Correction in MRI using Deep Neural Networks	</a>	</b><br><i>	Jee Won Kim (KAIST), Kinam Kwon (KAIST), Byungjai Kim (KAIST), HyunWook Park (KAIST)*	</i><br><br>-->
+						<!--Paper ID:	34	-	<b>		Decision explanation and feature importance for invertible networks		</b><br><i>	Juntang Zhuang (Yale University)*, Nicha Dvornek (Yale University), Xiaoxiao Li (Yale University), Junlin Yang (Yale University), James S Duncan (Yale University)	</i><br><br>-->
+						<!--Paper ID:	35	-	<b>	<a href="https://arxiv.org/abs/1908.02511">	Free-Lunch Saliency via Attention in Atari Agents	</a>	</b><br><i>	Dmitry Nikulin (Samsung AI Center Moscow)*, Anastasia Ianina (Samsung AI Center Moscow), Vladimir A Aliev (Samsung AI Center, Moscow), Sergey I Nikolenko (PDMI RAS)	</i><br><br>-->
+						<!--Paper ID:	37	-	<b>		Fooling Neural Network Interpretations via Adversarial Model Manipulation		</b><br><i>	Juyeon Heo (Sungkyunkwan University), Sunghwan Joo (Sungkyunkwan University), Taesup Moon (Sungkyunkwan University)*	</i><br><br>-->
+						<!--Paper ID:	39	-	<b>		Second-order feature representation for visualizing pyramidal multiscale superpixel pooling network		</b><br><i>	Ali Tousi (Ulsan National Institute of Science and Technology)*, Jaesik Choi (KAIST)	</i><br><br>-->
+						<!--Paper ID:	42	-	<b>	<a href="https://arxiv.org/abs/1909.12446">	Interpreting Undesirable Pixels for Image Classification on Black-Box Models	</a>	</b><br><i>	Sin-Han Kang (Korea University)*, Hong-Gyu Jung (Korea University), Seong-Whan Lee (Korea University)	</i><br><br>-->
+						<!--</div>-->
+						<!-- Descriptions -->
+						<div class="row">
+							<div class="col-lg-12">
+								<a href="#" class="btn btn-theme btn-large" id="Program">Program</a>
+								<br>
+								<br>
+								<div class="pricing-box-alt special">
+									<div class="pricing-heading">
+										<h3><strong>PROGRAM</strong></h3>
+									</div>
+									<table class="table table-bordered">
+									<thead>
+									<tr style="color: white; background-color:#393a3d;">
+										<th style="text-align: center;width:15%">
+											Time
+										</th>
+										<th style="text-align: center;width:65%">
+											Title
+										</th>
+										<th style="text-align: center;width:20%">
+											Room
+										</th>
+									</tr>
+									</thead>
+									<tbody style="text-align: center">
+								</tr>
+								<tr>
+									<td>
+										9:00 - 9:10
+									</td>
+									<td style="text-align: left">
+										<strong>Opening Remarks</strong>
+									</td>
+									<td colspan="1" rowspan="3">
+										<div>
+											308BC
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										9:10 -10:00
+									</td>
+									<td style="text-align: left">
+										<strong> Invited Talk 1. Recent progress towards XAI at UC Berkeley</strong><br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trevor Darrell (UC Berkeley)
+									</td>
+								</tr>
+								<tr>
+									<td>
+										10:00 - 10:20
+									</td>
+									<td style="text-align: left">
+										<strong>Oral Presentations 1 (10min * 2 papers)</strong>
+									</td>
+								</tr>
+								<tr style="background-color: #DFDDDD;">
+									<td>
+										10:20 - 10:40
+									</td>
+									<td colspan="2" rowspan="1">
+										Coffee Break
+									</td>
+								</tr>
+								<tr>
+									<td>
+										10:40 - 11:30
+									</td>
+									<td style="text-align: left">
+										<strong>Invited Talk 2.</strong><br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Wojciech Samek (Fraunhofer Heinrich Hertz Institute)
+									</td>
+									<td colspan="1" rowspan="2">
+										<div>
+											308BC
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										11:30 - 11:55
+									</td>
+									<td style="text-align: left">
+										<strong>Poster Spotlights (1min * 25 papers)</strong>
+									</td>
+								</tr>
+								<tr style="background-color: #DFDDDD;">
+									<td>
+										12:00 - 13:00
+									</td>
+									<td colspan="2" rowspan="1">
+										Lunch
+									</td>
+								</tr>
+								<tr>
+									<td>
+										13:00 - 13:30
+									</td>
+									<td style="text-align: left">
+										<strong>Poster Session 1 (16 papers)</strong>
+									</td>
+									<td>
+										Poster Section2
+									</td>
+								</tr>
+								<tr>
+									<td>
+										13:30 - 14:20
+									</td>
+									<td style="text-align: left">
+										<strong>Invited Talk 3. </strong><br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;David Bau (MIT)
+									</td>
+									<td colspan="1" rowspan="2">
+										<div>
+											308BC
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										14:20 -15:00
+									</td>
+									<td style="text-align: left">
+										<strong>Oral Presentations 2 (10min * 4 papers)</strong>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										15:00 - 15:30
+									</td>
+									<td style="text-align: left">
+										<strong>Poster Session 2 (15 papers)</strong>
+									</td>
+									<td>
+										Poster Section2
+									</td>
+								</tr>
+							</tr>
+							<tr style="background-color: #DFDDDD;">
+								<td>
+									15:30 - 15:50
+								</td>
+								<td colspan="2" rowspan="1">
+									Coffee Break
+								</td>
+							</tr>
+							<tr>
+								<td>
+									15:50 - 16:40
+								</td>
+								<td style="text-align: left">
+									<strong>Invited Talk 4.</strong><br>
+									 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ludwig Schubert (OpenAI)
+								</td>
+								<td colspan="1" rowspan="2">
+									<div>
+										308BC
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									16:40 - 17:00
+								</td>
+								<td style="text-align: left">
+									<strong>Tutorial on Open Source projects in XAI (10min * 2 sessions)</strong>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
 					</div>
-					<!-- end divider -->
-
 				</div>
+				<div class="alert alert-danger">
+					<span><strong>Presentation Guidelines</strong></span><br>
+					<li> All accepted papers are allocated not only a presentaion time (Oral presentation or 1-minute spotlight) but also a poster space at E hall. Please check your paper ID below. </li>
+					<li> The physical dimensions of the poster stands that will be available this year are 1950mm (width) x 950mm (height). Please prepare your posters accordingly. Other formats are up to you.(eg. font style, font size, etc.) </li>
+					<li> You could use slides(pdf/ppt) for audience during the presentation. </li>
+				</div>
+				<br>
+				<img src="/static/img/event/poster.png" style="width:50%"/>
+				<br>
+				<br>
+				<div class="pricing-box-alt special">
+					<div class="pricing-heading">
+						<h3 style="text-transform: none;"><strong> Presentaion List</strong></h3>
+					</div>
+				</div>
+				<div class="alert alert-info">
+					<strong> Oral Presentation 1 (10:00-10:20) </strong>
+				</div>
+				 Paper ID: 18 - <b><a href="https://arxiv.org/abs/1909.09285"> Characterizing Sources of Uncertainty to Proxy Calibration and Disambiguate Annotator and Data Bias </a></b><br>
+				<i> Asma Ghandeharioun (MIT)*, Brian Eoff (Google Research), Brendan Jou (Google Research), Rosalind Picard (MIT Media Lab) </i><br>
+				<br>
+				 Paper ID: 34 - <b> Decision explanation and feature importance for invertible networks </b><br>
+				<i> Juntang Zhuang (Yale University)*, Nicha Dvornek (Yale University), Xiaoxiao Li (Yale University), Junlin Yang (Yale University), James S Duncan (Yale University) </i><br>
+				<br>
+				<div class="alert alert-info">
+					<strong> Oral Presentation 2 (14:20-15:00)</strong>
+				</div>
+				 Paper ID: 19 - <b> Dynamic-K Activation: Simple Dynamic Routing Like Behavior in Convolutional Neural Networks </b><br>
+				<i> Yiyou Sun (University of Wisconsin Madison)*, Sathya Ravi (University of Wisconsin-Madison), Vikas Singh (University of Wisconsin-Madison USA) </i><br>
+				<br>
+				 Paper ID: 35 - <b><a href="https://arxiv.org/abs/1908.02511"> Free-Lunch Saliency via Attention in Atari Agents </a></b><br>
+				<i> Dmitry Nikulin (Samsung AI Center Moscow)*, Anastasia Ianina (Samsung AI Center Moscow), Vladimir A Aliev (Samsung AI Center, Moscow), Sergey I Nikolenko (PDMI RAS) </i><br>
+				<br>
+				 Paper ID: 25 - <b> Interpretable BoW Networks for Adversarial Example Detection </b><br>
+				<i> Krishna Kanth Nakka (EPFL)*, Mathieu Salzmann (EPFL) </i><br>
+				<br>
+				 Paper ID: 17 - <b><a href="https://arxiv.org/abs/1910.00387"> Leveraging Model Interpretability and Stability to increase Model Robustness </a></b><br>
+				<i> Fei WU (CentraleSupelec), Thomas MICHEL (Valeo)*, Alexandre Briot (Valeo) </i><br>
+				<br>
+				<div class="alert alert-info">
+					<strong> 1-min Poster Spotlights (11:30-11:55) </strong>
+				</div>
+				 Paper ID: 1 - <b> Visualization of Time Series Deep Neural Network </b><br>
+				<i> Sohee Cho (UNIST)*, Jaesik Choi (KAIST) </i><br>
+				<br>
+				 Paper ID: 2 - <b> Why are Saliency Maps Noisy? Cause of and Solution to Noisy Saliency Maps </b><br>
+				<i> Beomsu Kim (Korea Advanced Institute of Science and Technology)*, Junghoon Seo (Satrec Initiative), SeungHyun Jeon (Satrec Initiative), Jamyoung Koo (SI Analytics), Jeongyeol Choe (SI Analytics), Taegyun Jeon (SI Analytics) </i><br>
+				<br>
+				 Paper ID: 6 - <b> Interpretable Disentanglement of Neural Networks by Extracting Class-Specific Subnetwork </b><br>
+				<i> Yulong Wang (Tsinghua University), Xiaolin Hu (Tsinghua University), Hang Su (Tsinghua Univiersity)* </i><br>
+				<br>
+				 Paper ID: 7 - <b> Occlusions for Effective Data Augmentation in Image Classification </b><br>
+				<i> Ruth C Fong (University of Oxford)*, Andrea Vedaldi (Oxford University) </i><br>
+				<br>
+				 Paper ID: 8 - <b><a href="https://arxiv.org/abs/1907.13054"> Grid Saliency for Context Explanations of Semantic Segmentation </a></b><br>
+				<i> Lukas Hoyer (Bosch Center for Artificial Intelligence)*, Mauricio Munoz (Bosch Center for Artificial Intelligence), Prateek Katiyar (Bosch Center for Artificial Intelligence), Anna Khoreva (Bosch Center for Artificial Intelligence), Volker Fischer (Bosch Center for Artificial Intelligence) </i><br>
+				<br>
+				 Paper ID: 9 - <b><a href="https://arxiv.org/abs/1909.08891"> Explaining Visual Models by Causal Attribution </a></b><br>
+				<i> Álvaro Parafita Martínez (Universitat de Barcelona)*, Jordi Vitria (Universitat de Barcelona) </i><br>
+				<br>
+				 Paper ID: 10 - <b><a href="https://arxiv.org/abs/1908.04351"> Explaining Convolutional Neural Networks using Softmax Gradient Layer-wise Relevance Propagation </a></b><br>
+				<i> Brian K Iwana (Kyushu University)*, Ryohei Kuroki (Kyushu University), Seiichi Uchida (Kyushu University) </i><br>
+				<br>
+				 Paper ID: 11 - <b> Understanding Convolutional Networks Using Linear Interpreters - Extended Abstract </b><br>
+				<i> Pablo Navarrete Michelini (BOE Technology Group Co., Ltd.)*, Hanwen Liu (BOE Technology Group Co., Ltd.), Yunhua Lu (BOE Technology Group Co., Ltd.), Xingqun Jiang (BOE Technology Group Co., Ltd.) </i><br>
+				<br>
+				 Paper ID: 12 - <b><a href="https://arxiv.org/abs/1908.11528"> Bin-wise Temperature Scaling (BTS):Improvement in Confidence Calibration Performance through Simple Scaling Techniques </a></b><br>
+				<i> Younghak Shin (LGCNS)*, ByeongmoonJi (LG CNS), Hyemin Jung (LG CNS), jihyeun yoon (LG CNS), kyungyul kim (LG CNS) </i><br>
+				<br>
+				 Paper ID: 13 - <b><a href="https://arxiv.org/abs/1904.04621"> Towards Analyzing Semantic Robustness of Deep Neural Networks </a></b><br>
+				<i> Abdullah J Hamdi (KAUST)*, Bernard Ghanem (KAUST) </i><br>
+				<br>
+				 Paper ID: 14 - <b><a href="https://arxiv.org/abs/1909.07082"> Towards A Rigorous Evaluation Of XAI Methods On Time Series </a></b><br>
+				<i> Udo M Schlegel (University Konstanz)*, Hiba Arnout (Siemens CT & TU Munich), Mennatallah El-Assady (University of Konstanz), Daniela Oelke (Siemens CT), Daniel Keim (Uni. Konstanz) </i><br>
+				<br>
+				 Paper ID: 15 - <b><a href="https://arxiv.org/abs/1909.08611"> Class Feature Pyramids for Video Explanation </a></b><br>
+				<i> Alexandros Stergiou (Utrecht University)*, George Kapidis (Utrecht University), Grigorios Kalliatakis (University of Essex, UK), Christos Chrysoulas (London South Bank University), Ronald Poppe (Utrecht University), Remco C.Veltkamp (Utrecht University) </i><br>
+				<br>
+				 Paper ID: 16 - <b> Localizing Occluders with Compositional Convolutional Networks </b><br>
+				<i> Adam Kortylewski (Johns Hopkins University)*, Qing Liu (Johns Hopkins University), Huiyu Wang (Johns Hopkins University), Zhishuai Zhang (Johns Hopkins University), Alan Yuille (Johns Hopkins University) </i><br>
+				<br>
+				 Paper ID: 20 - <b> Efficient Exploration-based Sampling in the Generative Boundary of Deep Generative Neural Networks </b><br>
+				<i> Giyoung Jeon (Ulsan National Institute of Science and Technology), Haedong Jeong (Ulsan National Institute of Science and Technology), Jaesik Choi (KAIST)* </i><br>
+				<br>
+				 Paper ID: 21 - <b> Cost-Effective Interactive Attention Learning for Action Recognition </b><br>
+				<i> Jay Heo (KAIST)*, Junhyeon Park (KAIST), Hyewon Jeong (KAIST), Wuhyun Shin (KAIST), Kwang Joon Kim (Yonsei University College of Medicine), Sung Ju Hwang (KAIST) </i><br>
+				<br>
+				 Paper ID: 22 - <b> A Plug-in Fatorizer for Disentangling a Latent Representation </b><br>
+				<i> Jee Seok Yoon (Korea University), Wonjun Ko (Korea University), Heung-Il Suk (Korea University)* </i><br>
+				<br>
+				 Paper ID: 24 - <b><a href="https://arxiv.org/abs/1910.04357"> Visual Understanding of Multiple Attributes Learning Model of X-Ray Scattering Images</a></b><br>
+				<i> Xinyi Huang (Kent State University), SuphanutJamonnak (Kent State University), Ye Zhao (Kent State University)*, Boyu Wang (Stony Brook University), Minh Hoai Nguyen (Stony Brook University), KevinYager (Brookhaven National Laboratory), Wei Xu (Brookhaven National Lab) </i><br>
+				<br>
+				 Paper ID: 28 - <b><a href="https://arxiv.org/abs/1909.08442"> Semantically Interpretable Activation Maps: what-where-how explanations within CNNs </a></b><br>
+				<i> Diego Marcos (Wageningen University)*, Sylvain Lobry (Wageningen University and Research), Devis Tuia (Wageningen University and Research) </i><br>
+				<br>
+				 Paper ID: 30 - <b> To Trust, or Not to Trust? A Case Study of Human Bias in Automated Video Interview Assessments </b><br>
+				<i> Chee Wee Leong (Educational Testing Service (ETS))*, Katrina Roohr (Educational Testing Service), Vikram Ramanarayanan (University of California, San Francisco), MichelleMartin-Raugh (Educational Testing Service (ETS)), Harrison Kell (Educational Testing Service), Rutuja Ubale (Educational Testing Service Research), Yao Qian (Educational Testing Service), Zydrune Mladineo (Educational Testing Service), Laura McCulla (Educational Testing Service) </i><br>
+				<br>
+				 Paper ID: 31 - <b> Assisting human experts in the interpretation of their visual process: A case study on assessing copper surface adhesive potency </b><br>
+				<i> Tristan Hascoet*, Xuejiao Deng, Kiyoto Tai, Mari Sugiyama, Yuji Adachi, Sachiko Nakamura, Yasuo Ariki, Tomoko Hayashi, Tetusya Takiguchi (Kobe University) </i><br>
+				<br>
+				 Paper ID: 32 - <b><a href="https://arxiv.org/abs/1909.09263"> Propagated Perturbation of Adversarial Attack for well-known CNNs: Empirical Study and its Explanation </a></b><br>
+				<i> jihyeun yoon (LG CNS), kyungyul kim (LG CNS), jongseong jang (LG CNS)* </i><br>
+				<br>
+				 Paper ID: 33 - <b><a href="https://arxiv.org/abs/1910.08705"> Attention Guided Metal Artifact Correction in MRI using Deep Neural Networks </a></b><br>
+				<i> Jee Won Kim (KAIST), Kinam Kwon (KAIST), Byungjai Kim (KAIST), HyunWook Park (KAIST)* </i><br>
+				<br>
+				 Paper ID: 37 - <b> Fooling Neural Network Interpretations via Adversarial Model Manipulation </b><br>
+				<i> Juyeon Heo (Sungkyunkwan University), Sunghwan Joo (Sungkyunkwan University), Taesup Moon (Sungkyunkwan University)* </i><br>
+				<br>
+				 Paper ID: 39 - <b> Second-order feature representation for visualizing pyramidal multiscale superpixel pooling network </b><br>
+				<i> Ali Tousi (Ulsan National Institute of Science and Technology)*, Jaesik Choi (KAIST) </i><br>
+				<br>
+				 Paper ID: 42 - <b><a href="https://arxiv.org/abs/1909.12446"> Interpreting Undesirable Pixels for Image Classification on Black-Box Models </a></b><br>
+				<i> Sin-Han Kang (Korea University)*, Hong-Gyu Jung (Korea University), Seong-Whan Lee (Korea University) </i><br>
+				<br>
+				<br>
+				<div class="pricing-box-alt special">
+					<div class="pricing-heading">
+						<h3 style="text-transform: none;"><strong> Poster List</strong></h3>
+					</div>
+				</div>
+				<table class="table table-bordered">
+				<thead>
+				<tr style="color: #31708F; background-color:#D9EDF7;">
+					<th style="text-align: center;" colspan=2>
+						Poster Session Paper List
+					</th>
+				</tr>
+				</thead>
+				<tbody style="text-align: center;">
+				<tr style="height: 21px;">
+					<td>
+						Poster Session 1 (13:00-13:30)
+					</td>
+					<td>
+						#1, #2, #6, #7, #8, #9, #10, #11, #12, #13, #14, #15, #16, #18, #20, #34
+					</td>
+				</tr>
+				<tr style="height: 21px;">
+					<td>
+						Poster Session 2 (15:00-15:30)
+					</td>
+					<td>
+						#17, #19, #21, #22, #24, #25, #28, #30, #31, #32, #33, #35, #37, #39, #42
+					</td>
+				</tr>
+				</tbody>
+				</table>
+				 * The detail information will be updated on this page soon.<br>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="solidline">
+						</div>
+					</div>
+				</div>
+				<!-- divider -->
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="solidline">
+						</div>
+					</div>
+				</div>
+				<!-- end divider -->
+				<div class="row">
+					<div class="col-lg-12">
+						<a href="#" class="btn btn-success btn-large" id="Contact">Contact</a>
+						<br>
+						<br>
+						 UNIST Explainable Artificial Intelligence Center<br>
+						 &emsp;&emsp;&emsp; <strong>Jaesik Choi</strong> / jaesik.choi@kaist.ac.kr<br>
+						 &emsp;&emsp;&emsp; <strong>Sohee Cho</strong> / sohee.cho@kaist.ac.kr<br>
+						 &emsp;&emsp;&emsp; <strong>GyeongEun Lee</strong> / socool@unist.ac.kr / 052-217-2196<br>
+						<br>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="solidline">
+						</div>
+					</div>
+				</div>
+				<!-- end divider -->
+				<!-- Descriptions -->
+				<a href="#" class="btn btn-primary btn-large" id="Organizers">Organizers</a>
+				<br>
+				<br>
+				<div class="row">
+					<div class="col-lg-4">
+						<span><strong>Jaesik Choi</strong></span>
+						<span>@UNIST</span>
+						<a href="http://sail.unist.ac.kr/members/jaesik/"><i class="fa fa-home"></i></a>
+					</div>
+					<div class="col-lg-4">
+						<span><strong>Seong-Whan Lee</strong></span>
+						<span>@Korea Univ.</span>
+						<a href="http://pr.korea.ac.kr/sub2_1.php?code=LSW"><i class="fa fa-home"></i></a>
+					</div>
+					<div class="col-lg-4">
+						<span><strong>K.-R. Müller</strong></span>
+						<span>@TU Berlin</span>
+						<a href="http://heatmapping.org/"><i class="fa fa-home"></i></a>
+					</div>
+					<div class="col-lg-4">
+						<span><strong>Seongju Hwang</strong></span>
+						<span>@KAIST</span>
+						<a href="http://www.sungjuhwang.com/"><i class="fa fa-home"></i></a>
+					</div>
+					<div class="col-lg-4">
+						<span><strong>Bohyung Han</strong></span>
+						<span>@SNU</span>
+						<a href="https://cv.snu.ac.kr/index.php/~bhhan/"><i class="fa fa-home"></i></a>
+					</div>
+					<div class="col-lg-4">
+						<span><strong>David Bau</strong></span>
+						<span>@MIT</span>
+						<a href="http://people.csail.mit.edu/davidbau/home/"><i class="fa fa-home"></i></a>
+					</div>
+					<div class="col-lg-4">
+						<span><strong>Ludwig Schubert</strong></span>
+						<span>@OpenAI</span>
+						<a href="https://distill.pub/about/"><i class="fa fa-home"></i></a>
+					</div>
+					<div class="col-lg-4">
+						<span><strong>Yong Man Ro</strong></span>
+						<span>@KAIST</span>
+						<a href="http://ivylab.kaist.ac.kr/base/people/people1.php"><i class="fa fa-home"></i></a>
+					</div>
+				</div>
+				<!-- divider -->
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="solidline">
+						</div>
+					</div>
+				</div>
+				<!-- end divider -->
 			</div>
 		</div>
 	</div>
-	</div>
+</div>
+</div>
 </div>
 </section>
-
 <!-- divider -->
 <div class="row">
-	<div class="col-lg-12">
-		<div class="solidline">
-		</div>
-	</div>
+<div class="col-lg-12">
+<div class="solidline">
+</div>
+</div>
 </div>
 <!-- end divider -->
- {% endblock content %} {
+ {% endblock content %}
