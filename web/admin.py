@@ -1,5 +1,8 @@
 from django.contrib import admin
-from web.models import TopMenu, SubMenu, Greeting, Member, Lab, Project, DemoResource, Publication, Patent, Notice, News, Gallery, Community, Github, RelatedProject, AutoNews
+from web.models import (TopMenu, SubMenu, Greeting, Member, Lab, Project, 
+                        DemoResource, Publication, Patent, Notice, News, 
+                        Gallery, Community, Github, RelatedProject, AutoNews,
+                        AutoNews_v2)
 
 # Register your models here.
 
@@ -23,3 +26,4 @@ admin.site.register(Community)
 admin.site.register(Github)
 admin.site.register(RelatedProject)
 admin.site.register(AutoNews)
+admin.site.register(AutoNews_v2)

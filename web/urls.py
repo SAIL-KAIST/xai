@@ -19,6 +19,11 @@ urlpatterns = [
     url(r'^research/automatic_news/$', views.AutomaticNews.as_view(), name='autonews'),
     url(r'^research/automatic_news/list/(?P<company>.+)/$', views.AutomaticNewsList.as_view(), name='autonews_list'),
     url(r'^research/automatic_news/detail/(?P<pk>\d+)/$', views.AutomaticNewsDetail.as_view(), name='autonews_detail'),
+    
+    # TODO: list of companies, stocks like autonews_list
+    # new version of automatic
+    url(r'^research/automatic_news_v2/detail/(?P<pk>\d+)/$', views.AutomaticNewsDetail_v2.as_view(), name='autonews_detail_v2'),
+    
 
     # url(r'^research/demoresource/$', views.DemoresourceImageList.as_view(), name='demoresource'),
     url(r'^research/unist_index/$', views.financialIndex, name='financial_index'),

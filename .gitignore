@@ -5,3 +5,4 @@ static/upload/AutomaticNews
 .idea/
 venv/
 web/migrations
+.vscode/
