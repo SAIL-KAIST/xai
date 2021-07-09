@@ -7,7 +7,8 @@ from datetime import timedelta, datetime
 from .models import (TopMenu, SubMenu, Greeting, Member, Lab, Project, 
                      DemoResource, Publication, Patent, Notice, News,
                      Gallery, Community, RelatedProject, AutoNews, 
-                     CompanyList, AutoNews_v2)
+                     CompanyList)
+
 
 from django.views.generic.base import TemplateView
 from django.views.generic import ListView, DetailView
@@ -205,20 +206,6 @@ class AutomaticNewsDetail(DetailView):
         context = {'autonews':autonews, 'predict_pk':predict_pk, 'is_future':is_future, 'is_only_2018':is_only_2018}
         return render(request, self.template_name, context)
     
-    
-class AutomaticNewsDetail_v2(DetailView):
-    
-    model = AutoNews_v2
-    template_name = "web/automaticnews_detail_v2.html"
-    
-    def get_context_data(self, **kwargs):
-        
-        pass
-    
-    def get(self, request, pk):
-        
-        context = {}
-        return render(request, self.template_name, context)
     
 
 def stock(request):

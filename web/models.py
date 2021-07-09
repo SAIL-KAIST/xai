@@ -148,25 +148,8 @@ class AutoNews(models.Model):
     submenu_id = models.ForeignKey('SubMenu', on_delete=models.PROTECT)
 
     def __str__(self):
-        return self.title
-
-class AutoNews_v2(models.Model): 
-    """
-    Automatic generated reported from ABCD in English
-    """
+        return self.title    
     
-    company = models.CharField(max_length=50)
-    title = models.CharField(max_length=100)
-    datetime = models.DateTimeField() # when to save to data base?
-    content = models.TextField() # contain generated html
-    image_folder = models.ImageField(upload_to="AutomaticNews/") # point to the folder that the generated html need
-    
-    #key to pick which report to show
-    id = models.ForeignKey('submenu', on_delete=models.PROTECT)
-    
-    def __str__(self) -> str:
-        return self.title
-
 class Publication(models.Model):
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)

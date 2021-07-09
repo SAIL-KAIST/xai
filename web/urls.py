@@ -1,6 +1,7 @@
 from django.conf.urls import url, include
 
 from . import views
+from . import views_abcd
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
@@ -20,9 +21,10 @@ urlpatterns = [
     url(r'^research/automatic_news/list/(?P<company>.+)/$', views.AutomaticNewsList.as_view(), name='autonews_list'),
     url(r'^research/automatic_news/detail/(?P<pk>\d+)/$', views.AutomaticNewsDetail.as_view(), name='autonews_detail'),
     
-    # TODO: list of companies, stocks like autonews_list
     # new version of automatic
-    url(r'^research/automatic_news_v2/detail/(?P<pk>\d+)/$', views.AutomaticNewsDetail_v2.as_view(), name='autonews_detail_v2'),
+    url(r'^research/automatic_report/$', views_abcd.TimeSeriesList.as_view(), name='time_series'),
+    url(r'^research/automatic_report/list/(?P<time_series>.+)/$', views_abcd.ReportList.as_view(), name='report_list'),
+    url(r'^research/automatic_report/detail/(?P<report_id>\d+)/$', views_abcd.ReportDetail.as_view(), name='report_detail'),
     
 
     # url(r'^research/demoresource/$', views.DemoresourceImageList.as_view(), name='demoresource'),
