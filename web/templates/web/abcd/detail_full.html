@@ -31,7 +31,7 @@
 
   <p>
   <figure class="l-body-outset" id="fig:raw_and_fit">
-    <img src=/static/upload/AutomaticNews/raw.png alt="raw" style="width: 45%"> <img src=/static/upload/AutomaticNews/fit.png alt="fit" style="width: 45%">
+    <img src=/static/upload/AutomaticNews/{{report.image_folder}}/raw.png alt="raw" style="width: 45%"> <img src=/static/upload/AutomaticNews/{{report.image_folder}}/fit.png alt="fit" style="width: 45%">
     <figcaption>Raw data (left) and model posterior with extrapolation (right)</figcaption>
   </figure>
   </p>
@@ -151,15 +151,15 @@
   </p>
 
   <figure>
-    <img src=/static/upload/AutomaticNews/{{component.fit}} style="width: 45%"> 
-    <img src=/static/upload/AutomaticNews/{{component.cum_fit}} style="width: 45%"> 
+    <img src=/static/upload/AutomaticNews/{{report.image_folder}}/{{component.fit}} style="width: 45%"> 
+    <img src=/static/upload/AutomaticNews/{{report.image_folder}}/{{component.cum_fit}} style="width: 45%"> 
     <figcaption>Pointwise posterior of component {{forloop.counter}} and the posterior of the cumulative sum of components with data (right)</figcaption>
   </figure>
   
   <!--residual figure: last component does not have this-->
   {% if forloop.counter < components|length %}
     <figure>
-      <img src={{component.anti_res}} style="width: 45%"> 
+      <img src=/static/uploadAutomaticNews/{{report.image_folder}}/{{component.anti_res}} style="width: 45%"> 
       <figcaption>Pointwise posterior of residuals after adding component {{forloop.counter}}</figcaption>
     </figure>
   {% endif %}
@@ -175,8 +175,8 @@
     The plot on the right displays three random samples from the posterior.
   </p>
   <figure id="fig:extrap">
-    <img src= /static/upload/AutomaticNews/fit.png style="width: 45%"> 
-    <img src= /static/upload/AutomaticNews/sample.png style="width: 45%"> 
+    <img src= /static/upload/AutomaticNews/{{report.image_folder}}/fit.png style="width: 45%"> 
+    <img src= /static/upload/AutomaticNews/{{report.image_folder}}/sample.png style="width: 45%"> 
     <figcaption>Full model posterior with extrapolation. Mean and pointwase variance (left) and three random samples
       (right)</figcaption>
     </figure>
@@ -191,8 +191,8 @@
     <p>{{component.extrap_desc}}</p>
     
     <figure>
-      <img src=/static/upload/AutomaticNews/{{component.extrap}} style="width: 80%"> 
-      <img src=/static/upload/AutomaticNews/{{component.cum_extrap}} style="width: 80%"> 
+      <img src=/static/upload/AutomaticNews/{{report.image_folder}}/{{component.extrap}} style="width: 80%"> 
+      <img src=/static/upload/AutomaticNews/{{report.image_folder}}/{{component.cum_extrap}} style="width: 80%"> 
     <figcaption>
       Posterior of component {{forloop.counter}} (top) and cumulative sum of components (bottom) with extrapolation. 
       Mean and pointwise (left) and three samples from the posterior distribution (right).
