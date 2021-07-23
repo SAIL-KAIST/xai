@@ -222,17 +222,63 @@
   </p>
 
   <table id="tab:check">
-    <TR>
-      <td> ""</td>
-      <td> ""</td>
-      <td> ""</td>
-      <td> ""</td>
-    </TR>
+    <thead>
+      <tr>
+        <th class="tg-0pky"></th>
+        <th class="tg-c3ow" colspan="2">ACF</th>
+        <th class="tg-c3ow" colspan="2">Periodogram</th>
+        <th class="tg-c3ow" colspan="2">QQ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-c3ow">#</td>
+        <td class="tg-c3ow">min</td>
+        <td class="tg-c3ow">min loc</td>
+        <td class="tg-c3ow">max</td>
+        <td class="tg-c3ow">max loc</td>
+        <td class="tg-c3ow">max</td>
+        <td class="tg-c3ow">min</td>
+      </tr>
+      {% for component in components%}
+      <tr>
+        <td class="tg-c3ow">{{forloop.counter}}</td>
+        <td class="tg-c3ow">{{component.acf_min | floatformat:3}}</td>
+        <td class="tg-c3ow">{{component.acf_min_loc | floatformat:3}}</td>
+        <td class="tg-c3ow">{{component.pxx_max | floatformat:3}}</td>
+        <td class="tg-c3ow">{{component.pxx_max_loc | floatformat:3}}</td>
+        <td class="tg-c3ow">{{component.qq_d_max | floatformat:3}}</td>
+        <td class="tg-c3ow">{{component.qq_d_min | floatformat:3}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
     <caption>Model checking statistics for each components. Cummulative probabilities for minimun of autocorrelation
       function (ACF) and its location.
       Cummulative probabilities for maximum of periodogram and its location.
       \(p\)-value for maximum and minimun deviation of QQ-plot from straight line.
     </caption>
   </table>
+
+    <!--TODO: bad fit or moderate bad fit-->
+  <p>
+    TODO: check if this is bad fit
+  </p>
+
+  {% for component in components%}
+    <h4>Component {{forloop.counter}}: {{component.summary}}</h4>
+    <!--TODO: discussion -->
+    <p>
+      TODO: discussion heare
+    </p>
+    <figure>
+      <img src=/static/upload/AutomaticNews/{{report.image_folder}}/acf_band_{{component.i}}.png style="width: 45%"> 
+      <img src=/static/upload/AutomaticNews/{{report.image_folder}}/pxx_band_{{component.i}}.png style="width: 45%"> 
+      <img src=/static/upload/AutomaticNews/{{report.image_folder}}/qq_band_{{component.i}}.png style="width: 45%"> 
+      <figcaption>
+        ACF (top left), periodogram (top right), and quantile-quantile (bottom left) uncertainty plots. 
+      </figcaption>
+    </figure>
+  {% endfor %}
+
 </dt-article>
 {% endblock content %}

@@ -41,7 +41,13 @@ class Component(models.Model):
     
     
     # some more stastic for model checking
-    # TODO: 
+    mmd_p_value=models.FloatField()
+    qq_d_max = models.FloatField()
+    qq_d_min = models.FloatField()
+    acf_min_loc = models.FloatField()
+    acf_min = models.FloatField()
+    pxx_max_loc = models.FloatField()
+    pxx_max = models.FloatField() 
     
     # figure:
     fit= models.ImageField(upload_to="AutomaticNews", default='fit_0.png')
