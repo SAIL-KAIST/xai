@@ -3,7 +3,7 @@ from web.models import (TopMenu, SubMenu, Greeting, Member, Lab, Project,
                         DemoResource, Publication, Patent, Notice, News, 
                         Gallery, Community, Github, RelatedProject, AutoNews)
 
-from web.models_abcd import (TimeSeries, Report, Component)
+from web.models_abcd import (TimeSeries, Report)
 
 # Register your models here.
 
@@ -31,4 +31,3 @@ admin.site.register(AutoNews)
 # new models
 admin.site.register(TimeSeries)
 admin.site.register(Report)
-admin.site.register(Component)
